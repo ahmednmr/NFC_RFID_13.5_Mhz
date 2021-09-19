@@ -1,5 +1,5 @@
 
-NFC_Normal_Board_layers.elf:     file format elf32-avr
+check_states.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn

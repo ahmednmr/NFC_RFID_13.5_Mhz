@@ -8,6 +8,8 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include app/subdir.mk
+-include MCAL/UART_Debug/subdir.mk
 -include MCAL/subdir.mk
 -include HAL/subdir.mk
 -include subdir.mk

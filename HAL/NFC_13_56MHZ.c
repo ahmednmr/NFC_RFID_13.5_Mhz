@@ -13,7 +13,7 @@
 char Rec_Data[DEFAULT_BUFFER_SIZE];
 char Counter=0;
 
-U8 NFC_Fixed_Company_ID_array[4]           ={0xE9,0xE8,0xE7,0xE6};
+//U8 NFC_Fixed_Company_ID_array[4]           ={0xE9,0xE8,0xE7,0xE6};
 unsigned char config_arr[]                 ={0x14,0x01,0x14,0x01};
 unsigned char response_config_arr[]        ={0X00,0X00,0XFF,0X00,0XFF,0X00,0X00,0X00,0XFF,0X02,0XFE,0XD5,0X15,0X16,0X00};
 
@@ -201,6 +201,24 @@ status=NFC_write_page(COMPANY_ID_PAGE_NUMBER,Company_id);
 return status;
 }
 
+en_tag_status NFC_write_company_id_number(U32 Company_id_number)
+{
+
+	en_tag_status status;
+	U8 tag_id[4]={0};
+
+	for(U8 i=0;i<PAGE_SIZE;i++)
+	{
+		tag_id[3-i]=(unsigned char )(Company_id_number);
+		Company_id_number>>=8;
+	}
+
+
+status=NFC_write_page(COMPANY_ID_PAGE_NUMBER,tag_id);
+
+return status;
+}
+
 
 
 en_tag_status NFC_write_tag_ID(U32 tag_number)
@@ -239,10 +257,31 @@ en_tag_status NFC_write_Tag_Points(U32 points)
 }
 
 
+//en_tag_status NFC_write_load_Points(U32 points)
+//{
+//	en_tag_status status;
+//		U8 tag_points[4]={0};
+//
+//	for(char i=0;i<PAGE_SIZE;i++)
+//	{
+//		tag_points[3-i]=(unsigned char )(points);
+//		points>>=8;
+//	}
+//
+//	status=NFC_write_page(LOAD_POINTS_PAGE_NUMBER,tag_points);
+//
+//	return status;
+//
+//	return 0;
+//}
+//
+
+
 U8 NFC_read_tag_data(st_recieved_tag_data* recieved_struct)
 {
 	en_tag_status status;
 
+	unsigned long company_id_array_byte[4]={0};
 	unsigned long tag_id_array_byte[4]={0};
 	unsigned long points_number_array_byte[4]={0};
 
@@ -257,25 +296,18 @@ U8 NFC_read_tag_data(st_recieved_tag_data* recieved_struct)
 		NFC_Recieved_Data[i]=Rec_Data[response_read_tag_data_length+i];
 	}
 
-#if Debug_NFC_Driver
-	uart_TX_string("\r\n Company ID  ");    //For Debug only
-#endif
+
+	recieved_struct->tag_company_id=0;
 	for(char i=0;i<PAGE_SIZE;i++)
 	{
-		recieved_struct->tag_company_id[i]=NFC_Recieved_Data[Company_ID_index+i];
-
-		if((recieved_struct->tag_company_id[i])!=NFC_Fixed_Company_ID_array[i])
-			{
-			 return Tag_exist_Not_valid;
-			}
-
-#if Debug_NFC_Driver
-		uart_TX_hex_number(recieved_struct->tag_company_id[i]);
-#endif
-
+		company_id_array_byte[i]=(unsigned long )(NFC_Recieved_Data[Company_ID_index+3-i]);
+		company_id_array_byte[i]<<=8*i;
+		recieved_struct->tag_company_id |=company_id_array_byte[i];
 	}
-
-
+#if Debug_NFC_Driver
+	uart_TX_string("\r\n Company ID  ");    //For Debug only
+	uart_TX_long_number(recieved_struct->tag_company_id);
+#endif
 
 	recieved_struct->tag_id=0;
 	for(char i=0;i<PAGE_SIZE;i++)

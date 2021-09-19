@@ -632,5 +632,5 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 
 .debug_macinfo
  *(.debug_macinfo)
-OUTPUT(NFC_Normal_Board_layers.elf elf32-avr)
+OUTPUT(check_states.elf elf32-avr)
 LOAD linker stubs
