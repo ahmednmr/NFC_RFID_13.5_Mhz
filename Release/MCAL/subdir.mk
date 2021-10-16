@@ -4,12 +4,15 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../MCAL/DIO.c \
 ../MCAL/UART.c 
 
 OBJS += \
+./MCAL/DIO.o \
 ./MCAL/UART.o 
 
 C_DEPS += \
+./MCAL/DIO.d \
 ./MCAL/UART.d 
 
 

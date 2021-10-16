@@ -30,8 +30,8 @@
 #define UART_BAUD	(4800)
 
 /* Port settings */
-#define UART_TX_PORT	PORTA	/*!< GPIO port register for Tx */
-#define UART_TX_DDR	DDRA	/*!< GPIO direction register for Tx */
-#define UART_TX_BIT	1	/*!< GPIO pin for Tx */
+#define UART_TX_PORT	PORTD	/*!< GPIO port register for Tx */
+#define UART_TX_DDR	DDRD	/*!< GPIO direction register for Tx */
+#define UART_TX_BIT	6	/*!< GPIO pin for Tx */
 
 #endif

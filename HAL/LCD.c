@@ -94,6 +94,26 @@ void LCD_vidsendword(char * word)
 }
 
 
+void LCD_vidsend_sentance(char * word)
+{
+	U8 i=0;
+	LCD_vidClear();
+	while(*word!='\0')
+	{
+		LCD_vidsendData(*word);
+		word++;
+		i++;
+		if(i==16)
+		{
+			LCD_vidGoTo(1,0)	;
+		}
+
+	}
+
+
+}
+
+
 void LCD_vidClear(void)
 {
 	LCD_vidSendCommand(0x01);
@@ -215,9 +235,20 @@ void LCD_vidGoTo(unsigned char col,unsigned char Row)
 
 void LCD_SEND_number(int number)
 {
+	char buffer[20];
+
+	itoa(number,buffer,10);
+	LCD_vidsendword(buffer);
+
+
+}
+
+
+void  LCD_SEND_long_number(unsigned long number)
+{
    char buffer[20];
 
-   itoa(number,buffer,10);
+   ultoa(number,buffer,10);
    LCD_vidsendword(buffer);
 
 
@@ -227,18 +258,18 @@ void LCD_SEND_number(int number)
 
 void LCD_SEND_number_binary(int number)
 {
-    char c=0,k=0;
+	char c=0,k=0;
 
-    for (c = 8; c > 0; c--)
-     {
-       k = number >> (c-1);
+	for (c = 8; c > 0; c--)
+	{
+		k = number >> (c-1);
 
-       if (k & 1)
-    	   LCD_vidsendData('1');
-       else
-    	   LCD_vidsendData('0');
+		if (k & 1)
+			LCD_vidsendData('1');
+		else
+			LCD_vidsendData('0');
 
-     }
+	}
 
 
 }
@@ -247,90 +278,90 @@ void LCD_SEND_number_binary(int number)
 void LCD_SEND_number_hex(unsigned char number)
 {
 	unsigned char high_nipple=number&0xF0;
-    high_nipple>>=4;
-    unsigned char low_nipple=number&0x0F;
+	high_nipple>>=4;
+	unsigned char low_nipple=number&0x0F;
 
-//    LCD_vidsendword("0x");
-    if(high_nipple<10)
-    {
-    	LCD_SEND_number(high_nipple);
-    }
-    else if(high_nipple==10)
-    {
+	//    LCD_vidsendword("0x");
+	if(high_nipple<10)
+	{
+		LCD_SEND_number(high_nipple);
+	}
+	else if(high_nipple==10)
+	{
 
-    	   LCD_vidsendData('A');
-    }
+		LCD_vidsendData('A');
+	}
 
-    else if(high_nipple==11)
-    {
+	else if(high_nipple==11)
+	{
 
-    	   LCD_vidsendData('B');
-    }
+		LCD_vidsendData('B');
+	}
 
-    else if(high_nipple==12)
-    {
+	else if(high_nipple==12)
+	{
 
-    	   LCD_vidsendData('C');
-    }
+		LCD_vidsendData('C');
+	}
 
-    else if(high_nipple==13)
-    {
+	else if(high_nipple==13)
+	{
 
-    	   LCD_vidsendData('D');
-    }
+		LCD_vidsendData('D');
+	}
 
-    else if(high_nipple==14)
-    {
+	else if(high_nipple==14)
+	{
 
-    	   LCD_vidsendData('E');
-    }
+		LCD_vidsendData('E');
+	}
 
-    else if(high_nipple==15)
-    {
+	else if(high_nipple==15)
+	{
 
-    	   LCD_vidsendData('F');
-    }
+		LCD_vidsendData('F');
+	}
 
 
-    if(low_nipple<10)
-    {
-    	LCD_SEND_number(low_nipple);
-    }
-    else if(low_nipple==10)
-    {
+	if(low_nipple<10)
+	{
+		LCD_SEND_number(low_nipple);
+	}
+	else if(low_nipple==10)
+	{
 
-    	   LCD_vidsendData('A');
-    }
+		LCD_vidsendData('A');
+	}
 
-    else if(low_nipple==11)
-    {
+	else if(low_nipple==11)
+	{
 
-    	   LCD_vidsendData('B');
-    }
+		LCD_vidsendData('B');
+	}
 
-    else if(low_nipple==12)
-    {
+	else if(low_nipple==12)
+	{
 
-    	   LCD_vidsendData('C');
-    }
+		LCD_vidsendData('C');
+	}
 
-    else if(low_nipple==13)
-    {
+	else if(low_nipple==13)
+	{
 
-    	   LCD_vidsendData('D');
-    }
+		LCD_vidsendData('D');
+	}
 
-    else if(low_nipple==14)
-    {
+	else if(low_nipple==14)
+	{
 
-    	   LCD_vidsendData('E');
-    }
+		LCD_vidsendData('E');
+	}
 
-    else if(low_nipple==15)
-    {
+	else if(low_nipple==15)
+	{
 
-    	   LCD_vidsendData('F');
-    }
+		LCD_vidsendData('F');
+	}
 
 
 }

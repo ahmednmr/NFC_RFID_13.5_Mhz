@@ -11,7 +11,8 @@
 #include<avr/delay.h>
 #include<avr/io.h>
 #include<stdlib.h>
-
+#include"../helpers/STD_TYPES.h"
+#include"../helpers/Utils.h"
 
 #define LCD_DDR_DATA      DDRB
 #define LCD_PORT_DATA     PORTB
@@ -25,10 +26,12 @@ void LCD_VidInit(void);
 void LCD_vidSendCommand(unsigned char command);
 void LCD_vidsendData(unsigned char character);
 void LCD_vidsendword(char * word);
+void LCD_vidsend_sentance(char * word);
 void LCD_vidClear(void);
 void LCD_vid_Save_in_CGRAM(void);
 void LCD_vidGoTo(unsigned char col,unsigned char Row);
 void LCD_SEND_number(int number);
+void  LCD_SEND_long_number(unsigned long number);
 void LCD_SEND_number_binary(int number);
 void LCD_SEND_number_hex(unsigned char number);
 

@@ -8,6 +8,8 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include app/subdir.mk
+-include MCAL/UART_Debug/subdir.mk
 -include MCAL/subdir.mk
 -include HAL/subdir.mk
 -include subdir.mk
@@ -32,56 +34,56 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 LSS += \
-NFC_Normal_Board_layers.lss \
+NFC_Normal_Board_States_four_cards.lss \
 
 FLASH_IMAGE += \
-NFC_Normal_Board_layers.hex \
+NFC_Normal_Board_States_four_cards.hex \
 
 EEPROM_IMAGE += \
-NFC_Normal_Board_layers.eep \
+NFC_Normal_Board_States_four_cards.eep \
 
 SIZEDUMMY += \
 sizedummy \
 
 
 # All Target
-all: NFC_Normal_Board_layers.elf secondary-outputs
+all: NFC_Normal_Board_States_four_cards.elf secondary-outputs
 
 # Tool invocations
-NFC_Normal_Board_layers.elf: $(OBJS) $(USER_OBJS)
+NFC_Normal_Board_States_four_cards.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: AVR C Linker'
-	avr-gcc -Wl,-Map,NFC_Normal_Board_layers.map -mmcu=atmega32 -o "NFC_Normal_Board_layers.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	avr-gcc -Wl,-Map,NFC_Normal_Board_States_four_cards.map -mmcu=atmega32 -o "NFC_Normal_Board_States_four_cards.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-NFC_Normal_Board_layers.lss: NFC_Normal_Board_layers.elf
+NFC_Normal_Board_States_four_cards.lss: NFC_Normal_Board_States_four_cards.elf
 	@echo 'Invoking: AVR Create Extended Listing'
-	-avr-objdump -h -S NFC_Normal_Board_layers.elf  >"NFC_Normal_Board_layers.lss"
+	-avr-objdump -h -S NFC_Normal_Board_States_four_cards.elf  >"NFC_Normal_Board_States_four_cards.lss"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-NFC_Normal_Board_layers.hex: NFC_Normal_Board_layers.elf
+NFC_Normal_Board_States_four_cards.hex: NFC_Normal_Board_States_four_cards.elf
 	@echo 'Create Flash image (ihex format)'
-	-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex NFC_Normal_Board_layers.elf  "NFC_Normal_Board_layers.hex"
+	-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex NFC_Normal_Board_States_four_cards.elf  "NFC_Normal_Board_States_four_cards.hex"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-NFC_Normal_Board_layers.eep: NFC_Normal_Board_layers.elf
+NFC_Normal_Board_States_four_cards.eep: NFC_Normal_Board_States_four_cards.elf
 	@echo 'Create eeprom image (ihex format)'
-	-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex NFC_Normal_Board_layers.elf  "NFC_Normal_Board_layers.eep"
+	-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex NFC_Normal_Board_States_four_cards.elf  "NFC_Normal_Board_States_four_cards.eep"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-sizedummy: NFC_Normal_Board_layers.elf
+sizedummy: NFC_Normal_Board_States_four_cards.elf
 	@echo 'Invoking: Print Size'
-	-avr-size --format=avr --mcu=atmega32 NFC_Normal_Board_layers.elf
+	-avr-size --format=avr --mcu=atmega32 NFC_Normal_Board_States_four_cards.elf
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(FLASH_IMAGE)$(ELFS)$(OBJS)$(ASM_DEPS)$(EEPROM_IMAGE)$(S_DEPS)$(SIZEDUMMY)$(S_UPPER_DEPS)$(LSS)$(C_DEPS) NFC_Normal_Board_layers.elf
+	-$(RM) $(FLASH_IMAGE)$(ELFS)$(OBJS)$(ASM_DEPS)$(EEPROM_IMAGE)$(S_DEPS)$(SIZEDUMMY)$(S_UPPER_DEPS)$(LSS)$(C_DEPS) NFC_Normal_Board_States_four_cards.elf
 	-@echo ' '
 
 secondary-outputs: $(LSS) $(FLASH_IMAGE) $(EEPROM_IMAGE) $(SIZEDUMMY)

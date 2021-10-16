@@ -1,0 +1,661 @@
+Archive member included because of file (symbol)
+
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o (exit)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                              ./app/idle_state.o (__do_copy_data)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                              ./app/idle_state.o (__do_clear_bss)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+                              ./MCAL/UART_Debug/uart.o (itoa)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa.o)
+                              ./MCAL/UART_Debug/uart.o (ultoa)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_dword_atmega32.o)
+                              ./app/init_state.o (__eerd_dword_m32)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_dword_atmega32.o)
+                              ./app/load_card_state.o (__eewr_dword_m32)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_word_atmega32.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_dword_atmega32.o) (__eewr_word_m32)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o) (strrev)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_block_atmega32.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_dword_atmega32.o) (__eerd_blraw_m32)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_byte_atmega32.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_word_atmega32.o) (__eewr_byte_m32)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o) (__udivmodhi4)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa.o) (__udivmodsi4)
+
+Allocating common symbols
+Common symbol       size              file
+
+call_back_pointer   0x2               ./app/idle_state.o
+Company_ID          0x4               ./app/idle_state.o
+Machine_points      0x4               ./app/idle_state.o
+Rec_Data            0x64              ./HAL/NFC_13_56MHZ.o
+tag_data_struct     0xc               ./app/idle_state.o
+total_load_points   0x4               ./app/idle_state.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+LOAD ./app/idle_state.o
+LOAD ./app/init_state.o
+LOAD ./app/load_card_state.o
+LOAD ./app/master_card_state.o
+LOAD ./app/user_card_state.o
+LOAD ./MCAL/UART_Debug/uart.o
+LOAD ./MCAL/UART.o
+LOAD ./HAL/LCD.o
+LOAD ./HAL/NFC_13_56MHZ.o
+LOAD ./main.o
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x1330
+ *(.vectors)
+ .vectors       0x00000000       0x54 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x00000054                . = ALIGN (0x2)
+                0x00000054                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000054        0x0 linker stubs
+ *(.trampolines*)
+                0x00000054                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000054                __ctors_start = .
+ *(.ctors)
+                0x00000054                __ctors_end = .
+                0x00000054                __dtors_start = .
+ *(.dtors)
+                0x00000054                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000054        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x00000054                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000054        0xc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000060       0x16 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x00000060                __do_copy_data
+ .init4         0x00000076       0x10 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00000076                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000086        0x8 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ *(.init9)
+ *(.text)
+ .text          0x0000008e        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x0000008e                __vector_1
+                0x0000008e                __vector_12
+                0x0000008e                __bad_interrupt
+                0x0000008e                __vector_6
+                0x0000008e                __vector_3
+                0x0000008e                __vector_11
+                0x0000008e                __vector_17
+                0x0000008e                __vector_19
+                0x0000008e                __vector_7
+                0x0000008e                __vector_5
+                0x0000008e                __vector_4
+                0x0000008e                __vector_9
+                0x0000008e                __vector_2
+                0x0000008e                __vector_15
+                0x0000008e                __vector_8
+                0x0000008e                __vector_14
+                0x0000008e                __vector_10
+                0x0000008e                __vector_16
+                0x0000008e                __vector_18
+                0x0000008e                __vector_20
+ .text          0x00000092        0x0 ./app/idle_state.o
+ .text          0x00000092        0x0 ./app/init_state.o
+ .text          0x00000092        0x0 ./app/load_card_state.o
+ .text          0x00000092        0x0 ./app/master_card_state.o
+ .text          0x00000092        0x0 ./app/user_card_state.o
+ .text          0x00000092        0x0 ./MCAL/UART_Debug/uart.o
+ .text          0x00000092        0x0 ./MCAL/UART.o
+ .text          0x00000092        0x0 ./HAL/LCD.o
+ .text          0x00000092        0x0 ./HAL/NFC_13_56MHZ.o
+ .text          0x00000092        0x0 ./main.o
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa.o)
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_dword_atmega32.o)
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_dword_atmega32.o)
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_word_atmega32.o)
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_block_atmega32.o)
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_byte_atmega32.o)
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x00000092                . = ALIGN (0x2)
+ *(.text.*)
+ .text.idle_state
+                0x00000092      0x158 ./app/idle_state.o
+                0x00000092                idle_state
+ .text.init_state
+                0x000001ea      0x11c ./app/init_state.o
+                0x000001ea                init_state
+ .text.load_card_state
+                0x00000306      0x116 ./app/load_card_state.o
+                0x00000306                load_card_state
+ .text.master_card_state
+                0x0000041c       0x12 ./app/master_card_state.o
+                0x0000041c                master_card_state
+ .text.user_card_state
+                0x0000042e      0x246 ./app/user_card_state.o
+                0x0000042e                user_card_state
+ .text.uart_init
+                0x00000674        0x6 ./MCAL/UART_Debug/uart.o
+                0x00000674                uart_init
+ .text.uart_tx  0x0000067a       0x40 ./MCAL/UART_Debug/uart.o
+                0x0000067a                uart_tx
+ .text.uart_TX_string
+                0x000006ba       0x26 ./MCAL/UART_Debug/uart.o
+                0x000006ba                uart_TX_string
+ .text.uart_tx_str
+                0x000006e0       0x20 ./MCAL/UART_Debug/uart.o
+                0x000006e0                uart_tx_str
+ .text.uart_tx_hex
+                0x00000700       0x10 ./MCAL/UART_Debug/uart.o
+                0x00000700                uart_tx_hex
+ .text.uart_tx_hex_byte
+                0x00000710       0x18 ./MCAL/UART_Debug/uart.o
+                0x00000710                uart_tx_hex_byte
+ .text.uart_tx_hex_word
+                0x00000728       0x14 ./MCAL/UART_Debug/uart.o
+                0x00000728                uart_tx_hex_word
+ .text.uart_tx_hex_lword
+                0x0000073c       0x26 ./MCAL/UART_Debug/uart.o
+                0x0000073c                uart_tx_hex_lword
+ .text.uart_TX_long_number
+                0x00000762       0x44 ./MCAL/UART_Debug/uart.o
+                0x00000762                uart_TX_long_number
+ .text.uart_TX_number
+                0x000007a6       0x44 ./MCAL/UART_Debug/uart.o
+                0x000007a6                uart_TX_number
+ .text.uart_TX_hex_number
+                0x000007ea       0x34 ./MCAL/UART_Debug/uart.o
+                0x000007ea                uart_TX_hex_number
+ .text.init_UART_9600
+                0x0000081e       0x10 ./MCAL/UART.o
+                0x0000081e                init_UART_9600
+ .text.De_init_UART
+                0x0000082e        0xc ./MCAL/UART.o
+                0x0000082e                De_init_UART
+ .text.init_UART_115200
+                0x0000083a       0x14 ./MCAL/UART.o
+                0x0000083a                init_UART_115200
+ .text.UART_SendChar
+                0x0000084e        0x8 ./MCAL/UART.o
+                0x0000084e                UART_SendChar
+ .text.UART_getChar
+                0x00000856        0x8 ./MCAL/UART.o
+                0x00000856                UART_getChar
+ .text.UART_SEND_string
+                0x0000085e       0x14 ./MCAL/UART.o
+                0x0000085e                UART_SEND_string
+ .text.UART_set_call_back_function
+                0x00000872        0xa ./MCAL/UART.o
+                0x00000872                UART_set_call_back_function
+ .text.__vector_13
+                0x0000087c       0x4e ./MCAL/UART.o
+                0x0000087c                __vector_13
+ .text.UART_SEND_number
+                0x000008ca       0x44 ./MCAL/UART.o
+                0x000008ca                UART_SEND_number
+ .text.LCD_vidSendCommand
+                0x0000090e       0x40 ./HAL/LCD.o
+                0x0000090e                LCD_vidSendCommand
+ .text.LCD_VidInit
+                0x0000094e       0x56 ./HAL/LCD.o
+                0x0000094e                LCD_VidInit
+ .text.LCD_vidsendData
+                0x000009a4       0x40 ./HAL/LCD.o
+                0x000009a4                LCD_vidsendData
+ .text.LCD_vidsendword
+                0x000009e4       0x1a ./HAL/LCD.o
+                0x000009e4                LCD_vidsendword
+ .text.LCD_vidClear
+                0x000009fe        0x8 ./HAL/LCD.o
+                0x000009fe                LCD_vidClear
+ .text.LCD_vid_Save_in_CGRAM
+                0x00000a06      0x188 ./HAL/LCD.o
+                0x00000a06                LCD_vid_Save_in_CGRAM
+ .text.LCD_vidGoTo
+                0x00000b8e       0x1c ./HAL/LCD.o
+                0x00000b8e                LCD_vidGoTo
+ .text.LCD_vidsend_sentance
+                0x00000baa       0x32 ./HAL/LCD.o
+                0x00000baa                LCD_vidsend_sentance
+ .text.LCD_SEND_number_binary
+                0x00000bdc       0x3e ./HAL/LCD.o
+                0x00000bdc                LCD_SEND_number_binary
+ .text.LCD_SEND_long_number
+                0x00000c1a       0x44 ./HAL/LCD.o
+                0x00000c1a                LCD_SEND_long_number
+ .text.LCD_SEND_number
+                0x00000c5e       0x44 ./HAL/LCD.o
+                0x00000c5e                LCD_SEND_number
+ .text.LCD_SEND_number_hex
+                0x00000ca2       0x88 ./HAL/LCD.o
+                0x00000ca2                LCD_SEND_number_hex
+ .text.NFC_Recieving_interrupt
+                0x00000d2a       0x26 ./HAL/NFC_13_56MHZ.o
+                0x00000d2a                NFC_Recieving_interrupt
+ .text.Check_Respond
+                0x00000d50       0x26 ./HAL/NFC_13_56MHZ.o
+                0x00000d50                Check_Respond
+ .text.NFC_fixed_data
+                0x00000d76       0x32 ./HAL/NFC_13_56MHZ.o
+                0x00000d76                NFC_fixed_data
+ .text.NFC_send_frame
+                0x00000da8       0x7c ./HAL/NFC_13_56MHZ.o
+                0x00000da8                NFC_send_frame
+ .text.Clear_Rec_buffer
+                0x00000e24       0x14 ./HAL/NFC_13_56MHZ.o
+                0x00000e24                Clear_Rec_buffer
+ .text.NFC_read_tag_data
+                0x00000e38      0x15c ./HAL/NFC_13_56MHZ.o
+                0x00000e38                NFC_read_tag_data
+ .text.NFC_write_page
+                0x00000f94       0x68 ./HAL/NFC_13_56MHZ.o
+                0x00000f94                NFC_write_page
+ .text.NFC_write_Tag_Points
+                0x00000ffc       0x44 ./HAL/NFC_13_56MHZ.o
+                0x00000ffc                NFC_write_Tag_Points
+ .text.NFC_write_tag_ID
+                0x00001040       0x44 ./HAL/NFC_13_56MHZ.o
+                0x00001040                NFC_write_tag_ID
+ .text.NFC_write_company_id_number
+                0x00001084       0x44 ./HAL/NFC_13_56MHZ.o
+                0x00001084                NFC_write_company_id_number
+ .text.NFC_write_company_id
+                0x000010c8        0xa ./HAL/NFC_13_56MHZ.o
+                0x000010c8                NFC_write_company_id
+ .text.NFC_read_tag
+                0x000010d2       0x4a ./HAL/NFC_13_56MHZ.o
+                0x000010d2                NFC_read_tag
+ .text.NFC_init
+                0x0000111c       0x5c ./HAL/NFC_13_56MHZ.o
+                0x0000111c                NFC_init
+ .text.main     0x00001178       0x3c ./main.o
+                0x00001178                main
+ .text.libgcc   0x000011b4        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x000011b4        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x000011b4        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.avr-libc
+                0x000011b4       0x42 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+                0x000011b4                itoa
+ .text.avr-libc
+                0x000011f6       0x4a c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa.o)
+                0x000011f6                ultoa
+ .text.avr-libc
+                0x00001240        0xc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_dword_atmega32.o)
+                0x00001240                __eerd_dword_m32
+                0x00001240                __eerd_float_m32
+ .text.avr-libc
+                0x0000124c       0x10 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_dword_atmega32.o)
+                0x0000124c                __eewr_dword_m32
+                0x0000124c                __eewr_float_m32
+ .text.avr-libc
+                0x0000125c        0xa c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_word_atmega32.o)
+                0x0000125c                __eewr_word_m32
+ .text.avr-libc
+                0x00001266       0x20 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+                0x00001266                strrev
+ .text.avr-libc
+                0x00001286       0x20 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_block_atmega32.o)
+                0x0000128a                __eerd_blraw_m32
+                0x00001286                __eerd_block_m32
+ .text.avr-libc
+                0x000012a6       0x1a c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_byte_atmega32.o)
+                0x000012a8                __eewr_r18_m32
+                0x000012a6                __eewr_byte_m32
+ .text.libgcc   0x000012c0       0x28 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x000012c0                __udivmodhi4
+ .text.libgcc   0x000012e8       0x44 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x000012e8                __udivmodsi4
+                0x0000132c                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x0000132c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x0000132c                exit
+                0x0000132c                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x0000132c        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00001330                _etext = .
+
+.data           0x00800060      0x314 load address 0x00001330
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .data          0x00800060       0xad ./app/idle_state.o
+ .data          0x0080010d       0xa5 ./app/init_state.o
+ .data          0x008001b2       0x73 ./app/load_card_state.o
+ .data          0x00800225       0x31 ./app/master_card_state.o
+ .data          0x00800256       0xd0 ./app/user_card_state.o
+ .data          0x00800326        0x0 ./MCAL/UART_Debug/uart.o
+ .data          0x00800326        0x0 ./MCAL/UART.o
+ .data          0x00800326        0x0 ./HAL/LCD.o
+ .data          0x00800326        0x0 ./HAL/NFC_13_56MHZ.o
+ .data          0x00800326        0x0 ./main.o
+ .data          0x00800326        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x00800326        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x00800326        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .data          0x00800326        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+ .data          0x00800326        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa.o)
+ .data          0x00800326        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_dword_atmega32.o)
+ .data          0x00800326        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_dword_atmega32.o)
+ .data          0x00800326        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_word_atmega32.o)
+ .data          0x00800326        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+ .data          0x00800326        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_block_atmega32.o)
+ .data          0x00800326        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_byte_atmega32.o)
+ .data          0x00800326        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .data          0x00800326        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ *(.data*)
+ .data.config_arr
+                0x00800326        0x4 ./HAL/NFC_13_56MHZ.o
+                0x00800326                config_arr
+ .data.response_config_arr
+                0x0080032a        0xf ./HAL/NFC_13_56MHZ.o
+                0x0080032a                response_config_arr
+ .data.read_tag_arr
+                0x00800339        0x3 ./HAL/NFC_13_56MHZ.o
+                0x00800339                read_tag_arr
+ .data.response_read_tag_arr
+                0x0080033c        0xe ./HAL/NFC_13_56MHZ.o
+                0x0080033c                response_read_tag_arr
+ .data.read_tag_data
+                0x0080034a        0x4 ./HAL/NFC_13_56MHZ.o
+                0x0080034a                read_tag_data
+ .data.response_read_tag_data
+                0x0080034e        0xe ./HAL/NFC_13_56MHZ.o
+                0x0080034e                response_read_tag_data
+ .data.write_page_frame
+                0x0080035c        0x8 ./HAL/NFC_13_56MHZ.o
+                0x0080035c                write_page_frame
+ .data.response_write_page
+                0x00800364       0x10 ./HAL/NFC_13_56MHZ.o
+                0x00800364                response_write_page
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800374                . = ALIGN (0x2)
+                0x00800374                _edata = .
+                0x00800374                PROVIDE (__data_end, .)
+
+.bss            0x00800374       0x8c
+                0x00800374                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00800374        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .bss           0x00800374        0x0 ./app/idle_state.o
+ .bss           0x00800374        0x0 ./app/init_state.o
+ .bss           0x00800374        0x0 ./app/load_card_state.o
+ .bss           0x00800374        0x0 ./app/master_card_state.o
+ .bss           0x00800374        0x0 ./app/user_card_state.o
+ .bss           0x00800374        0x0 ./MCAL/UART_Debug/uart.o
+ .bss           0x00800374        0x0 ./MCAL/UART.o
+ .bss           0x00800374        0x0 ./HAL/LCD.o
+ .bss           0x00800374        0x0 ./HAL/NFC_13_56MHZ.o
+ .bss           0x00800374        0x0 ./main.o
+ .bss           0x00800374        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x00800374        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x00800374        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x00800374        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+ .bss           0x00800374        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(ultoa.o)
+ .bss           0x00800374        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_dword_atmega32.o)
+ .bss           0x00800374        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_dword_atmega32.o)
+ .bss           0x00800374        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_word_atmega32.o)
+ .bss           0x00800374        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+ .bss           0x00800374        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_block_atmega32.o)
+ .bss           0x00800374        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_byte_atmega32.o)
+ .bss           0x00800374        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .bss           0x00800374        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ *(.bss*)
+ .bss.Counter   0x00800374        0x1 ./HAL/NFC_13_56MHZ.o
+                0x00800374                Counter
+ .bss.NFC_Recieved_Data
+                0x00800375        0xd ./HAL/NFC_13_56MHZ.o
+                0x00800375                NFC_Recieved_Data
+ *(COMMON)
+ COMMON         0x00800382       0x1a ./app/idle_state.o
+                0x00800382                call_back_pointer
+                0x00800384                Company_ID
+                0x00800388                Machine_points
+                0x0080038c                tag_data_struct
+                0x00800398                total_load_points
+ COMMON         0x0080039c       0x64 ./HAL/NFC_13_56MHZ.o
+                0x0080039c                Rec_Data
+                0x00800400                PROVIDE (__bss_end, .)
+                0x00001330                __data_load_start = LOADADDR (.data)
+                0x00001644                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800400        0x0
+                0x00800400                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800400                PROVIDE (__noinit_end, .)
+                0x00800400                _end = .
+                0x00800400                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(NFC_Normal_Board_States.elf elf32-avr)
+LOAD linker stubs

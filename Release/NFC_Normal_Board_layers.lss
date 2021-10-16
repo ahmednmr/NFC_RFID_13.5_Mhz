@@ -3,1765 +3,2160 @@ NFC_Normal_Board_layers.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         00000e6c  00000000  00000000  00000094  2**1
+  0 .text         00001284  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         000000d0  00800060  00000e6c  00000f00  2**0
+  1 .data         000002d0  00800060  00001284  00001318  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .bss          00000074  00800130  00800130  00000fd0  2**0
+  2 .bss          0000008c  00800330  00800330  000015e8  2**0
                   ALLOC
 
 Disassembly of section .text:
 
 00000000 <__vectors>:
-   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
-   4:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
-   8:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
-   c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
-  10:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
-  14:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
-  18:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
-  1c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
-  20:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
-  24:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
-  28:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
-  2c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
-  30:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
-  34:	0c 94 78 00 	jmp	0xf0	; 0xf0 <__vector_13>
-  38:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
-  3c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
-  40:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
-  44:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
-  48:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
-  4c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
-  50:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+       0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+       4:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+       8:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+       c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+      10:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+      14:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+      18:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+      1c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+      20:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+      24:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+      28:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+      2c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+      30:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+      34:	0c 94 02 04 	jmp	0x804	; 0x804 <__vector_13>
+      38:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+      3c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+      40:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+      44:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+      48:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+      4c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+      50:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
 
 00000054 <__ctors_end>:
-  54:	11 24       	eor	r1, r1
-  56:	1f be       	out	0x3f, r1	; 63
-  58:	cf e5       	ldi	r28, 0x5F	; 95
-  5a:	d8 e0       	ldi	r29, 0x08	; 8
-  5c:	de bf       	out	0x3e, r29	; 62
-  5e:	cd bf       	out	0x3d, r28	; 61
+      54:	11 24       	eor	r1, r1
+      56:	1f be       	out	0x3f, r1	; 63
+      58:	cf e5       	ldi	r28, 0x5F	; 95
+      5a:	d8 e0       	ldi	r29, 0x08	; 8
+      5c:	de bf       	out	0x3e, r29	; 62
+      5e:	cd bf       	out	0x3d, r28	; 61
 
 00000060 <__do_copy_data>:
-  60:	11 e0       	ldi	r17, 0x01	; 1
-  62:	a0 e6       	ldi	r26, 0x60	; 96
-  64:	b0 e0       	ldi	r27, 0x00	; 0
-  66:	ec e6       	ldi	r30, 0x6C	; 108
-  68:	fe e0       	ldi	r31, 0x0E	; 14
-  6a:	02 c0       	rjmp	.+4      	; 0x70 <.do_copy_data_start>
+      60:	13 e0       	ldi	r17, 0x03	; 3
+      62:	a0 e6       	ldi	r26, 0x60	; 96
+      64:	b0 e0       	ldi	r27, 0x00	; 0
+      66:	e4 e8       	ldi	r30, 0x84	; 132
+      68:	f2 e1       	ldi	r31, 0x12	; 18
+      6a:	02 c0       	rjmp	.+4      	; 0x70 <.do_copy_data_start>
 
 0000006c <.do_copy_data_loop>:
-  6c:	05 90       	lpm	r0, Z+
-  6e:	0d 92       	st	X+, r0
+      6c:	05 90       	lpm	r0, Z+
+      6e:	0d 92       	st	X+, r0
 
 00000070 <.do_copy_data_start>:
-  70:	a0 33       	cpi	r26, 0x30	; 48
-  72:	b1 07       	cpc	r27, r17
-  74:	d9 f7       	brne	.-10     	; 0x6c <.do_copy_data_loop>
+      70:	a0 33       	cpi	r26, 0x30	; 48
+      72:	b1 07       	cpc	r27, r17
+      74:	d9 f7       	brne	.-10     	; 0x6c <.do_copy_data_loop>
 
 00000076 <__do_clear_bss>:
-  76:	11 e0       	ldi	r17, 0x01	; 1
-  78:	a0 e3       	ldi	r26, 0x30	; 48
-  7a:	b1 e0       	ldi	r27, 0x01	; 1
-  7c:	01 c0       	rjmp	.+2      	; 0x80 <.do_clear_bss_start>
+      76:	13 e0       	ldi	r17, 0x03	; 3
+      78:	a0 e3       	ldi	r26, 0x30	; 48
+      7a:	b3 e0       	ldi	r27, 0x03	; 3
+      7c:	01 c0       	rjmp	.+2      	; 0x80 <.do_clear_bss_start>
 
 0000007e <.do_clear_bss_loop>:
-  7e:	1d 92       	st	X+, r1
+      7e:	1d 92       	st	X+, r1
 
 00000080 <.do_clear_bss_start>:
-  80:	a4 3a       	cpi	r26, 0xA4	; 164
-  82:	b1 07       	cpc	r27, r17
-  84:	e1 f7       	brne	.-8      	; 0x7e <.do_clear_bss_loop>
-  86:	0e 94 bd 04 	call	0x97a	; 0x97a <main>
-  8a:	0c 94 34 07 	jmp	0xe68	; 0xe68 <_exit>
+      80:	ac 3b       	cpi	r26, 0xBC	; 188
+      82:	b1 07       	cpc	r27, r17
+      84:	e1 f7       	brne	.-8      	; 0x7e <.do_clear_bss_loop>
+      86:	0e 94 80 08 	call	0x1100	; 0x1100 <main>
+      8a:	0c 94 40 09 	jmp	0x1280	; 0x1280 <_exit>
 
 0000008e <__bad_interrupt>:
-  8e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+      8e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
-00000092 <init_UART_9600>:
-  92:	88 e1       	ldi	r24, 0x18	; 24
-  94:	8a b9       	out	0x0a, r24	; 10
-  96:	86 e8       	ldi	r24, 0x86	; 134
-  98:	80 bd       	out	0x20, r24	; 32
-  9a:	83 e3       	ldi	r24, 0x33	; 51
-  9c:	89 b9       	out	0x09, r24	; 9
-  9e:	10 bc       	out	0x20, r1	; 32
-  a0:	08 95       	ret
+00000092 <idle_state>:
+      92:	cf 93       	push	r28
+      94:	df 93       	push	r29
+      96:	80 e6       	ldi	r24, 0x60	; 96
+      98:	90 e0       	ldi	r25, 0x00	; 0
+      9a:	0e 94 21 03 	call	0x642	; 0x642 <uart_TX_string>
+      9e:	8f e6       	ldi	r24, 0x6F	; 111
+      a0:	90 e0       	ldi	r25, 0x00	; 0
+      a2:	0e 94 99 05 	call	0xb32	; 0xb32 <LCD_vidsend_sentance>
+      a6:	c0 e9       	ldi	r28, 0x90	; 144
+      a8:	d1 e0       	ldi	r29, 0x01	; 1
+      aa:	0e 94 2d 08 	call	0x105a	; 0x105a <NFC_read_tag>
+      ae:	20 ea       	ldi	r18, 0xA0	; 160
+      b0:	3f e0       	ldi	r19, 0x0F	; 15
+      b2:	fe 01       	movw	r30, r28
+      b4:	31 97       	sbiw	r30, 0x01	; 1
+      b6:	f1 f7       	brne	.-4      	; 0xb4 <idle_state+0x22>
+      b8:	21 50       	subi	r18, 0x01	; 1
+      ba:	30 40       	sbci	r19, 0x00	; 0
+      bc:	d1 f7       	brne	.-12     	; 0xb2 <idle_state+0x20>
+      be:	83 30       	cpi	r24, 0x03	; 3
+      c0:	a1 f7       	brne	.-24     	; 0xaa <idle_state+0x18>
+      c2:	8f e7       	ldi	r24, 0x7F	; 127
+      c4:	90 e0       	ldi	r25, 0x00	; 0
+      c6:	0e 94 21 03 	call	0x642	; 0x642 <uart_TX_string>
+      ca:	88 e4       	ldi	r24, 0x48	; 72
+      cc:	93 e0       	ldi	r25, 0x03	; 3
+      ce:	0e 94 e0 06 	call	0xdc0	; 0xdc0 <NFC_read_tag_data>
+      d2:	68 2f       	mov	r22, r24
+      d4:	20 91 48 03 	lds	r18, 0x0348
+      d8:	30 91 49 03 	lds	r19, 0x0349
+      dc:	40 91 4a 03 	lds	r20, 0x034A
+      e0:	50 91 4b 03 	lds	r21, 0x034B
+      e4:	80 91 40 03 	lds	r24, 0x0340
+      e8:	90 91 41 03 	lds	r25, 0x0341
+      ec:	a0 91 42 03 	lds	r26, 0x0342
+      f0:	b0 91 43 03 	lds	r27, 0x0343
+      f4:	28 17       	cp	r18, r24
+      f6:	39 07       	cpc	r19, r25
+      f8:	4a 07       	cpc	r20, r26
+      fa:	5b 07       	cpc	r21, r27
+      fc:	09 f0       	breq	.+2      	; 0x100 <idle_state+0x6e>
+      fe:	46 c0       	rjmp	.+140    	; 0x18c <idle_state+0xfa>
+     100:	66 30       	cpi	r22, 0x06	; 6
+     102:	91 f1       	breq	.+100    	; 0x168 <idle_state+0xd6>
+     104:	67 30       	cpi	r22, 0x07	; 7
+     106:	21 f0       	breq	.+8      	; 0x110 <idle_state+0x7e>
+     108:	64 30       	cpi	r22, 0x04	; 4
+     10a:	09 f0       	breq	.+2      	; 0x10e <idle_state+0x7c>
+     10c:	50 c0       	rjmp	.+160    	; 0x1ae <idle_state+0x11c>
+     10e:	3e c0       	rjmp	.+124    	; 0x18c <idle_state+0xfa>
+     110:	8e e8       	ldi	r24, 0x8E	; 142
+     112:	90 e0       	ldi	r25, 0x00	; 0
+     114:	0e 94 21 03 	call	0x642	; 0x642 <uart_TX_string>
+     118:	60 91 48 03 	lds	r22, 0x0348
+     11c:	70 91 49 03 	lds	r23, 0x0349
+     120:	80 91 4a 03 	lds	r24, 0x034A
+     124:	90 91 4b 03 	lds	r25, 0x034B
+     128:	0e 94 75 03 	call	0x6ea	; 0x6ea <uart_TX_long_number>
+     12c:	8e e9       	ldi	r24, 0x9E	; 158
+     12e:	90 e0       	ldi	r25, 0x00	; 0
+     130:	0e 94 21 03 	call	0x642	; 0x642 <uart_TX_string>
+     134:	60 91 4c 03 	lds	r22, 0x034C
+     138:	70 91 4d 03 	lds	r23, 0x034D
+     13c:	80 91 4e 03 	lds	r24, 0x034E
+     140:	90 91 4f 03 	lds	r25, 0x034F
+     144:	0e 94 75 03 	call	0x6ea	; 0x6ea <uart_TX_long_number>
+     148:	8a ea       	ldi	r24, 0xAA	; 170
+     14a:	90 e0       	ldi	r25, 0x00	; 0
+     14c:	0e 94 21 03 	call	0x642	; 0x642 <uart_TX_string>
+     150:	60 91 50 03 	lds	r22, 0x0350
+     154:	70 91 51 03 	lds	r23, 0x0351
+     158:	80 91 52 03 	lds	r24, 0x0352
+     15c:	90 91 53 03 	lds	r25, 0x0353
+     160:	0e 94 75 03 	call	0x6ea	; 0x6ea <uart_TX_long_number>
+     164:	82 e0       	ldi	r24, 0x02	; 2
+     166:	24 c0       	rjmp	.+72     	; 0x1b0 <idle_state+0x11e>
+     168:	8c eb       	ldi	r24, 0xBC	; 188
+     16a:	90 e0       	ldi	r25, 0x00	; 0
+     16c:	0e 94 21 03 	call	0x642	; 0x642 <uart_TX_string>
+     170:	82 ed       	ldi	r24, 0xD2	; 210
+     172:	90 e0       	ldi	r25, 0x00	; 0
+     174:	0e 94 99 05 	call	0xb32	; 0xb32 <LCD_vidsend_sentance>
+     178:	80 e2       	ldi	r24, 0x20	; 32
+     17a:	9e e4       	ldi	r25, 0x4E	; 78
+     17c:	20 e9       	ldi	r18, 0x90	; 144
+     17e:	31 e0       	ldi	r19, 0x01	; 1
+     180:	f9 01       	movw	r30, r18
+     182:	31 97       	sbiw	r30, 0x01	; 1
+     184:	f1 f7       	brne	.-4      	; 0x182 <idle_state+0xf0>
+     186:	01 97       	sbiw	r24, 0x01	; 1
+     188:	d9 f7       	brne	.-10     	; 0x180 <idle_state+0xee>
+     18a:	11 c0       	rjmp	.+34     	; 0x1ae <idle_state+0x11c>
+     18c:	81 ee       	ldi	r24, 0xE1	; 225
+     18e:	90 e0       	ldi	r25, 0x00	; 0
+     190:	0e 94 21 03 	call	0x642	; 0x642 <uart_TX_string>
+     194:	89 ef       	ldi	r24, 0xF9	; 249
+     196:	90 e0       	ldi	r25, 0x00	; 0
+     198:	0e 94 99 05 	call	0xb32	; 0xb32 <LCD_vidsend_sentance>
+     19c:	80 e2       	ldi	r24, 0x20	; 32
+     19e:	9e e4       	ldi	r25, 0x4E	; 78
+     1a0:	20 e9       	ldi	r18, 0x90	; 144
+     1a2:	31 e0       	ldi	r19, 0x01	; 1
+     1a4:	f9 01       	movw	r30, r18
+     1a6:	31 97       	sbiw	r30, 0x01	; 1
+     1a8:	f1 f7       	brne	.-4      	; 0x1a6 <idle_state+0x114>
+     1aa:	01 97       	sbiw	r24, 0x01	; 1
+     1ac:	d9 f7       	brne	.-10     	; 0x1a4 <idle_state+0x112>
+     1ae:	81 e0       	ldi	r24, 0x01	; 1
+     1b0:	df 91       	pop	r29
+     1b2:	cf 91       	pop	r28
+     1b4:	08 95       	ret
 
-000000a2 <De_init_UART>:
-  a2:	1b b8       	out	0x0b, r1	; 11
-  a4:	1a b8       	out	0x0a, r1	; 10
-  a6:	10 bc       	out	0x20, r1	; 32
-  a8:	19 b8       	out	0x09, r1	; 9
-  aa:	10 bc       	out	0x20, r1	; 32
-  ac:	08 95       	ret
+000001b6 <init_state>:
+     1b6:	0f 93       	push	r16
+     1b8:	1f 93       	push	r17
+     1ba:	0e 94 6b 04 	call	0x8d6	; 0x8d6 <LCD_VidInit>
+     1be:	8d e0       	ldi	r24, 0x0D	; 13
+     1c0:	91 e0       	ldi	r25, 0x01	; 1
+     1c2:	0e 94 b6 04 	call	0x96c	; 0x96c <LCD_vidsendword>
+     1c6:	0e 94 52 08 	call	0x10a4	; 0x10a4 <NFC_init>
+     1ca:	08 2f       	mov	r16, r24
+     1cc:	85 e1       	ldi	r24, 0x15	; 21
+     1ce:	91 e0       	ldi	r25, 0x01	; 1
+     1d0:	0e 94 21 03 	call	0x642	; 0x642 <uart_TX_string>
+     1d4:	00 23       	and	r16, r16
+     1d6:	91 f4       	brne	.+36     	; 0x1fc <init_state+0x46>
+     1d8:	84 e2       	ldi	r24, 0x24	; 36
+     1da:	91 e0       	ldi	r25, 0x01	; 1
+     1dc:	0e 94 21 03 	call	0x642	; 0x642 <uart_TX_string>
+     1e0:	8a e3       	ldi	r24, 0x3A	; 58
+     1e2:	91 e0       	ldi	r25, 0x01	; 1
+     1e4:	0e 94 99 05 	call	0xb32	; 0xb32 <LCD_vidsend_sentance>
+     1e8:	80 e2       	ldi	r24, 0x20	; 32
+     1ea:	9e e4       	ldi	r25, 0x4E	; 78
+     1ec:	20 e9       	ldi	r18, 0x90	; 144
+     1ee:	31 e0       	ldi	r19, 0x01	; 1
+     1f0:	f9 01       	movw	r30, r18
+     1f2:	31 97       	sbiw	r30, 0x01	; 1
+     1f4:	f1 f7       	brne	.-4      	; 0x1f2 <init_state+0x3c>
+     1f6:	01 97       	sbiw	r24, 0x01	; 1
+     1f8:	d9 f7       	brne	.-10     	; 0x1f0 <init_state+0x3a>
+     1fa:	67 c0       	rjmp	.+206    	; 0x2ca <init_state+0x114>
+     1fc:	01 30       	cpi	r16, 0x01	; 1
+     1fe:	09 f0       	breq	.+2      	; 0x202 <init_state+0x4c>
+     200:	64 c0       	rjmp	.+200    	; 0x2ca <init_state+0x114>
+     202:	8e e4       	ldi	r24, 0x4E	; 78
+     204:	91 e0       	ldi	r25, 0x01	; 1
+     206:	0e 94 21 03 	call	0x642	; 0x642 <uart_TX_string>
+     20a:	81 e0       	ldi	r24, 0x01	; 1
+     20c:	90 e0       	ldi	r25, 0x00	; 0
+     20e:	0e 94 e4 08 	call	0x11c8	; 0x11c8 <__eerd_dword_m32>
+     212:	60 93 44 03 	sts	0x0344, r22
+     216:	70 93 45 03 	sts	0x0345, r23
+     21a:	80 93 46 03 	sts	0x0346, r24
+     21e:	90 93 47 03 	sts	0x0347, r25
+     222:	00 e4       	ldi	r16, 0x40	; 64
+     224:	1c e9       	ldi	r17, 0x9C	; 156
+     226:	c8 01       	movw	r24, r16
+     228:	01 97       	sbiw	r24, 0x01	; 1
+     22a:	f1 f7       	brne	.-4      	; 0x228 <init_state+0x72>
+     22c:	84 e0       	ldi	r24, 0x04	; 4
+     22e:	90 e0       	ldi	r25, 0x00	; 0
+     230:	0e 94 e4 08 	call	0x11c8	; 0x11c8 <__eerd_dword_m32>
+     234:	60 93 54 03 	sts	0x0354, r22
+     238:	70 93 55 03 	sts	0x0355, r23
+     23c:	80 93 56 03 	sts	0x0356, r24
+     240:	90 93 57 03 	sts	0x0357, r25
+     244:	c8 01       	movw	r24, r16
+     246:	01 97       	sbiw	r24, 0x01	; 1
+     248:	f1 f7       	brne	.-4      	; 0x246 <init_state+0x90>
+     24a:	88 e0       	ldi	r24, 0x08	; 8
+     24c:	90 e0       	ldi	r25, 0x00	; 0
+     24e:	0e 94 e4 08 	call	0x11c8	; 0x11c8 <__eerd_dword_m32>
+     252:	60 93 40 03 	sts	0x0340, r22
+     256:	70 93 41 03 	sts	0x0341, r23
+     25a:	80 93 42 03 	sts	0x0342, r24
+     25e:	90 93 43 03 	sts	0x0343, r25
+     262:	c8 01       	movw	r24, r16
+     264:	01 97       	sbiw	r24, 0x01	; 1
+     266:	f1 f7       	brne	.-4      	; 0x264 <init_state+0xae>
+     268:	80 e6       	ldi	r24, 0x60	; 96
+     26a:	91 e0       	ldi	r25, 0x01	; 1
+     26c:	0e 94 21 03 	call	0x642	; 0x642 <uart_TX_string>
+     270:	80 91 44 03 	lds	r24, 0x0344
+     274:	90 91 45 03 	lds	r25, 0x0345
+     278:	0e 94 97 03 	call	0x72e	; 0x72e <uart_TX_number>
+     27c:	86 e7       	ldi	r24, 0x76	; 118
+     27e:	91 e0       	ldi	r25, 0x01	; 1
+     280:	0e 94 21 03 	call	0x642	; 0x642 <uart_TX_string>
+     284:	80 91 54 03 	lds	r24, 0x0354
+     288:	90 91 55 03 	lds	r25, 0x0355
+     28c:	0e 94 97 03 	call	0x72e	; 0x72e <uart_TX_number>
+     290:	8f e8       	ldi	r24, 0x8F	; 143
+     292:	91 e0       	ldi	r25, 0x01	; 1
+     294:	0e 94 21 03 	call	0x642	; 0x642 <uart_TX_string>
+     298:	80 91 40 03 	lds	r24, 0x0340
+     29c:	90 91 41 03 	lds	r25, 0x0341
+     2a0:	0e 94 97 03 	call	0x72e	; 0x72e <uart_TX_number>
+     2a4:	81 ea       	ldi	r24, 0xA1	; 161
+     2a6:	91 e0       	ldi	r25, 0x01	; 1
+     2a8:	0e 94 21 03 	call	0x642	; 0x642 <uart_TX_string>
+     2ac:	84 ea       	ldi	r24, 0xA4	; 164
+     2ae:	91 e0       	ldi	r25, 0x01	; 1
+     2b0:	0e 94 99 05 	call	0xb32	; 0xb32 <LCD_vidsend_sentance>
+     2b4:	80 e2       	ldi	r24, 0x20	; 32
+     2b6:	9e e4       	ldi	r25, 0x4E	; 78
+     2b8:	20 e9       	ldi	r18, 0x90	; 144
+     2ba:	31 e0       	ldi	r19, 0x01	; 1
+     2bc:	f9 01       	movw	r30, r18
+     2be:	31 97       	sbiw	r30, 0x01	; 1
+     2c0:	f1 f7       	brne	.-4      	; 0x2be <init_state+0x108>
+     2c2:	01 97       	sbiw	r24, 0x01	; 1
+     2c4:	d9 f7       	brne	.-10     	; 0x2bc <init_state+0x106>
+     2c6:	81 e0       	ldi	r24, 0x01	; 1
+     2c8:	01 c0       	rjmp	.+2      	; 0x2cc <init_state+0x116>
+     2ca:	80 e0       	ldi	r24, 0x00	; 0
+     2cc:	1f 91       	pop	r17
+     2ce:	0f 91       	pop	r16
+     2d0:	08 95       	ret
 
-000000ae <init_UART_115200>:
-  ae:	82 e0       	ldi	r24, 0x02	; 2
-  b0:	8b b9       	out	0x0b, r24	; 11
-  b2:	88 e9       	ldi	r24, 0x98	; 152
-  b4:	8a b9       	out	0x0a, r24	; 10
-  b6:	86 e8       	ldi	r24, 0x86	; 134
-  b8:	80 bd       	out	0x20, r24	; 32
-  ba:	80 e1       	ldi	r24, 0x10	; 16
-  bc:	89 b9       	out	0x09, r24	; 9
-  be:	10 bc       	out	0x20, r1	; 32
-  c0:	08 95       	ret
+000002d2 <load_card_state>:
+     2d2:	82 eb       	ldi	r24, 0xB2	; 178
+     2d4:	91 e0       	ldi	r25, 0x01	; 1
+     2d6:	0e 94 21 03 	call	0x642	; 0x642 <uart_TX_string>
+     2da:	60 91 54 03 	lds	r22, 0x0354
+     2de:	70 91 55 03 	lds	r23, 0x0355
+     2e2:	80 91 56 03 	lds	r24, 0x0356
+     2e6:	90 91 57 03 	lds	r25, 0x0357
+     2ea:	20 91 50 03 	lds	r18, 0x0350
+     2ee:	30 91 51 03 	lds	r19, 0x0351
+     2f2:	40 91 52 03 	lds	r20, 0x0352
+     2f6:	50 91 53 03 	lds	r21, 0x0353
+     2fa:	62 0f       	add	r22, r18
+     2fc:	73 1f       	adc	r23, r19
+     2fe:	84 1f       	adc	r24, r20
+     300:	95 1f       	adc	r25, r21
+     302:	60 93 50 03 	sts	0x0350, r22
+     306:	70 93 51 03 	sts	0x0351, r23
+     30a:	80 93 52 03 	sts	0x0352, r24
+     30e:	90 93 53 03 	sts	0x0353, r25
+     312:	0e 94 c2 07 	call	0xf84	; 0xf84 <NFC_write_Tag_Points>
+     316:	87 30       	cpi	r24, 0x07	; 7
+     318:	09 f0       	breq	.+2      	; 0x31c <load_card_state+0x4a>
+     31a:	3f c0       	rjmp	.+126    	; 0x39a <load_card_state+0xc8>
+     31c:	86 ec       	ldi	r24, 0xC6	; 198
+     31e:	91 e0       	ldi	r25, 0x01	; 1
+     320:	0e 94 21 03 	call	0x642	; 0x642 <uart_TX_string>
+     324:	80 91 54 03 	lds	r24, 0x0354
+     328:	90 91 55 03 	lds	r25, 0x0355
+     32c:	0e 94 97 03 	call	0x72e	; 0x72e <uart_TX_number>
+     330:	8e ed       	ldi	r24, 0xDE	; 222
+     332:	91 e0       	ldi	r25, 0x01	; 1
+     334:	0e 94 21 03 	call	0x642	; 0x642 <uart_TX_string>
+     338:	80 91 50 03 	lds	r24, 0x0350
+     33c:	90 91 51 03 	lds	r25, 0x0351
+     340:	0e 94 97 03 	call	0x72e	; 0x72e <uart_TX_number>
+     344:	81 ee       	ldi	r24, 0xE1	; 225
+     346:	91 e0       	ldi	r25, 0x01	; 1
+     348:	0e 94 99 05 	call	0xb32	; 0xb32 <LCD_vidsend_sentance>
+     34c:	80 91 54 03 	lds	r24, 0x0354
+     350:	90 91 55 03 	lds	r25, 0x0355
+     354:	0e 94 f3 05 	call	0xbe6	; 0xbe6 <LCD_SEND_number>
+     358:	8e ed       	ldi	r24, 0xDE	; 222
+     35a:	91 e0       	ldi	r25, 0x01	; 1
+     35c:	0e 94 b6 04 	call	0x96c	; 0x96c <LCD_vidsendword>
+     360:	60 91 50 03 	lds	r22, 0x0350
+     364:	70 91 51 03 	lds	r23, 0x0351
+     368:	80 91 52 03 	lds	r24, 0x0352
+     36c:	90 91 53 03 	lds	r25, 0x0353
+     370:	0e 94 d1 05 	call	0xba2	; 0xba2 <LCD_SEND_long_number>
+     374:	80 e2       	ldi	r24, 0x20	; 32
+     376:	9e e4       	ldi	r25, 0x4E	; 78
+     378:	20 e9       	ldi	r18, 0x90	; 144
+     37a:	31 e0       	ldi	r19, 0x01	; 1
+     37c:	f9 01       	movw	r30, r18
+     37e:	31 97       	sbiw	r30, 0x01	; 1
+     380:	f1 f7       	brne	.-4      	; 0x37e <load_card_state+0xac>
+     382:	01 97       	sbiw	r24, 0x01	; 1
+     384:	d9 f7       	brne	.-10     	; 0x37c <load_card_state+0xaa>
+     386:	80 e2       	ldi	r24, 0x20	; 32
+     388:	9e e4       	ldi	r25, 0x4E	; 78
+     38a:	20 e9       	ldi	r18, 0x90	; 144
+     38c:	31 e0       	ldi	r19, 0x01	; 1
+     38e:	f9 01       	movw	r30, r18
+     390:	31 97       	sbiw	r30, 0x01	; 1
+     392:	f1 f7       	brne	.-4      	; 0x390 <load_card_state+0xbe>
+     394:	01 97       	sbiw	r24, 0x01	; 1
+     396:	d9 f7       	brne	.-10     	; 0x38e <load_card_state+0xbc>
+     398:	11 c0       	rjmp	.+34     	; 0x3bc <load_card_state+0xea>
+     39a:	88 ef       	ldi	r24, 0xF8	; 248
+     39c:	91 e0       	ldi	r25, 0x01	; 1
+     39e:	0e 94 99 05 	call	0xb32	; 0xb32 <LCD_vidsend_sentance>
+     3a2:	80 e2       	ldi	r24, 0x20	; 32
+     3a4:	9e e4       	ldi	r25, 0x4E	; 78
+     3a6:	20 e9       	ldi	r18, 0x90	; 144
+     3a8:	31 e0       	ldi	r19, 0x01	; 1
+     3aa:	f9 01       	movw	r30, r18
+     3ac:	31 97       	sbiw	r30, 0x01	; 1
+     3ae:	f1 f7       	brne	.-4      	; 0x3ac <load_card_state+0xda>
+     3b0:	01 97       	sbiw	r24, 0x01	; 1
+     3b2:	d9 f7       	brne	.-10     	; 0x3aa <load_card_state+0xd8>
+     3b4:	8d e0       	ldi	r24, 0x0D	; 13
+     3b6:	92 e0       	ldi	r25, 0x02	; 2
+     3b8:	0e 94 21 03 	call	0x642	; 0x642 <uart_TX_string>
+     3bc:	10 92 54 03 	sts	0x0354, r1
+     3c0:	10 92 55 03 	sts	0x0355, r1
+     3c4:	10 92 56 03 	sts	0x0356, r1
+     3c8:	10 92 57 03 	sts	0x0357, r1
+     3cc:	81 e0       	ldi	r24, 0x01	; 1
+     3ce:	08 95       	ret
 
-000000c2 <UART_SendChar>:
-  c2:	5d 9b       	sbis	0x0b, 5	; 11
-  c4:	fe cf       	rjmp	.-4      	; 0xc2 <UART_SendChar>
-  c6:	8c b9       	out	0x0c, r24	; 12
-  c8:	08 95       	ret
+000003d0 <master_card_state>:
+     3d0:	85 e2       	ldi	r24, 0x25	; 37
+     3d2:	92 e0       	ldi	r25, 0x02	; 2
+     3d4:	0e 94 21 03 	call	0x642	; 0x642 <uart_TX_string>
+     3d8:	8b e3       	ldi	r24, 0x3B	; 59
+     3da:	92 e0       	ldi	r25, 0x02	; 2
+     3dc:	0e 94 99 05 	call	0xb32	; 0xb32 <LCD_vidsend_sentance>
+     3e0:	ff cf       	rjmp	.-2      	; 0x3e0 <master_card_state+0x10>
 
-000000ca <UART_getChar>:
-  ca:	5f 9b       	sbis	0x0b, 7	; 11
-  cc:	fe cf       	rjmp	.-4      	; 0xca <UART_getChar>
-  ce:	8c b1       	in	r24, 0x0c	; 12
-  d0:	08 95       	ret
+000003e2 <user_card_state>:
+     3e2:	1f 93       	push	r17
+     3e4:	cf 93       	push	r28
+     3e6:	df 93       	push	r29
+     3e8:	86 e5       	ldi	r24, 0x56	; 86
+     3ea:	92 e0       	ldi	r25, 0x02	; 2
+     3ec:	0e 94 21 03 	call	0x642	; 0x642 <uart_TX_string>
+     3f0:	20 91 50 03 	lds	r18, 0x0350
+     3f4:	30 91 51 03 	lds	r19, 0x0351
+     3f8:	40 91 52 03 	lds	r20, 0x0352
+     3fc:	50 91 53 03 	lds	r21, 0x0353
+     400:	80 91 44 03 	lds	r24, 0x0344
+     404:	90 91 45 03 	lds	r25, 0x0345
+     408:	a0 91 46 03 	lds	r26, 0x0346
+     40c:	b0 91 47 03 	lds	r27, 0x0347
+     410:	28 17       	cp	r18, r24
+     412:	39 07       	cpc	r19, r25
+     414:	4a 07       	cpc	r20, r26
+     416:	5b 07       	cpc	r21, r27
+     418:	08 f0       	brcs	.+2      	; 0x41c <user_card_state+0x3a>
+     41a:	41 c0       	rjmp	.+130    	; 0x49e <user_card_state+0xbc>
+     41c:	0e 94 c3 04 	call	0x986	; 0x986 <LCD_vidClear>
+     420:	80 e0       	ldi	r24, 0x00	; 0
+     422:	60 e0       	ldi	r22, 0x00	; 0
+     424:	0e 94 8b 05 	call	0xb16	; 0xb16 <LCD_vidGoTo>
+     428:	8a e6       	ldi	r24, 0x6A	; 106
+     42a:	92 e0       	ldi	r25, 0x02	; 2
+     42c:	0e 94 b6 04 	call	0x96c	; 0x96c <LCD_vidsendword>
+     430:	80 91 4c 03 	lds	r24, 0x034C
+     434:	90 91 4d 03 	lds	r25, 0x034D
+     438:	0e 94 f3 05 	call	0xbe6	; 0xbe6 <LCD_SEND_number>
+     43c:	80 e0       	ldi	r24, 0x00	; 0
+     43e:	6e e0       	ldi	r22, 0x0E	; 14
+     440:	0e 94 8b 05 	call	0xb16	; 0xb16 <LCD_vidGoTo>
+     444:	80 91 44 03 	lds	r24, 0x0344
+     448:	90 91 45 03 	lds	r25, 0x0345
+     44c:	0e 94 f3 05 	call	0xbe6	; 0xbe6 <LCD_SEND_number>
+     450:	81 e0       	ldi	r24, 0x01	; 1
+     452:	60 e0       	ldi	r22, 0x00	; 0
+     454:	0e 94 8b 05 	call	0xb16	; 0xb16 <LCD_vidGoTo>
+     458:	84 e7       	ldi	r24, 0x74	; 116
+     45a:	92 e0       	ldi	r25, 0x02	; 2
+     45c:	0e 94 b6 04 	call	0x96c	; 0x96c <LCD_vidsendword>
+     460:	80 91 50 03 	lds	r24, 0x0350
+     464:	90 91 51 03 	lds	r25, 0x0351
+     468:	0e 94 f3 05 	call	0xbe6	; 0xbe6 <LCD_SEND_number>
+     46c:	80 e1       	ldi	r24, 0x10	; 16
+     46e:	97 e2       	ldi	r25, 0x27	; 39
+     470:	20 e9       	ldi	r18, 0x90	; 144
+     472:	31 e0       	ldi	r19, 0x01	; 1
+     474:	f9 01       	movw	r30, r18
+     476:	31 97       	sbiw	r30, 0x01	; 1
+     478:	f1 f7       	brne	.-4      	; 0x476 <user_card_state+0x94>
+     47a:	01 97       	sbiw	r24, 0x01	; 1
+     47c:	d9 f7       	brne	.-10     	; 0x474 <user_card_state+0x92>
+     47e:	0e 94 c3 04 	call	0x986	; 0x986 <LCD_vidClear>
+     482:	8e e7       	ldi	r24, 0x7E	; 126
+     484:	92 e0       	ldi	r25, 0x02	; 2
+     486:	0e 94 b6 04 	call	0x96c	; 0x96c <LCD_vidsendword>
+     48a:	80 e3       	ldi	r24, 0x30	; 48
+     48c:	95 e7       	ldi	r25, 0x75	; 117
+     48e:	20 e9       	ldi	r18, 0x90	; 144
+     490:	31 e0       	ldi	r19, 0x01	; 1
+     492:	f9 01       	movw	r30, r18
+     494:	31 97       	sbiw	r30, 0x01	; 1
+     496:	f1 f7       	brne	.-4      	; 0x494 <user_card_state+0xb2>
+     498:	01 97       	sbiw	r24, 0x01	; 1
+     49a:	d9 f7       	brne	.-10     	; 0x492 <user_card_state+0xb0>
+     49c:	aa c0       	rjmp	.+340    	; 0x5f2 <user_card_state+0x210>
+     49e:	0e 94 c3 04 	call	0x986	; 0x986 <LCD_vidClear>
+     4a2:	80 e0       	ldi	r24, 0x00	; 0
+     4a4:	60 e0       	ldi	r22, 0x00	; 0
+     4a6:	0e 94 8b 05 	call	0xb16	; 0xb16 <LCD_vidGoTo>
+     4aa:	8a e6       	ldi	r24, 0x6A	; 106
+     4ac:	92 e0       	ldi	r25, 0x02	; 2
+     4ae:	0e 94 b6 04 	call	0x96c	; 0x96c <LCD_vidsendword>
+     4b2:	80 91 4c 03 	lds	r24, 0x034C
+     4b6:	90 91 4d 03 	lds	r25, 0x034D
+     4ba:	0e 94 f3 05 	call	0xbe6	; 0xbe6 <LCD_SEND_number>
+     4be:	80 e0       	ldi	r24, 0x00	; 0
+     4c0:	6e e0       	ldi	r22, 0x0E	; 14
+     4c2:	0e 94 8b 05 	call	0xb16	; 0xb16 <LCD_vidGoTo>
+     4c6:	80 91 44 03 	lds	r24, 0x0344
+     4ca:	90 91 45 03 	lds	r25, 0x0345
+     4ce:	0e 94 f3 05 	call	0xbe6	; 0xbe6 <LCD_SEND_number>
+     4d2:	81 e0       	ldi	r24, 0x01	; 1
+     4d4:	60 e0       	ldi	r22, 0x00	; 0
+     4d6:	0e 94 8b 05 	call	0xb16	; 0xb16 <LCD_vidGoTo>
+     4da:	84 e7       	ldi	r24, 0x74	; 116
+     4dc:	92 e0       	ldi	r25, 0x02	; 2
+     4de:	0e 94 b6 04 	call	0x96c	; 0x96c <LCD_vidsendword>
+     4e2:	80 91 50 03 	lds	r24, 0x0350
+     4e6:	90 91 51 03 	lds	r25, 0x0351
+     4ea:	0e 94 f3 05 	call	0xbe6	; 0xbe6 <LCD_SEND_number>
+     4ee:	60 91 50 03 	lds	r22, 0x0350
+     4f2:	70 91 51 03 	lds	r23, 0x0351
+     4f6:	80 91 52 03 	lds	r24, 0x0352
+     4fa:	90 91 53 03 	lds	r25, 0x0353
+     4fe:	20 91 44 03 	lds	r18, 0x0344
+     502:	30 91 45 03 	lds	r19, 0x0345
+     506:	40 91 46 03 	lds	r20, 0x0346
+     50a:	50 91 47 03 	lds	r21, 0x0347
+     50e:	62 1b       	sub	r22, r18
+     510:	73 0b       	sbc	r23, r19
+     512:	84 0b       	sbc	r24, r20
+     514:	95 0b       	sbc	r25, r21
+     516:	60 93 50 03 	sts	0x0350, r22
+     51a:	70 93 51 03 	sts	0x0351, r23
+     51e:	80 93 52 03 	sts	0x0352, r24
+     522:	90 93 53 03 	sts	0x0353, r25
+     526:	0e 94 c2 07 	call	0xf84	; 0xf84 <NFC_write_Tag_Points>
+     52a:	87 30       	cpi	r24, 0x07	; 7
+     52c:	09 f0       	breq	.+2      	; 0x530 <user_card_state+0x14e>
+     52e:	50 c0       	rjmp	.+160    	; 0x5d0 <user_card_state+0x1ee>
+     530:	80 e9       	ldi	r24, 0x90	; 144
+     532:	92 e0       	ldi	r25, 0x02	; 2
+     534:	0e 94 21 03 	call	0x642	; 0x642 <uart_TX_string>
+     538:	80 91 54 03 	lds	r24, 0x0354
+     53c:	90 91 55 03 	lds	r25, 0x0355
+     540:	a0 91 56 03 	lds	r26, 0x0356
+     544:	b0 91 57 03 	lds	r27, 0x0357
+     548:	20 91 44 03 	lds	r18, 0x0344
+     54c:	30 91 45 03 	lds	r19, 0x0345
+     550:	40 91 46 03 	lds	r20, 0x0346
+     554:	50 91 47 03 	lds	r21, 0x0347
+     558:	82 0f       	add	r24, r18
+     55a:	93 1f       	adc	r25, r19
+     55c:	a4 1f       	adc	r26, r20
+     55e:	b5 1f       	adc	r27, r21
+     560:	80 93 54 03 	sts	0x0354, r24
+     564:	90 93 55 03 	sts	0x0355, r25
+     568:	a0 93 56 03 	sts	0x0356, r26
+     56c:	b0 93 57 03 	sts	0x0357, r27
+     570:	80 e1       	ldi	r24, 0x10	; 16
+     572:	97 e2       	ldi	r25, 0x27	; 39
+     574:	20 e9       	ldi	r18, 0x90	; 144
+     576:	31 e0       	ldi	r19, 0x01	; 1
+     578:	f9 01       	movw	r30, r18
+     57a:	31 97       	sbiw	r30, 0x01	; 1
+     57c:	f1 f7       	brne	.-4      	; 0x57a <user_card_state+0x198>
+     57e:	01 97       	sbiw	r24, 0x01	; 1
+     580:	d9 f7       	brne	.-10     	; 0x578 <user_card_state+0x196>
+     582:	10 e0       	ldi	r17, 0x00	; 0
+     584:	c0 e9       	ldi	r28, 0x90	; 144
+     586:	d1 e0       	ldi	r29, 0x01	; 1
+     588:	81 e0       	ldi	r24, 0x01	; 1
+     58a:	69 e0       	ldi	r22, 0x09	; 9
+     58c:	0e 94 8b 05 	call	0xb16	; 0xb16 <LCD_vidGoTo>
+     590:	8a ea       	ldi	r24, 0xAA	; 170
+     592:	92 e0       	ldi	r25, 0x02	; 2
+     594:	0e 94 b6 04 	call	0x96c	; 0x96c <LCD_vidsendword>
+     598:	88 e8       	ldi	r24, 0x88	; 136
+     59a:	93 e1       	ldi	r25, 0x13	; 19
+     59c:	fe 01       	movw	r30, r28
+     59e:	31 97       	sbiw	r30, 0x01	; 1
+     5a0:	f1 f7       	brne	.-4      	; 0x59e <user_card_state+0x1bc>
+     5a2:	01 97       	sbiw	r24, 0x01	; 1
+     5a4:	d9 f7       	brne	.-10     	; 0x59c <user_card_state+0x1ba>
+     5a6:	81 e0       	ldi	r24, 0x01	; 1
+     5a8:	69 e0       	ldi	r22, 0x09	; 9
+     5aa:	0e 94 8b 05 	call	0xb16	; 0xb16 <LCD_vidGoTo>
+     5ae:	80 91 50 03 	lds	r24, 0x0350
+     5b2:	90 91 51 03 	lds	r25, 0x0351
+     5b6:	0e 94 f3 05 	call	0xbe6	; 0xbe6 <LCD_SEND_number>
+     5ba:	88 e8       	ldi	r24, 0x88	; 136
+     5bc:	93 e1       	ldi	r25, 0x13	; 19
+     5be:	fe 01       	movw	r30, r28
+     5c0:	31 97       	sbiw	r30, 0x01	; 1
+     5c2:	f1 f7       	brne	.-4      	; 0x5c0 <user_card_state+0x1de>
+     5c4:	01 97       	sbiw	r24, 0x01	; 1
+     5c6:	d9 f7       	brne	.-10     	; 0x5be <user_card_state+0x1dc>
+     5c8:	1f 5f       	subi	r17, 0xFF	; 255
+     5ca:	15 30       	cpi	r17, 0x05	; 5
+     5cc:	e9 f6       	brne	.-70     	; 0x588 <user_card_state+0x1a6>
+     5ce:	11 c0       	rjmp	.+34     	; 0x5f2 <user_card_state+0x210>
+     5d0:	82 eb       	ldi	r24, 0xB2	; 178
+     5d2:	92 e0       	ldi	r25, 0x02	; 2
+     5d4:	0e 94 b6 04 	call	0x96c	; 0x96c <LCD_vidsendword>
+     5d8:	80 e2       	ldi	r24, 0x20	; 32
+     5da:	9e e4       	ldi	r25, 0x4E	; 78
+     5dc:	20 e9       	ldi	r18, 0x90	; 144
+     5de:	31 e0       	ldi	r19, 0x01	; 1
+     5e0:	f9 01       	movw	r30, r18
+     5e2:	31 97       	sbiw	r30, 0x01	; 1
+     5e4:	f1 f7       	brne	.-4      	; 0x5e2 <user_card_state+0x200>
+     5e6:	01 97       	sbiw	r24, 0x01	; 1
+     5e8:	d9 f7       	brne	.-10     	; 0x5e0 <user_card_state+0x1fe>
+     5ea:	87 ec       	ldi	r24, 0xC7	; 199
+     5ec:	92 e0       	ldi	r25, 0x02	; 2
+     5ee:	0e 94 21 03 	call	0x642	; 0x642 <uart_TX_string>
+     5f2:	81 e0       	ldi	r24, 0x01	; 1
+     5f4:	df 91       	pop	r29
+     5f6:	cf 91       	pop	r28
+     5f8:	1f 91       	pop	r17
+     5fa:	08 95       	ret
 
-000000d2 <UART_SEND_string>:
-  d2:	fc 01       	movw	r30, r24
-  d4:	04 c0       	rjmp	.+8      	; 0xde <UART_SEND_string+0xc>
-  d6:	5d 9b       	sbis	0x0b, 5	; 11
-  d8:	fe cf       	rjmp	.-4      	; 0xd6 <UART_SEND_string+0x4>
-  da:	8c b9       	out	0x0c, r24	; 12
-  dc:	31 96       	adiw	r30, 0x01	; 1
-  de:	80 81       	ld	r24, Z
-  e0:	88 23       	and	r24, r24
-  e2:	c9 f7       	brne	.-14     	; 0xd6 <UART_SEND_string+0x4>
-  e4:	08 95       	ret
+000005fc <uart_init>:
+     5fc:	d1 9a       	sbi	0x1a, 1	; 26
+     5fe:	d9 9a       	sbi	0x1b, 1	; 27
+     600:	08 95       	ret
 
-000000e6 <UART_set_call_back_function>:
-  e6:	90 93 3f 01 	sts	0x013F, r25
-  ea:	80 93 3e 01 	sts	0x013E, r24
-  ee:	08 95       	ret
+00000602 <uart_tx>:
+     602:	58 2f       	mov	r21, r24
+     604:	d9 98       	cbi	0x1b, 1	; 27
+     606:	80 e4       	ldi	r24, 0x40	; 64
+     608:	93 e0       	ldi	r25, 0x03	; 3
+     60a:	01 97       	sbiw	r24, 0x01	; 1
+     60c:	f1 f7       	brne	.-4      	; 0x60a <uart_tx+0x8>
+     60e:	41 e0       	ldi	r20, 0x01	; 1
+     610:	20 e0       	ldi	r18, 0x00	; 0
+     612:	30 e0       	ldi	r19, 0x00	; 0
+     614:	60 e4       	ldi	r22, 0x40	; 64
+     616:	73 e0       	ldi	r23, 0x03	; 3
+     618:	84 2f       	mov	r24, r20
+     61a:	85 23       	and	r24, r21
+     61c:	11 f0       	breq	.+4      	; 0x622 <uart_tx+0x20>
+     61e:	d9 9a       	sbi	0x1b, 1	; 27
+     620:	01 c0       	rjmp	.+2      	; 0x624 <uart_tx+0x22>
+     622:	d9 98       	cbi	0x1b, 1	; 27
+     624:	cb 01       	movw	r24, r22
+     626:	01 97       	sbiw	r24, 0x01	; 1
+     628:	f1 f7       	brne	.-4      	; 0x626 <uart_tx+0x24>
+     62a:	44 0f       	add	r20, r20
+     62c:	2f 5f       	subi	r18, 0xFF	; 255
+     62e:	3f 4f       	sbci	r19, 0xFF	; 255
+     630:	28 30       	cpi	r18, 0x08	; 8
+     632:	31 05       	cpc	r19, r1
+     634:	89 f7       	brne	.-30     	; 0x618 <uart_tx+0x16>
+     636:	d9 9a       	sbi	0x1b, 1	; 27
+     638:	80 e4       	ldi	r24, 0x40	; 64
+     63a:	93 e0       	ldi	r25, 0x03	; 3
+     63c:	01 97       	sbiw	r24, 0x01	; 1
+     63e:	f1 f7       	brne	.-4      	; 0x63c <uart_tx+0x3a>
+     640:	08 95       	ret
 
-000000f0 <__vector_13>:
-  f0:	1f 92       	push	r1
-  f2:	0f 92       	push	r0
-  f4:	0f b6       	in	r0, 0x3f	; 63
-  f6:	0f 92       	push	r0
-  f8:	11 24       	eor	r1, r1
-  fa:	2f 93       	push	r18
-  fc:	3f 93       	push	r19
-  fe:	4f 93       	push	r20
- 100:	5f 93       	push	r21
- 102:	6f 93       	push	r22
- 104:	7f 93       	push	r23
- 106:	8f 93       	push	r24
- 108:	9f 93       	push	r25
- 10a:	af 93       	push	r26
- 10c:	bf 93       	push	r27
- 10e:	ef 93       	push	r30
- 110:	ff 93       	push	r31
- 112:	e0 91 3e 01 	lds	r30, 0x013E
- 116:	f0 91 3f 01 	lds	r31, 0x013F
- 11a:	09 95       	icall
- 11c:	ff 91       	pop	r31
- 11e:	ef 91       	pop	r30
- 120:	bf 91       	pop	r27
- 122:	af 91       	pop	r26
- 124:	9f 91       	pop	r25
- 126:	8f 91       	pop	r24
- 128:	7f 91       	pop	r23
- 12a:	6f 91       	pop	r22
- 12c:	5f 91       	pop	r21
- 12e:	4f 91       	pop	r20
- 130:	3f 91       	pop	r19
- 132:	2f 91       	pop	r18
- 134:	0f 90       	pop	r0
- 136:	0f be       	out	0x3f, r0	; 63
- 138:	0f 90       	pop	r0
- 13a:	1f 90       	pop	r1
- 13c:	18 95       	reti
+00000642 <uart_TX_string>:
+     642:	1f 93       	push	r17
+     644:	cf 93       	push	r28
+     646:	df 93       	push	r29
+     648:	ec 01       	movw	r28, r24
+     64a:	10 e0       	ldi	r17, 0x00	; 0
+     64c:	03 c0       	rjmp	.+6      	; 0x654 <uart_TX_string+0x12>
+     64e:	0e 94 01 03 	call	0x602	; 0x602 <uart_tx>
+     652:	1f 5f       	subi	r17, 0xFF	; 255
+     654:	fe 01       	movw	r30, r28
+     656:	e1 0f       	add	r30, r17
+     658:	f1 1d       	adc	r31, r1
+     65a:	80 81       	ld	r24, Z
+     65c:	88 23       	and	r24, r24
+     65e:	b9 f7       	brne	.-18     	; 0x64e <uart_TX_string+0xc>
+     660:	df 91       	pop	r29
+     662:	cf 91       	pop	r28
+     664:	1f 91       	pop	r17
+     666:	08 95       	ret
 
-0000013e <UART_SEND_number>:
- 13e:	0f 93       	push	r16
- 140:	1f 93       	push	r17
- 142:	df 93       	push	r29
- 144:	cf 93       	push	r28
- 146:	cd b7       	in	r28, 0x3d	; 61
- 148:	de b7       	in	r29, 0x3e	; 62
- 14a:	64 97       	sbiw	r28, 0x14	; 20
- 14c:	0f b6       	in	r0, 0x3f	; 63
- 14e:	f8 94       	cli
- 150:	de bf       	out	0x3e, r29	; 62
- 152:	0f be       	out	0x3f, r0	; 63
- 154:	cd bf       	out	0x3d, r28	; 61
- 156:	8e 01       	movw	r16, r28
- 158:	0f 5f       	subi	r16, 0xFF	; 255
- 15a:	1f 4f       	sbci	r17, 0xFF	; 255
- 15c:	b8 01       	movw	r22, r16
- 15e:	4a e0       	ldi	r20, 0x0A	; 10
- 160:	50 e0       	ldi	r21, 0x00	; 0
- 162:	0e 94 a8 06 	call	0xd50	; 0xd50 <itoa>
- 166:	c8 01       	movw	r24, r16
- 168:	0e 94 69 00 	call	0xd2	; 0xd2 <UART_SEND_string>
- 16c:	64 96       	adiw	r28, 0x14	; 20
- 16e:	0f b6       	in	r0, 0x3f	; 63
- 170:	f8 94       	cli
- 172:	de bf       	out	0x3e, r29	; 62
- 174:	0f be       	out	0x3f, r0	; 63
- 176:	cd bf       	out	0x3d, r28	; 61
- 178:	cf 91       	pop	r28
- 17a:	df 91       	pop	r29
- 17c:	1f 91       	pop	r17
- 17e:	0f 91       	pop	r16
- 180:	08 95       	ret
+00000668 <uart_tx_str>:
+     668:	cf 93       	push	r28
+     66a:	df 93       	push	r29
+     66c:	ec 01       	movw	r28, r24
+     66e:	fc 01       	movw	r30, r24
+     670:	84 91       	lpm	r24, Z+
+     672:	05 c0       	rjmp	.+10     	; 0x67e <uart_tx_str+0x16>
+     674:	21 96       	adiw	r28, 0x01	; 1
+     676:	0e 94 01 03 	call	0x602	; 0x602 <uart_tx>
+     67a:	fe 01       	movw	r30, r28
+     67c:	84 91       	lpm	r24, Z+
+     67e:	88 23       	and	r24, r24
+     680:	c9 f7       	brne	.-14     	; 0x674 <uart_tx_str+0xc>
+     682:	df 91       	pop	r29
+     684:	cf 91       	pop	r28
+     686:	08 95       	ret
 
-00000182 <LCD_vidSendCommand>:
- 182:	ae 98       	cbi	0x15, 6	; 21
- 184:	98 b3       	in	r25, 0x18	; 24
- 186:	28 2f       	mov	r18, r24
- 188:	20 7f       	andi	r18, 0xF0	; 240
- 18a:	9f 70       	andi	r25, 0x0F	; 15
- 18c:	29 2b       	or	r18, r25
- 18e:	28 bb       	out	0x18, r18	; 24
- 190:	af 9a       	sbi	0x15, 7	; 21
- 192:	20 e4       	ldi	r18, 0x40	; 64
- 194:	3f e1       	ldi	r19, 0x1F	; 31
- 196:	f9 01       	movw	r30, r18
- 198:	31 97       	sbiw	r30, 0x01	; 1
- 19a:	f1 f7       	brne	.-4      	; 0x198 <LCD_vidSendCommand+0x16>
- 19c:	af 98       	cbi	0x15, 7	; 21
- 19e:	95 e0       	ldi	r25, 0x05	; 5
- 1a0:	9a 95       	dec	r25
- 1a2:	f1 f7       	brne	.-4      	; 0x1a0 <LCD_vidSendCommand+0x1e>
- 1a4:	98 b3       	in	r25, 0x18	; 24
- 1a6:	82 95       	swap	r24
- 1a8:	80 7f       	andi	r24, 0xF0	; 240
- 1aa:	9f 70       	andi	r25, 0x0F	; 15
- 1ac:	98 2b       	or	r25, r24
- 1ae:	98 bb       	out	0x18, r25	; 24
- 1b0:	af 9a       	sbi	0x15, 7	; 21
- 1b2:	c9 01       	movw	r24, r18
- 1b4:	01 97       	sbiw	r24, 0x01	; 1
- 1b6:	f1 f7       	brne	.-4      	; 0x1b4 <LCD_vidSendCommand+0x32>
- 1b8:	af 98       	cbi	0x15, 7	; 21
- 1ba:	c9 01       	movw	r24, r18
- 1bc:	01 97       	sbiw	r24, 0x01	; 1
- 1be:	f1 f7       	brne	.-4      	; 0x1bc <LCD_vidSendCommand+0x3a>
- 1c0:	08 95       	ret
+00000688 <uart_tx_hex>:
+     688:	8a 30       	cpi	r24, 0x0A	; 10
+     68a:	10 f0       	brcs	.+4      	; 0x690 <uart_tx_hex+0x8>
+     68c:	89 5a       	subi	r24, 0xA9	; 169
+     68e:	01 c0       	rjmp	.+2      	; 0x692 <uart_tx_hex+0xa>
+     690:	80 5d       	subi	r24, 0xD0	; 208
+     692:	0e 94 01 03 	call	0x602	; 0x602 <uart_tx>
+     696:	08 95       	ret
 
-000001c2 <LCD_VidInit>:
- 1c2:	0f 93       	push	r16
- 1c4:	1f 93       	push	r17
- 1c6:	87 b3       	in	r24, 0x17	; 23
- 1c8:	80 6f       	ori	r24, 0xF0	; 240
- 1ca:	87 bb       	out	0x17, r24	; 23
- 1cc:	84 b3       	in	r24, 0x14	; 20
- 1ce:	80 6c       	ori	r24, 0xC0	; 192
- 1d0:	84 bb       	out	0x14, r24	; 20
- 1d2:	88 b3       	in	r24, 0x18	; 24
- 1d4:	8f 70       	andi	r24, 0x0F	; 15
- 1d6:	88 bb       	out	0x18, r24	; 24
- 1d8:	85 b3       	in	r24, 0x15	; 21
- 1da:	8f 73       	andi	r24, 0x3F	; 63
- 1dc:	85 bb       	out	0x15, r24	; 21
- 1de:	00 e4       	ldi	r16, 0x40	; 64
- 1e0:	1f e1       	ldi	r17, 0x1F	; 31
- 1e2:	c8 01       	movw	r24, r16
- 1e4:	01 97       	sbiw	r24, 0x01	; 1
- 1e6:	f1 f7       	brne	.-4      	; 0x1e4 <LCD_VidInit+0x22>
- 1e8:	83 e3       	ldi	r24, 0x33	; 51
- 1ea:	0e 94 c1 00 	call	0x182	; 0x182 <LCD_vidSendCommand>
- 1ee:	82 e3       	ldi	r24, 0x32	; 50
- 1f0:	0e 94 c1 00 	call	0x182	; 0x182 <LCD_vidSendCommand>
- 1f4:	88 e2       	ldi	r24, 0x28	; 40
- 1f6:	0e 94 c1 00 	call	0x182	; 0x182 <LCD_vidSendCommand>
- 1fa:	8e e0       	ldi	r24, 0x0E	; 14
- 1fc:	0e 94 c1 00 	call	0x182	; 0x182 <LCD_vidSendCommand>
- 200:	81 e0       	ldi	r24, 0x01	; 1
- 202:	0e 94 c1 00 	call	0x182	; 0x182 <LCD_vidSendCommand>
- 206:	c8 01       	movw	r24, r16
- 208:	01 97       	sbiw	r24, 0x01	; 1
- 20a:	f1 f7       	brne	.-4      	; 0x208 <LCD_VidInit+0x46>
- 20c:	86 e0       	ldi	r24, 0x06	; 6
- 20e:	0e 94 c1 00 	call	0x182	; 0x182 <LCD_vidSendCommand>
- 212:	1f 91       	pop	r17
- 214:	0f 91       	pop	r16
- 216:	08 95       	ret
+00000698 <uart_tx_hex_byte>:
+     698:	1f 93       	push	r17
+     69a:	18 2f       	mov	r17, r24
+     69c:	82 95       	swap	r24
+     69e:	8f 70       	andi	r24, 0x0F	; 15
+     6a0:	0e 94 44 03 	call	0x688	; 0x688 <uart_tx_hex>
+     6a4:	81 2f       	mov	r24, r17
+     6a6:	8f 70       	andi	r24, 0x0F	; 15
+     6a8:	0e 94 44 03 	call	0x688	; 0x688 <uart_tx_hex>
+     6ac:	1f 91       	pop	r17
+     6ae:	08 95       	ret
 
-00000218 <LCD_vidsendData>:
- 218:	ae 9a       	sbi	0x15, 6	; 21
- 21a:	98 b3       	in	r25, 0x18	; 24
- 21c:	28 2f       	mov	r18, r24
- 21e:	20 7f       	andi	r18, 0xF0	; 240
- 220:	9f 70       	andi	r25, 0x0F	; 15
- 222:	29 2b       	or	r18, r25
- 224:	28 bb       	out	0x18, r18	; 24
- 226:	af 9a       	sbi	0x15, 7	; 21
- 228:	20 e4       	ldi	r18, 0x40	; 64
- 22a:	3f e1       	ldi	r19, 0x1F	; 31
- 22c:	f9 01       	movw	r30, r18
- 22e:	31 97       	sbiw	r30, 0x01	; 1
- 230:	f1 f7       	brne	.-4      	; 0x22e <LCD_vidsendData+0x16>
- 232:	af 98       	cbi	0x15, 7	; 21
- 234:	95 e0       	ldi	r25, 0x05	; 5
- 236:	9a 95       	dec	r25
- 238:	f1 f7       	brne	.-4      	; 0x236 <LCD_vidsendData+0x1e>
- 23a:	98 b3       	in	r25, 0x18	; 24
- 23c:	82 95       	swap	r24
- 23e:	80 7f       	andi	r24, 0xF0	; 240
- 240:	9f 70       	andi	r25, 0x0F	; 15
- 242:	98 2b       	or	r25, r24
- 244:	98 bb       	out	0x18, r25	; 24
- 246:	af 9a       	sbi	0x15, 7	; 21
- 248:	c9 01       	movw	r24, r18
- 24a:	01 97       	sbiw	r24, 0x01	; 1
- 24c:	f1 f7       	brne	.-4      	; 0x24a <LCD_vidsendData+0x32>
- 24e:	af 98       	cbi	0x15, 7	; 21
- 250:	c9 01       	movw	r24, r18
- 252:	01 97       	sbiw	r24, 0x01	; 1
- 254:	f1 f7       	brne	.-4      	; 0x252 <LCD_vidsendData+0x3a>
- 256:	08 95       	ret
+000006b0 <uart_tx_hex_word>:
+     6b0:	1f 93       	push	r17
+     6b2:	18 2f       	mov	r17, r24
+     6b4:	89 2f       	mov	r24, r25
+     6b6:	0e 94 4c 03 	call	0x698	; 0x698 <uart_tx_hex_byte>
+     6ba:	81 2f       	mov	r24, r17
+     6bc:	0e 94 4c 03 	call	0x698	; 0x698 <uart_tx_hex_byte>
+     6c0:	1f 91       	pop	r17
+     6c2:	08 95       	ret
 
-00000258 <LCD_vidsendword>:
- 258:	cf 93       	push	r28
- 25a:	df 93       	push	r29
- 25c:	ec 01       	movw	r28, r24
- 25e:	03 c0       	rjmp	.+6      	; 0x266 <LCD_vidsendword+0xe>
- 260:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 264:	21 96       	adiw	r28, 0x01	; 1
- 266:	88 81       	ld	r24, Y
- 268:	88 23       	and	r24, r24
- 26a:	d1 f7       	brne	.-12     	; 0x260 <LCD_vidsendword+0x8>
- 26c:	df 91       	pop	r29
- 26e:	cf 91       	pop	r28
- 270:	08 95       	ret
+000006c4 <uart_tx_hex_lword>:
+     6c4:	ef 92       	push	r14
+     6c6:	ff 92       	push	r15
+     6c8:	0f 93       	push	r16
+     6ca:	1f 93       	push	r17
+     6cc:	7b 01       	movw	r14, r22
+     6ce:	8c 01       	movw	r16, r24
+     6d0:	c8 01       	movw	r24, r16
+     6d2:	aa 27       	eor	r26, r26
+     6d4:	bb 27       	eor	r27, r27
+     6d6:	0e 94 58 03 	call	0x6b0	; 0x6b0 <uart_tx_hex_word>
+     6da:	c7 01       	movw	r24, r14
+     6dc:	0e 94 58 03 	call	0x6b0	; 0x6b0 <uart_tx_hex_word>
+     6e0:	1f 91       	pop	r17
+     6e2:	0f 91       	pop	r16
+     6e4:	ff 90       	pop	r15
+     6e6:	ef 90       	pop	r14
+     6e8:	08 95       	ret
 
-00000272 <LCD_vidClear>:
- 272:	81 e0       	ldi	r24, 0x01	; 1
- 274:	0e 94 c1 00 	call	0x182	; 0x182 <LCD_vidSendCommand>
- 278:	08 95       	ret
+000006ea <uart_TX_long_number>:
+     6ea:	0f 93       	push	r16
+     6ec:	1f 93       	push	r17
+     6ee:	df 93       	push	r29
+     6f0:	cf 93       	push	r28
+     6f2:	cd b7       	in	r28, 0x3d	; 61
+     6f4:	de b7       	in	r29, 0x3e	; 62
+     6f6:	64 97       	sbiw	r28, 0x14	; 20
+     6f8:	0f b6       	in	r0, 0x3f	; 63
+     6fa:	f8 94       	cli
+     6fc:	de bf       	out	0x3e, r29	; 62
+     6fe:	0f be       	out	0x3f, r0	; 63
+     700:	cd bf       	out	0x3d, r28	; 61
+     702:	8e 01       	movw	r16, r28
+     704:	0f 5f       	subi	r16, 0xFF	; 255
+     706:	1f 4f       	sbci	r17, 0xFF	; 255
+     708:	a8 01       	movw	r20, r16
+     70a:	2a e0       	ldi	r18, 0x0A	; 10
+     70c:	30 e0       	ldi	r19, 0x00	; 0
+     70e:	0e 94 bf 08 	call	0x117e	; 0x117e <ultoa>
+     712:	c8 01       	movw	r24, r16
+     714:	0e 94 21 03 	call	0x642	; 0x642 <uart_TX_string>
+     718:	64 96       	adiw	r28, 0x14	; 20
+     71a:	0f b6       	in	r0, 0x3f	; 63
+     71c:	f8 94       	cli
+     71e:	de bf       	out	0x3e, r29	; 62
+     720:	0f be       	out	0x3f, r0	; 63
+     722:	cd bf       	out	0x3d, r28	; 61
+     724:	cf 91       	pop	r28
+     726:	df 91       	pop	r29
+     728:	1f 91       	pop	r17
+     72a:	0f 91       	pop	r16
+     72c:	08 95       	ret
 
-0000027a <LCD_vid_Save_in_CGRAM>:
- 27a:	80 e4       	ldi	r24, 0x40	; 64
- 27c:	0e 94 c1 00 	call	0x182	; 0x182 <LCD_vidSendCommand>
- 280:	8e e0       	ldi	r24, 0x0E	; 14
- 282:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 286:	8e e0       	ldi	r24, 0x0E	; 14
- 288:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 28c:	84 e0       	ldi	r24, 0x04	; 4
- 28e:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 292:	8e e0       	ldi	r24, 0x0E	; 14
- 294:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 298:	85 e1       	ldi	r24, 0x15	; 21
- 29a:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 29e:	84 e0       	ldi	r24, 0x04	; 4
- 2a0:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 2a4:	8a e0       	ldi	r24, 0x0A	; 10
- 2a6:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 2aa:	8a e0       	ldi	r24, 0x0A	; 10
- 2ac:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 2b0:	80 e0       	ldi	r24, 0x00	; 0
- 2b2:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 2b6:	80 e0       	ldi	r24, 0x00	; 0
- 2b8:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 2bc:	8a e0       	ldi	r24, 0x0A	; 10
- 2be:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 2c2:	80 e0       	ldi	r24, 0x00	; 0
- 2c4:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 2c8:	80 e0       	ldi	r24, 0x00	; 0
- 2ca:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 2ce:	81 e1       	ldi	r24, 0x11	; 17
- 2d0:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 2d4:	8e e0       	ldi	r24, 0x0E	; 14
- 2d6:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 2da:	80 e0       	ldi	r24, 0x00	; 0
- 2dc:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 2e0:	8e e0       	ldi	r24, 0x0E	; 14
- 2e2:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 2e6:	81 e1       	ldi	r24, 0x11	; 17
- 2e8:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 2ec:	81 e1       	ldi	r24, 0x11	; 17
- 2ee:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 2f2:	8f e1       	ldi	r24, 0x1F	; 31
- 2f4:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 2f8:	8b e1       	ldi	r24, 0x1B	; 27
- 2fa:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 2fe:	8b e1       	ldi	r24, 0x1B	; 27
- 300:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 304:	8f e1       	ldi	r24, 0x1F	; 31
- 306:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 30a:	80 e0       	ldi	r24, 0x00	; 0
- 30c:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 310:	80 e0       	ldi	r24, 0x00	; 0
- 312:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 316:	80 e0       	ldi	r24, 0x00	; 0
- 318:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 31c:	8a e0       	ldi	r24, 0x0A	; 10
- 31e:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 322:	85 e1       	ldi	r24, 0x15	; 21
- 324:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 328:	81 e1       	ldi	r24, 0x11	; 17
- 32a:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 32e:	8e e0       	ldi	r24, 0x0E	; 14
- 330:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 334:	84 e0       	ldi	r24, 0x04	; 4
- 336:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 33a:	80 e0       	ldi	r24, 0x00	; 0
- 33c:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 340:	80 e0       	ldi	r24, 0x00	; 0
- 342:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 346:	80 e0       	ldi	r24, 0x00	; 0
- 348:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 34c:	80 e0       	ldi	r24, 0x00	; 0
- 34e:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 352:	81 e0       	ldi	r24, 0x01	; 1
- 354:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 358:	81 e0       	ldi	r24, 0x01	; 1
- 35a:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 35e:	81 e0       	ldi	r24, 0x01	; 1
- 360:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 364:	8f e1       	ldi	r24, 0x1F	; 31
- 366:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 36a:	80 e0       	ldi	r24, 0x00	; 0
- 36c:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 370:	80 e0       	ldi	r24, 0x00	; 0
- 372:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 376:	80 e0       	ldi	r24, 0x00	; 0
- 378:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 37c:	80 e0       	ldi	r24, 0x00	; 0
- 37e:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 382:	80 e0       	ldi	r24, 0x00	; 0
- 384:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 388:	80 e0       	ldi	r24, 0x00	; 0
- 38a:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 38e:	8e e0       	ldi	r24, 0x0E	; 14
- 390:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 394:	81 e1       	ldi	r24, 0x11	; 17
- 396:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 39a:	8e e0       	ldi	r24, 0x0E	; 14
- 39c:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 3a0:	80 e0       	ldi	r24, 0x00	; 0
- 3a2:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 3a6:	80 e0       	ldi	r24, 0x00	; 0
- 3a8:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 3ac:	80 e0       	ldi	r24, 0x00	; 0
- 3ae:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 3b2:	80 e0       	ldi	r24, 0x00	; 0
- 3b4:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 3b8:	8e e0       	ldi	r24, 0x0E	; 14
- 3ba:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 3be:	81 e0       	ldi	r24, 0x01	; 1
- 3c0:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 3c4:	8f e1       	ldi	r24, 0x1F	; 31
- 3c6:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 3ca:	80 e0       	ldi	r24, 0x00	; 0
- 3cc:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 3d0:	86 e0       	ldi	r24, 0x06	; 6
- 3d2:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 3d6:	84 e0       	ldi	r24, 0x04	; 4
- 3d8:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 3dc:	8e e0       	ldi	r24, 0x0E	; 14
- 3de:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 3e2:	80 e0       	ldi	r24, 0x00	; 0
- 3e4:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 3e8:	84 e0       	ldi	r24, 0x04	; 4
- 3ea:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 3ee:	84 e0       	ldi	r24, 0x04	; 4
- 3f0:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 3f4:	84 e0       	ldi	r24, 0x04	; 4
- 3f6:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 3fa:	84 e0       	ldi	r24, 0x04	; 4
- 3fc:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 400:	08 95       	ret
+0000072e <uart_TX_number>:
+     72e:	0f 93       	push	r16
+     730:	1f 93       	push	r17
+     732:	df 93       	push	r29
+     734:	cf 93       	push	r28
+     736:	cd b7       	in	r28, 0x3d	; 61
+     738:	de b7       	in	r29, 0x3e	; 62
+     73a:	64 97       	sbiw	r28, 0x14	; 20
+     73c:	0f b6       	in	r0, 0x3f	; 63
+     73e:	f8 94       	cli
+     740:	de bf       	out	0x3e, r29	; 62
+     742:	0f be       	out	0x3f, r0	; 63
+     744:	cd bf       	out	0x3d, r28	; 61
+     746:	8e 01       	movw	r16, r28
+     748:	0f 5f       	subi	r16, 0xFF	; 255
+     74a:	1f 4f       	sbci	r17, 0xFF	; 255
+     74c:	b8 01       	movw	r22, r16
+     74e:	4a e0       	ldi	r20, 0x0A	; 10
+     750:	50 e0       	ldi	r21, 0x00	; 0
+     752:	0e 94 9e 08 	call	0x113c	; 0x113c <itoa>
+     756:	c8 01       	movw	r24, r16
+     758:	0e 94 21 03 	call	0x642	; 0x642 <uart_TX_string>
+     75c:	64 96       	adiw	r28, 0x14	; 20
+     75e:	0f b6       	in	r0, 0x3f	; 63
+     760:	f8 94       	cli
+     762:	de bf       	out	0x3e, r29	; 62
+     764:	0f be       	out	0x3f, r0	; 63
+     766:	cd bf       	out	0x3d, r28	; 61
+     768:	cf 91       	pop	r28
+     76a:	df 91       	pop	r29
+     76c:	1f 91       	pop	r17
+     76e:	0f 91       	pop	r16
+     770:	08 95       	ret
 
-00000402 <LCD_vidGoTo>:
- 402:	88 23       	and	r24, r24
- 404:	29 f4       	brne	.+10     	; 0x410 <LCD_vidGoTo+0xe>
- 406:	86 2f       	mov	r24, r22
- 408:	80 68       	ori	r24, 0x80	; 128
- 40a:	0e 94 c1 00 	call	0x182	; 0x182 <LCD_vidSendCommand>
- 40e:	08 95       	ret
- 410:	81 30       	cpi	r24, 0x01	; 1
- 412:	21 f4       	brne	.+8      	; 0x41c <LCD_vidGoTo+0x1a>
- 414:	86 2f       	mov	r24, r22
- 416:	80 6c       	ori	r24, 0xC0	; 192
- 418:	0e 94 c1 00 	call	0x182	; 0x182 <LCD_vidSendCommand>
- 41c:	08 95       	ret
+00000772 <uart_TX_hex_number>:
+     772:	1f 93       	push	r17
+     774:	18 2f       	mov	r17, r24
+     776:	82 95       	swap	r24
+     778:	8f 70       	andi	r24, 0x0F	; 15
+     77a:	8a 30       	cpi	r24, 0x0A	; 10
+     77c:	20 f4       	brcc	.+8      	; 0x786 <uart_TX_hex_number+0x14>
+     77e:	90 e0       	ldi	r25, 0x00	; 0
+     780:	0e 94 97 03 	call	0x72e	; 0x72e <uart_TX_number>
+     784:	03 c0       	rjmp	.+6      	; 0x78c <uart_TX_hex_number+0x1a>
+     786:	89 5c       	subi	r24, 0xC9	; 201
+     788:	0e 94 01 03 	call	0x602	; 0x602 <uart_tx>
+     78c:	81 2f       	mov	r24, r17
+     78e:	8f 70       	andi	r24, 0x0F	; 15
+     790:	8a 30       	cpi	r24, 0x0A	; 10
+     792:	20 f4       	brcc	.+8      	; 0x79c <uart_TX_hex_number+0x2a>
+     794:	90 e0       	ldi	r25, 0x00	; 0
+     796:	0e 94 97 03 	call	0x72e	; 0x72e <uart_TX_number>
+     79a:	03 c0       	rjmp	.+6      	; 0x7a2 <uart_TX_hex_number+0x30>
+     79c:	89 5c       	subi	r24, 0xC9	; 201
+     79e:	0e 94 01 03 	call	0x602	; 0x602 <uart_tx>
+     7a2:	1f 91       	pop	r17
+     7a4:	08 95       	ret
 
-0000041e <LCD_SEND_number_binary>:
- 41e:	0f 93       	push	r16
- 420:	1f 93       	push	r17
- 422:	cf 93       	push	r28
- 424:	df 93       	push	r29
- 426:	8c 01       	movw	r16, r24
- 428:	c7 e0       	ldi	r28, 0x07	; 7
- 42a:	d0 e0       	ldi	r29, 0x00	; 0
- 42c:	c8 01       	movw	r24, r16
- 42e:	0c 2e       	mov	r0, r28
- 430:	02 c0       	rjmp	.+4      	; 0x436 <LCD_SEND_number_binary+0x18>
- 432:	95 95       	asr	r25
- 434:	87 95       	ror	r24
- 436:	0a 94       	dec	r0
- 438:	e2 f7       	brpl	.-8      	; 0x432 <LCD_SEND_number_binary+0x14>
- 43a:	80 ff       	sbrs	r24, 0
- 43c:	02 c0       	rjmp	.+4      	; 0x442 <LCD_SEND_number_binary+0x24>
- 43e:	81 e3       	ldi	r24, 0x31	; 49
- 440:	01 c0       	rjmp	.+2      	; 0x444 <LCD_SEND_number_binary+0x26>
- 442:	80 e3       	ldi	r24, 0x30	; 48
- 444:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 448:	21 97       	sbiw	r28, 0x01	; 1
- 44a:	8f ef       	ldi	r24, 0xFF	; 255
- 44c:	cf 3f       	cpi	r28, 0xFF	; 255
- 44e:	d8 07       	cpc	r29, r24
- 450:	69 f7       	brne	.-38     	; 0x42c <LCD_SEND_number_binary+0xe>
- 452:	df 91       	pop	r29
- 454:	cf 91       	pop	r28
- 456:	1f 91       	pop	r17
- 458:	0f 91       	pop	r16
- 45a:	08 95       	ret
+000007a6 <init_UART_9600>:
+     7a6:	88 e1       	ldi	r24, 0x18	; 24
+     7a8:	8a b9       	out	0x0a, r24	; 10
+     7aa:	86 e8       	ldi	r24, 0x86	; 134
+     7ac:	80 bd       	out	0x20, r24	; 32
+     7ae:	83 e3       	ldi	r24, 0x33	; 51
+     7b0:	89 b9       	out	0x09, r24	; 9
+     7b2:	10 bc       	out	0x20, r1	; 32
+     7b4:	08 95       	ret
 
-0000045c <LCD_SEND_number>:
- 45c:	0f 93       	push	r16
- 45e:	1f 93       	push	r17
- 460:	df 93       	push	r29
- 462:	cf 93       	push	r28
- 464:	cd b7       	in	r28, 0x3d	; 61
- 466:	de b7       	in	r29, 0x3e	; 62
- 468:	64 97       	sbiw	r28, 0x14	; 20
- 46a:	0f b6       	in	r0, 0x3f	; 63
- 46c:	f8 94       	cli
- 46e:	de bf       	out	0x3e, r29	; 62
- 470:	0f be       	out	0x3f, r0	; 63
- 472:	cd bf       	out	0x3d, r28	; 61
- 474:	8e 01       	movw	r16, r28
- 476:	0f 5f       	subi	r16, 0xFF	; 255
- 478:	1f 4f       	sbci	r17, 0xFF	; 255
- 47a:	b8 01       	movw	r22, r16
- 47c:	4a e0       	ldi	r20, 0x0A	; 10
- 47e:	50 e0       	ldi	r21, 0x00	; 0
- 480:	0e 94 a8 06 	call	0xd50	; 0xd50 <itoa>
- 484:	c8 01       	movw	r24, r16
- 486:	0e 94 2c 01 	call	0x258	; 0x258 <LCD_vidsendword>
- 48a:	64 96       	adiw	r28, 0x14	; 20
- 48c:	0f b6       	in	r0, 0x3f	; 63
- 48e:	f8 94       	cli
- 490:	de bf       	out	0x3e, r29	; 62
- 492:	0f be       	out	0x3f, r0	; 63
- 494:	cd bf       	out	0x3d, r28	; 61
- 496:	cf 91       	pop	r28
- 498:	df 91       	pop	r29
- 49a:	1f 91       	pop	r17
- 49c:	0f 91       	pop	r16
- 49e:	08 95       	ret
+000007b6 <De_init_UART>:
+     7b6:	1b b8       	out	0x0b, r1	; 11
+     7b8:	1a b8       	out	0x0a, r1	; 10
+     7ba:	10 bc       	out	0x20, r1	; 32
+     7bc:	19 b8       	out	0x09, r1	; 9
+     7be:	10 bc       	out	0x20, r1	; 32
+     7c0:	08 95       	ret
 
-000004a0 <LCD_SEND_number_hex>:
- 4a0:	1f 93       	push	r17
- 4a2:	98 2f       	mov	r25, r24
- 4a4:	92 95       	swap	r25
- 4a6:	9f 70       	andi	r25, 0x0F	; 15
- 4a8:	18 2f       	mov	r17, r24
- 4aa:	1f 70       	andi	r17, 0x0F	; 15
- 4ac:	9a 30       	cpi	r25, 0x0A	; 10
- 4ae:	28 f4       	brcc	.+10     	; 0x4ba <LCD_SEND_number_hex+0x1a>
- 4b0:	89 2f       	mov	r24, r25
- 4b2:	90 e0       	ldi	r25, 0x00	; 0
- 4b4:	0e 94 2e 02 	call	0x45c	; 0x45c <LCD_SEND_number>
- 4b8:	17 c0       	rjmp	.+46     	; 0x4e8 <LCD_SEND_number_hex+0x48>
- 4ba:	9a 30       	cpi	r25, 0x0A	; 10
- 4bc:	11 f4       	brne	.+4      	; 0x4c2 <LCD_SEND_number_hex+0x22>
- 4be:	81 e4       	ldi	r24, 0x41	; 65
- 4c0:	11 c0       	rjmp	.+34     	; 0x4e4 <LCD_SEND_number_hex+0x44>
- 4c2:	9b 30       	cpi	r25, 0x0B	; 11
- 4c4:	11 f4       	brne	.+4      	; 0x4ca <LCD_SEND_number_hex+0x2a>
- 4c6:	82 e4       	ldi	r24, 0x42	; 66
- 4c8:	0d c0       	rjmp	.+26     	; 0x4e4 <LCD_SEND_number_hex+0x44>
- 4ca:	9c 30       	cpi	r25, 0x0C	; 12
- 4cc:	11 f4       	brne	.+4      	; 0x4d2 <LCD_SEND_number_hex+0x32>
- 4ce:	83 e4       	ldi	r24, 0x43	; 67
- 4d0:	09 c0       	rjmp	.+18     	; 0x4e4 <LCD_SEND_number_hex+0x44>
- 4d2:	9d 30       	cpi	r25, 0x0D	; 13
- 4d4:	11 f4       	brne	.+4      	; 0x4da <LCD_SEND_number_hex+0x3a>
- 4d6:	84 e4       	ldi	r24, 0x44	; 68
- 4d8:	05 c0       	rjmp	.+10     	; 0x4e4 <LCD_SEND_number_hex+0x44>
- 4da:	9e 30       	cpi	r25, 0x0E	; 14
- 4dc:	11 f4       	brne	.+4      	; 0x4e2 <LCD_SEND_number_hex+0x42>
- 4de:	85 e4       	ldi	r24, 0x45	; 69
- 4e0:	01 c0       	rjmp	.+2      	; 0x4e4 <LCD_SEND_number_hex+0x44>
- 4e2:	86 e4       	ldi	r24, 0x46	; 70
- 4e4:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 4e8:	1a 30       	cpi	r17, 0x0A	; 10
- 4ea:	28 f4       	brcc	.+10     	; 0x4f6 <LCD_SEND_number_hex+0x56>
- 4ec:	81 2f       	mov	r24, r17
- 4ee:	90 e0       	ldi	r25, 0x00	; 0
- 4f0:	0e 94 2e 02 	call	0x45c	; 0x45c <LCD_SEND_number>
- 4f4:	17 c0       	rjmp	.+46     	; 0x524 <LCD_SEND_number_hex+0x84>
- 4f6:	1a 30       	cpi	r17, 0x0A	; 10
- 4f8:	11 f4       	brne	.+4      	; 0x4fe <LCD_SEND_number_hex+0x5e>
- 4fa:	81 e4       	ldi	r24, 0x41	; 65
- 4fc:	11 c0       	rjmp	.+34     	; 0x520 <LCD_SEND_number_hex+0x80>
- 4fe:	1b 30       	cpi	r17, 0x0B	; 11
- 500:	11 f4       	brne	.+4      	; 0x506 <LCD_SEND_number_hex+0x66>
- 502:	82 e4       	ldi	r24, 0x42	; 66
- 504:	0d c0       	rjmp	.+26     	; 0x520 <LCD_SEND_number_hex+0x80>
- 506:	1c 30       	cpi	r17, 0x0C	; 12
- 508:	11 f4       	brne	.+4      	; 0x50e <LCD_SEND_number_hex+0x6e>
- 50a:	83 e4       	ldi	r24, 0x43	; 67
- 50c:	09 c0       	rjmp	.+18     	; 0x520 <LCD_SEND_number_hex+0x80>
- 50e:	1d 30       	cpi	r17, 0x0D	; 13
- 510:	11 f4       	brne	.+4      	; 0x516 <LCD_SEND_number_hex+0x76>
- 512:	84 e4       	ldi	r24, 0x44	; 68
- 514:	05 c0       	rjmp	.+10     	; 0x520 <LCD_SEND_number_hex+0x80>
- 516:	1e 30       	cpi	r17, 0x0E	; 14
- 518:	11 f4       	brne	.+4      	; 0x51e <LCD_SEND_number_hex+0x7e>
- 51a:	85 e4       	ldi	r24, 0x45	; 69
- 51c:	01 c0       	rjmp	.+2      	; 0x520 <LCD_SEND_number_hex+0x80>
- 51e:	86 e4       	ldi	r24, 0x46	; 70
- 520:	0e 94 0c 01 	call	0x218	; 0x218 <LCD_vidsendData>
- 524:	1f 91       	pop	r17
- 526:	08 95       	ret
+000007c2 <init_UART_115200>:
+     7c2:	82 e0       	ldi	r24, 0x02	; 2
+     7c4:	8b b9       	out	0x0b, r24	; 11
+     7c6:	88 e9       	ldi	r24, 0x98	; 152
+     7c8:	8a b9       	out	0x0a, r24	; 10
+     7ca:	86 e8       	ldi	r24, 0x86	; 134
+     7cc:	80 bd       	out	0x20, r24	; 32
+     7ce:	80 e1       	ldi	r24, 0x10	; 16
+     7d0:	89 b9       	out	0x09, r24	; 9
+     7d2:	10 bc       	out	0x20, r1	; 32
+     7d4:	08 95       	ret
 
-00000528 <NFC_Recieving_interrupt>:
- 528:	2f b7       	in	r18, 0x3f	; 63
- 52a:	f8 94       	cli
- 52c:	80 91 30 01 	lds	r24, 0x0130
- 530:	9c b1       	in	r25, 0x0c	; 12
- 532:	e8 2f       	mov	r30, r24
- 534:	f0 e0       	ldi	r31, 0x00	; 0
- 536:	e0 5c       	subi	r30, 0xC0	; 192
- 538:	fe 4f       	sbci	r31, 0xFE	; 254
- 53a:	90 83       	st	Z, r25
- 53c:	8f 5f       	subi	r24, 0xFF	; 255
- 53e:	80 93 30 01 	sts	0x0130, r24
- 542:	84 36       	cpi	r24, 0x64	; 100
- 544:	11 f4       	brne	.+4      	; 0x54a <NFC_Recieving_interrupt+0x22>
- 546:	10 92 30 01 	sts	0x0130, r1
- 54a:	2f bf       	out	0x3f, r18	; 63
- 54c:	08 95       	ret
+000007d6 <UART_SendChar>:
+     7d6:	5d 9b       	sbis	0x0b, 5	; 11
+     7d8:	fe cf       	rjmp	.-4      	; 0x7d6 <UART_SendChar>
+     7da:	8c b9       	out	0x0c, r24	; 12
+     7dc:	08 95       	ret
 
-0000054e <Check_Respond>:
- 54e:	58 2f       	mov	r21, r24
- 550:	a0 e4       	ldi	r26, 0x40	; 64
- 552:	b1 e0       	ldi	r27, 0x01	; 1
- 554:	28 2f       	mov	r18, r24
- 556:	39 2f       	mov	r19, r25
- 558:	f9 01       	movw	r30, r18
- 55a:	06 c0       	rjmp	.+12     	; 0x568 <Check_Respond+0x1a>
- 55c:	9d 91       	ld	r25, X+
- 55e:	81 91       	ld	r24, Z+
- 560:	98 17       	cp	r25, r24
- 562:	11 f0       	breq	.+4      	; 0x568 <Check_Respond+0x1a>
- 564:	80 e0       	ldi	r24, 0x00	; 0
- 566:	08 95       	ret
- 568:	8e 2f       	mov	r24, r30
- 56a:	85 1b       	sub	r24, r21
- 56c:	86 17       	cp	r24, r22
- 56e:	b0 f3       	brcs	.-20     	; 0x55c <Check_Respond+0xe>
- 570:	81 e0       	ldi	r24, 0x01	; 1
- 572:	08 95       	ret
+000007de <UART_getChar>:
+     7de:	5f 9b       	sbis	0x0b, 7	; 11
+     7e0:	fe cf       	rjmp	.-4      	; 0x7de <UART_getChar>
+     7e2:	8c b1       	in	r24, 0x0c	; 12
+     7e4:	08 95       	ret
 
-00000574 <NFC_fixed_data>:
- 574:	85 e5       	ldi	r24, 0x55	; 85
- 576:	0e 94 61 00 	call	0xc2	; 0xc2 <UART_SendChar>
- 57a:	85 e5       	ldi	r24, 0x55	; 85
- 57c:	0e 94 61 00 	call	0xc2	; 0xc2 <UART_SendChar>
- 580:	80 e0       	ldi	r24, 0x00	; 0
- 582:	0e 94 61 00 	call	0xc2	; 0xc2 <UART_SendChar>
- 586:	80 e0       	ldi	r24, 0x00	; 0
- 588:	0e 94 61 00 	call	0xc2	; 0xc2 <UART_SendChar>
- 58c:	80 e0       	ldi	r24, 0x00	; 0
- 58e:	0e 94 61 00 	call	0xc2	; 0xc2 <UART_SendChar>
- 592:	80 e0       	ldi	r24, 0x00	; 0
- 594:	0e 94 61 00 	call	0xc2	; 0xc2 <UART_SendChar>
- 598:	80 e0       	ldi	r24, 0x00	; 0
- 59a:	0e 94 61 00 	call	0xc2	; 0xc2 <UART_SendChar>
- 59e:	8f ef       	ldi	r24, 0xFF	; 255
- 5a0:	0e 94 61 00 	call	0xc2	; 0xc2 <UART_SendChar>
- 5a4:	08 95       	ret
+000007e6 <UART_SEND_string>:
+     7e6:	fc 01       	movw	r30, r24
+     7e8:	04 c0       	rjmp	.+8      	; 0x7f2 <UART_SEND_string+0xc>
+     7ea:	5d 9b       	sbis	0x0b, 5	; 11
+     7ec:	fe cf       	rjmp	.-4      	; 0x7ea <UART_SEND_string+0x4>
+     7ee:	8c b9       	out	0x0c, r24	; 12
+     7f0:	31 96       	adiw	r30, 0x01	; 1
+     7f2:	80 81       	ld	r24, Z
+     7f4:	88 23       	and	r24, r24
+     7f6:	c9 f7       	brne	.-14     	; 0x7ea <UART_SEND_string+0x4>
+     7f8:	08 95       	ret
 
-000005a6 <NFC_send_frame>:
- 5a6:	cf 92       	push	r12
- 5a8:	df 92       	push	r13
- 5aa:	ef 92       	push	r14
- 5ac:	ff 92       	push	r15
- 5ae:	0f 93       	push	r16
- 5b0:	1f 93       	push	r17
- 5b2:	cf 93       	push	r28
- 5b4:	df 93       	push	r29
- 5b6:	6c 01       	movw	r12, r24
- 5b8:	16 2f       	mov	r17, r22
- 5ba:	1f 5f       	subi	r17, 0xFF	; 255
- 5bc:	0e 94 ba 02 	call	0x574	; 0x574 <NFC_fixed_data>
- 5c0:	81 2f       	mov	r24, r17
- 5c2:	0e 94 61 00 	call	0xc2	; 0xc2 <UART_SendChar>
- 5c6:	81 2f       	mov	r24, r17
- 5c8:	81 95       	neg	r24
- 5ca:	0e 94 61 00 	call	0xc2	; 0xc2 <UART_SendChar>
- 5ce:	84 ed       	ldi	r24, 0xD4	; 212
- 5d0:	0e 94 61 00 	call	0xc2	; 0xc2 <UART_SendChar>
- 5d4:	ff 24       	eor	r15, r15
- 5d6:	84 ed       	ldi	r24, 0xD4	; 212
- 5d8:	e8 2e       	mov	r14, r24
- 5da:	c1 2f       	mov	r28, r17
- 5dc:	d0 e0       	ldi	r29, 0x00	; 0
- 5de:	21 97       	sbiw	r28, 0x01	; 1
- 5e0:	0b c0       	rjmp	.+22     	; 0x5f8 <NFC_send_frame+0x52>
- 5e2:	86 01       	movw	r16, r12
- 5e4:	08 0f       	add	r16, r24
- 5e6:	19 1f       	adc	r17, r25
- 5e8:	f8 01       	movw	r30, r16
- 5ea:	80 81       	ld	r24, Z
- 5ec:	0e 94 61 00 	call	0xc2	; 0xc2 <UART_SendChar>
- 5f0:	f8 01       	movw	r30, r16
- 5f2:	80 81       	ld	r24, Z
- 5f4:	e8 0e       	add	r14, r24
- 5f6:	f3 94       	inc	r15
- 5f8:	8f 2d       	mov	r24, r15
- 5fa:	90 e0       	ldi	r25, 0x00	; 0
- 5fc:	8c 17       	cp	r24, r28
- 5fe:	9d 07       	cpc	r25, r29
- 600:	84 f3       	brlt	.-32     	; 0x5e2 <NFC_send_frame+0x3c>
- 602:	8e 2d       	mov	r24, r14
- 604:	81 95       	neg	r24
- 606:	0e 94 61 00 	call	0xc2	; 0xc2 <UART_SendChar>
- 60a:	80 e0       	ldi	r24, 0x00	; 0
- 60c:	0e 94 61 00 	call	0xc2	; 0xc2 <UART_SendChar>
- 610:	df 91       	pop	r29
- 612:	cf 91       	pop	r28
- 614:	1f 91       	pop	r17
- 616:	0f 91       	pop	r16
- 618:	ff 90       	pop	r15
- 61a:	ef 90       	pop	r14
- 61c:	df 90       	pop	r13
- 61e:	cf 90       	pop	r12
- 620:	08 95       	ret
+000007fa <UART_set_call_back_function>:
+     7fa:	90 93 3f 03 	sts	0x033F, r25
+     7fe:	80 93 3e 03 	sts	0x033E, r24
+     802:	08 95       	ret
 
-00000622 <Clear_Rec_buffer>:
- 622:	84 e6       	ldi	r24, 0x64	; 100
- 624:	e0 e4       	ldi	r30, 0x40	; 64
- 626:	f1 e0       	ldi	r31, 0x01	; 1
- 628:	df 01       	movw	r26, r30
- 62a:	1d 92       	st	X+, r1
- 62c:	8a 95       	dec	r24
- 62e:	e9 f7       	brne	.-6      	; 0x62a <Clear_Rec_buffer+0x8>
- 630:	10 92 30 01 	sts	0x0130, r1
- 634:	08 95       	ret
+00000804 <__vector_13>:
+     804:	1f 92       	push	r1
+     806:	0f 92       	push	r0
+     808:	0f b6       	in	r0, 0x3f	; 63
+     80a:	0f 92       	push	r0
+     80c:	11 24       	eor	r1, r1
+     80e:	2f 93       	push	r18
+     810:	3f 93       	push	r19
+     812:	4f 93       	push	r20
+     814:	5f 93       	push	r21
+     816:	6f 93       	push	r22
+     818:	7f 93       	push	r23
+     81a:	8f 93       	push	r24
+     81c:	9f 93       	push	r25
+     81e:	af 93       	push	r26
+     820:	bf 93       	push	r27
+     822:	ef 93       	push	r30
+     824:	ff 93       	push	r31
+     826:	e0 91 3e 03 	lds	r30, 0x033E
+     82a:	f0 91 3f 03 	lds	r31, 0x033F
+     82e:	09 95       	icall
+     830:	ff 91       	pop	r31
+     832:	ef 91       	pop	r30
+     834:	bf 91       	pop	r27
+     836:	af 91       	pop	r26
+     838:	9f 91       	pop	r25
+     83a:	8f 91       	pop	r24
+     83c:	7f 91       	pop	r23
+     83e:	6f 91       	pop	r22
+     840:	5f 91       	pop	r21
+     842:	4f 91       	pop	r20
+     844:	3f 91       	pop	r19
+     846:	2f 91       	pop	r18
+     848:	0f 90       	pop	r0
+     84a:	0f be       	out	0x3f, r0	; 63
+     84c:	0f 90       	pop	r0
+     84e:	1f 90       	pop	r1
+     850:	18 95       	reti
 
-00000636 <NFC_read_tag_data>:
- 636:	1f 93       	push	r17
- 638:	cf 93       	push	r28
- 63a:	df 93       	push	r29
- 63c:	ec 01       	movw	r28, r24
- 63e:	0e 94 11 03 	call	0x622	; 0x622 <Clear_Rec_buffer>
- 642:	86 e0       	ldi	r24, 0x06	; 6
- 644:	91 e0       	ldi	r25, 0x01	; 1
- 646:	64 e0       	ldi	r22, 0x04	; 4
- 648:	0e 94 d3 02 	call	0x5a6	; 0x5a6 <NFC_send_frame>
- 64c:	88 ee       	ldi	r24, 0xE8	; 232
- 64e:	93 e0       	ldi	r25, 0x03	; 3
- 650:	20 e9       	ldi	r18, 0x90	; 144
- 652:	31 e0       	ldi	r19, 0x01	; 1
- 654:	f9 01       	movw	r30, r18
- 656:	31 97       	sbiw	r30, 0x01	; 1
- 658:	f1 f7       	brne	.-4      	; 0x656 <NFC_read_tag_data+0x20>
- 65a:	01 97       	sbiw	r24, 0x01	; 1
- 65c:	d9 f7       	brne	.-10     	; 0x654 <NFC_read_tag_data+0x1e>
- 65e:	20 e0       	ldi	r18, 0x00	; 0
- 660:	30 e0       	ldi	r19, 0x00	; 0
- 662:	f9 01       	movw	r30, r18
- 664:	e0 5c       	subi	r30, 0xC0	; 192
- 666:	fe 4f       	sbci	r31, 0xFE	; 254
- 668:	d9 01       	movw	r26, r18
- 66a:	a6 5f       	subi	r26, 0xF6	; 246
- 66c:	be 4f       	sbci	r27, 0xFE	; 254
- 66e:	90 81       	ld	r25, Z
- 670:	8c 91       	ld	r24, X
- 672:	98 17       	cp	r25, r24
- 674:	11 f0       	breq	.+4      	; 0x67a <NFC_read_tag_data+0x44>
- 676:	10 e0       	ldi	r17, 0x00	; 0
- 678:	06 c0       	rjmp	.+12     	; 0x686 <NFC_read_tag_data+0x50>
- 67a:	2f 5f       	subi	r18, 0xFF	; 255
- 67c:	3f 4f       	sbci	r19, 0xFF	; 255
- 67e:	2e 30       	cpi	r18, 0x0E	; 14
- 680:	31 05       	cpc	r19, r1
- 682:	79 f7       	brne	.-34     	; 0x662 <NFC_read_tag_data+0x2c>
- 684:	11 e0       	ldi	r17, 0x01	; 1
- 686:	ee e4       	ldi	r30, 0x4E	; 78
- 688:	f1 e0       	ldi	r31, 0x01	; 1
- 68a:	a1 e3       	ldi	r26, 0x31	; 49
- 68c:	b1 e0       	ldi	r27, 0x01	; 1
- 68e:	81 91       	ld	r24, Z+
- 690:	8d 93       	st	X+, r24
- 692:	81 e0       	ldi	r24, 0x01	; 1
- 694:	ea 35       	cpi	r30, 0x5A	; 90
- 696:	f8 07       	cpc	r31, r24
- 698:	d1 f7       	brne	.-12     	; 0x68e <NFC_read_tag_data+0x58>
- 69a:	20 91 31 01 	lds	r18, 0x0131
- 69e:	30 e0       	ldi	r19, 0x00	; 0
- 6a0:	40 e0       	ldi	r20, 0x00	; 0
- 6a2:	50 e0       	ldi	r21, 0x00	; 0
- 6a4:	28 83       	st	Y, r18
- 6a6:	39 83       	std	Y+1, r19	; 0x01
- 6a8:	4a 83       	std	Y+2, r20	; 0x02
- 6aa:	5b 83       	std	Y+3, r21	; 0x03
- 6ac:	80 91 de 00 	lds	r24, 0x00DE
- 6b0:	90 e0       	ldi	r25, 0x00	; 0
- 6b2:	a0 e0       	ldi	r26, 0x00	; 0
- 6b4:	b0 e0       	ldi	r27, 0x00	; 0
- 6b6:	28 17       	cp	r18, r24
- 6b8:	39 07       	cpc	r19, r25
- 6ba:	4a 07       	cpc	r20, r26
- 6bc:	5b 07       	cpc	r21, r27
- 6be:	09 f0       	breq	.+2      	; 0x6c2 <NFC_read_tag_data+0x8c>
- 6c0:	87 c0       	rjmp	.+270    	; 0x7d0 <NFC_read_tag_data+0x19a>
- 6c2:	20 91 32 01 	lds	r18, 0x0132
- 6c6:	30 e0       	ldi	r19, 0x00	; 0
- 6c8:	40 e0       	ldi	r20, 0x00	; 0
- 6ca:	50 e0       	ldi	r21, 0x00	; 0
- 6cc:	2c 83       	std	Y+4, r18	; 0x04
- 6ce:	3d 83       	std	Y+5, r19	; 0x05
- 6d0:	4e 83       	std	Y+6, r20	; 0x06
- 6d2:	5f 83       	std	Y+7, r21	; 0x07
- 6d4:	80 91 df 00 	lds	r24, 0x00DF
- 6d8:	90 e0       	ldi	r25, 0x00	; 0
- 6da:	a0 e0       	ldi	r26, 0x00	; 0
- 6dc:	b0 e0       	ldi	r27, 0x00	; 0
- 6de:	28 17       	cp	r18, r24
- 6e0:	39 07       	cpc	r19, r25
- 6e2:	4a 07       	cpc	r20, r26
- 6e4:	5b 07       	cpc	r21, r27
- 6e6:	09 f0       	breq	.+2      	; 0x6ea <NFC_read_tag_data+0xb4>
- 6e8:	73 c0       	rjmp	.+230    	; 0x7d0 <NFC_read_tag_data+0x19a>
- 6ea:	20 91 33 01 	lds	r18, 0x0133
- 6ee:	30 e0       	ldi	r19, 0x00	; 0
- 6f0:	40 e0       	ldi	r20, 0x00	; 0
- 6f2:	50 e0       	ldi	r21, 0x00	; 0
- 6f4:	28 87       	std	Y+8, r18	; 0x08
- 6f6:	39 87       	std	Y+9, r19	; 0x09
- 6f8:	4a 87       	std	Y+10, r20	; 0x0a
- 6fa:	5b 87       	std	Y+11, r21	; 0x0b
- 6fc:	80 91 e0 00 	lds	r24, 0x00E0
- 700:	90 e0       	ldi	r25, 0x00	; 0
- 702:	a0 e0       	ldi	r26, 0x00	; 0
- 704:	b0 e0       	ldi	r27, 0x00	; 0
- 706:	28 17       	cp	r18, r24
- 708:	39 07       	cpc	r19, r25
- 70a:	4a 07       	cpc	r20, r26
- 70c:	5b 07       	cpc	r21, r27
- 70e:	09 f0       	breq	.+2      	; 0x712 <NFC_read_tag_data+0xdc>
- 710:	5f c0       	rjmp	.+190    	; 0x7d0 <NFC_read_tag_data+0x19a>
- 712:	20 91 34 01 	lds	r18, 0x0134
- 716:	30 e0       	ldi	r19, 0x00	; 0
- 718:	40 e0       	ldi	r20, 0x00	; 0
- 71a:	50 e0       	ldi	r21, 0x00	; 0
- 71c:	2c 87       	std	Y+12, r18	; 0x0c
- 71e:	3d 87       	std	Y+13, r19	; 0x0d
- 720:	4e 87       	std	Y+14, r20	; 0x0e
- 722:	5f 87       	std	Y+15, r21	; 0x0f
- 724:	80 91 e1 00 	lds	r24, 0x00E1
- 728:	90 e0       	ldi	r25, 0x00	; 0
- 72a:	a0 e0       	ldi	r26, 0x00	; 0
- 72c:	b0 e0       	ldi	r27, 0x00	; 0
- 72e:	28 17       	cp	r18, r24
- 730:	39 07       	cpc	r19, r25
- 732:	4a 07       	cpc	r20, r26
- 734:	5b 07       	cpc	r21, r27
- 736:	09 f0       	breq	.+2      	; 0x73a <NFC_read_tag_data+0x104>
- 738:	4b c0       	rjmp	.+150    	; 0x7d0 <NFC_read_tag_data+0x19a>
- 73a:	e8 e3       	ldi	r30, 0x38	; 56
- 73c:	f1 e0       	ldi	r31, 0x01	; 1
- 73e:	20 e0       	ldi	r18, 0x00	; 0
- 740:	30 e0       	ldi	r19, 0x00	; 0
- 742:	40 e0       	ldi	r20, 0x00	; 0
- 744:	50 e0       	ldi	r21, 0x00	; 0
- 746:	60 e0       	ldi	r22, 0x00	; 0
- 748:	70 e0       	ldi	r23, 0x00	; 0
- 74a:	80 81       	ld	r24, Z
- 74c:	90 e0       	ldi	r25, 0x00	; 0
- 74e:	a0 e0       	ldi	r26, 0x00	; 0
- 750:	b0 e0       	ldi	r27, 0x00	; 0
- 752:	06 2e       	mov	r0, r22
- 754:	04 c0       	rjmp	.+8      	; 0x75e <NFC_read_tag_data+0x128>
- 756:	88 0f       	add	r24, r24
- 758:	99 1f       	adc	r25, r25
- 75a:	aa 1f       	adc	r26, r26
- 75c:	bb 1f       	adc	r27, r27
- 75e:	0a 94       	dec	r0
- 760:	d2 f7       	brpl	.-12     	; 0x756 <NFC_read_tag_data+0x120>
- 762:	28 2b       	or	r18, r24
- 764:	39 2b       	or	r19, r25
- 766:	4a 2b       	or	r20, r26
- 768:	5b 2b       	or	r21, r27
- 76a:	31 97       	sbiw	r30, 0x01	; 1
- 76c:	68 5f       	subi	r22, 0xF8	; 248
- 76e:	7f 4f       	sbci	r23, 0xFF	; 255
- 770:	81 e0       	ldi	r24, 0x01	; 1
- 772:	e4 33       	cpi	r30, 0x34	; 52
- 774:	f8 07       	cpc	r31, r24
- 776:	49 f7       	brne	.-46     	; 0x74a <NFC_read_tag_data+0x114>
- 778:	28 8b       	std	Y+16, r18	; 0x10
- 77a:	39 8b       	std	Y+17, r19	; 0x11
- 77c:	4a 8b       	std	Y+18, r20	; 0x12
- 77e:	5b 8b       	std	Y+19, r21	; 0x13
- 780:	38 96       	adiw	r30, 0x08	; 8
- 782:	20 e0       	ldi	r18, 0x00	; 0
- 784:	30 e0       	ldi	r19, 0x00	; 0
- 786:	40 e0       	ldi	r20, 0x00	; 0
- 788:	50 e0       	ldi	r21, 0x00	; 0
- 78a:	60 e0       	ldi	r22, 0x00	; 0
- 78c:	70 e0       	ldi	r23, 0x00	; 0
- 78e:	80 81       	ld	r24, Z
- 790:	90 e0       	ldi	r25, 0x00	; 0
- 792:	a0 e0       	ldi	r26, 0x00	; 0
- 794:	b0 e0       	ldi	r27, 0x00	; 0
- 796:	06 2e       	mov	r0, r22
- 798:	04 c0       	rjmp	.+8      	; 0x7a2 <NFC_read_tag_data+0x16c>
- 79a:	88 0f       	add	r24, r24
- 79c:	99 1f       	adc	r25, r25
- 79e:	aa 1f       	adc	r26, r26
- 7a0:	bb 1f       	adc	r27, r27
- 7a2:	0a 94       	dec	r0
- 7a4:	d2 f7       	brpl	.-12     	; 0x79a <NFC_read_tag_data+0x164>
- 7a6:	28 2b       	or	r18, r24
- 7a8:	39 2b       	or	r19, r25
- 7aa:	4a 2b       	or	r20, r26
- 7ac:	5b 2b       	or	r21, r27
- 7ae:	31 97       	sbiw	r30, 0x01	; 1
- 7b0:	68 5f       	subi	r22, 0xF8	; 248
- 7b2:	7f 4f       	sbci	r23, 0xFF	; 255
- 7b4:	81 e0       	ldi	r24, 0x01	; 1
- 7b6:	e8 33       	cpi	r30, 0x38	; 56
- 7b8:	f8 07       	cpc	r31, r24
- 7ba:	49 f7       	brne	.-46     	; 0x78e <NFC_read_tag_data+0x158>
- 7bc:	2c 8b       	std	Y+20, r18	; 0x14
- 7be:	3d 8b       	std	Y+21, r19	; 0x15
- 7c0:	4e 8b       	std	Y+22, r20	; 0x16
- 7c2:	5f 8b       	std	Y+23, r21	; 0x17
- 7c4:	11 30       	cpi	r17, 0x01	; 1
- 7c6:	11 f0       	breq	.+4      	; 0x7cc <NFC_read_tag_data+0x196>
- 7c8:	86 e0       	ldi	r24, 0x06	; 6
- 7ca:	03 c0       	rjmp	.+6      	; 0x7d2 <NFC_read_tag_data+0x19c>
- 7cc:	87 e0       	ldi	r24, 0x07	; 7
- 7ce:	01 c0       	rjmp	.+2      	; 0x7d2 <NFC_read_tag_data+0x19c>
- 7d0:	84 e0       	ldi	r24, 0x04	; 4
- 7d2:	df 91       	pop	r29
- 7d4:	cf 91       	pop	r28
- 7d6:	1f 91       	pop	r17
- 7d8:	08 95       	ret
+00000852 <UART_SEND_number>:
+     852:	0f 93       	push	r16
+     854:	1f 93       	push	r17
+     856:	df 93       	push	r29
+     858:	cf 93       	push	r28
+     85a:	cd b7       	in	r28, 0x3d	; 61
+     85c:	de b7       	in	r29, 0x3e	; 62
+     85e:	64 97       	sbiw	r28, 0x14	; 20
+     860:	0f b6       	in	r0, 0x3f	; 63
+     862:	f8 94       	cli
+     864:	de bf       	out	0x3e, r29	; 62
+     866:	0f be       	out	0x3f, r0	; 63
+     868:	cd bf       	out	0x3d, r28	; 61
+     86a:	8e 01       	movw	r16, r28
+     86c:	0f 5f       	subi	r16, 0xFF	; 255
+     86e:	1f 4f       	sbci	r17, 0xFF	; 255
+     870:	b8 01       	movw	r22, r16
+     872:	4a e0       	ldi	r20, 0x0A	; 10
+     874:	50 e0       	ldi	r21, 0x00	; 0
+     876:	0e 94 9e 08 	call	0x113c	; 0x113c <itoa>
+     87a:	c8 01       	movw	r24, r16
+     87c:	0e 94 f3 03 	call	0x7e6	; 0x7e6 <UART_SEND_string>
+     880:	64 96       	adiw	r28, 0x14	; 20
+     882:	0f b6       	in	r0, 0x3f	; 63
+     884:	f8 94       	cli
+     886:	de bf       	out	0x3e, r29	; 62
+     888:	0f be       	out	0x3f, r0	; 63
+     88a:	cd bf       	out	0x3d, r28	; 61
+     88c:	cf 91       	pop	r28
+     88e:	df 91       	pop	r29
+     890:	1f 91       	pop	r17
+     892:	0f 91       	pop	r16
+     894:	08 95       	ret
 
-000007da <NFC_write_page>:
- 7da:	fb 01       	movw	r30, r22
- 7dc:	80 93 1b 01 	sts	0x011B, r24
- 7e0:	80 81       	ld	r24, Z
- 7e2:	80 93 1c 01 	sts	0x011C, r24
- 7e6:	81 81       	ldd	r24, Z+1	; 0x01
- 7e8:	80 93 1d 01 	sts	0x011D, r24
- 7ec:	82 81       	ldd	r24, Z+2	; 0x02
- 7ee:	80 93 1e 01 	sts	0x011E, r24
- 7f2:	83 81       	ldd	r24, Z+3	; 0x03
- 7f4:	80 93 1f 01 	sts	0x011F, r24
- 7f8:	0e 94 11 03 	call	0x622	; 0x622 <Clear_Rec_buffer>
- 7fc:	88 e1       	ldi	r24, 0x18	; 24
- 7fe:	91 e0       	ldi	r25, 0x01	; 1
- 800:	68 e0       	ldi	r22, 0x08	; 8
- 802:	0e 94 d3 02 	call	0x5a6	; 0x5a6 <NFC_send_frame>
- 806:	88 ee       	ldi	r24, 0xE8	; 232
- 808:	93 e0       	ldi	r25, 0x03	; 3
- 80a:	20 e9       	ldi	r18, 0x90	; 144
- 80c:	31 e0       	ldi	r19, 0x01	; 1
- 80e:	f9 01       	movw	r30, r18
- 810:	31 97       	sbiw	r30, 0x01	; 1
- 812:	f1 f7       	brne	.-4      	; 0x810 <NFC_write_page+0x36>
- 814:	01 97       	sbiw	r24, 0x01	; 1
- 816:	d9 f7       	brne	.-10     	; 0x80e <NFC_write_page+0x34>
- 818:	20 e0       	ldi	r18, 0x00	; 0
- 81a:	30 e0       	ldi	r19, 0x00	; 0
- 81c:	f9 01       	movw	r30, r18
- 81e:	e0 5c       	subi	r30, 0xC0	; 192
- 820:	fe 4f       	sbci	r31, 0xFE	; 254
- 822:	d9 01       	movw	r26, r18
- 824:	a0 5e       	subi	r26, 0xE0	; 224
- 826:	be 4f       	sbci	r27, 0xFE	; 254
- 828:	90 81       	ld	r25, Z
- 82a:	8c 91       	ld	r24, X
- 82c:	98 17       	cp	r25, r24
- 82e:	11 f0       	breq	.+4      	; 0x834 <NFC_write_page+0x5a>
- 830:	86 e0       	ldi	r24, 0x06	; 6
- 832:	08 95       	ret
- 834:	2f 5f       	subi	r18, 0xFF	; 255
- 836:	3f 4f       	sbci	r19, 0xFF	; 255
- 838:	20 31       	cpi	r18, 0x10	; 16
- 83a:	31 05       	cpc	r19, r1
- 83c:	79 f7       	brne	.-34     	; 0x81c <NFC_write_page+0x42>
- 83e:	87 e0       	ldi	r24, 0x07	; 7
- 840:	08 95       	ret
+00000896 <LCD_vidSendCommand>:
+     896:	ae 98       	cbi	0x15, 6	; 21
+     898:	98 b3       	in	r25, 0x18	; 24
+     89a:	28 2f       	mov	r18, r24
+     89c:	20 7f       	andi	r18, 0xF0	; 240
+     89e:	9f 70       	andi	r25, 0x0F	; 15
+     8a0:	29 2b       	or	r18, r25
+     8a2:	28 bb       	out	0x18, r18	; 24
+     8a4:	af 9a       	sbi	0x15, 7	; 21
+     8a6:	20 e4       	ldi	r18, 0x40	; 64
+     8a8:	3f e1       	ldi	r19, 0x1F	; 31
+     8aa:	f9 01       	movw	r30, r18
+     8ac:	31 97       	sbiw	r30, 0x01	; 1
+     8ae:	f1 f7       	brne	.-4      	; 0x8ac <LCD_vidSendCommand+0x16>
+     8b0:	af 98       	cbi	0x15, 7	; 21
+     8b2:	95 e0       	ldi	r25, 0x05	; 5
+     8b4:	9a 95       	dec	r25
+     8b6:	f1 f7       	brne	.-4      	; 0x8b4 <LCD_vidSendCommand+0x1e>
+     8b8:	98 b3       	in	r25, 0x18	; 24
+     8ba:	82 95       	swap	r24
+     8bc:	80 7f       	andi	r24, 0xF0	; 240
+     8be:	9f 70       	andi	r25, 0x0F	; 15
+     8c0:	98 2b       	or	r25, r24
+     8c2:	98 bb       	out	0x18, r25	; 24
+     8c4:	af 9a       	sbi	0x15, 7	; 21
+     8c6:	c9 01       	movw	r24, r18
+     8c8:	01 97       	sbiw	r24, 0x01	; 1
+     8ca:	f1 f7       	brne	.-4      	; 0x8c8 <LCD_vidSendCommand+0x32>
+     8cc:	af 98       	cbi	0x15, 7	; 21
+     8ce:	c9 01       	movw	r24, r18
+     8d0:	01 97       	sbiw	r24, 0x01	; 1
+     8d2:	f1 f7       	brne	.-4      	; 0x8d0 <LCD_vidSendCommand+0x3a>
+     8d4:	08 95       	ret
 
-00000842 <NFC_write_Tag_Points>:
- 842:	df 93       	push	r29
- 844:	cf 93       	push	r28
- 846:	00 d0       	rcall	.+0      	; 0x848 <NFC_write_Tag_Points+0x6>
- 848:	00 d0       	rcall	.+0      	; 0x84a <NFC_write_Tag_Points+0x8>
- 84a:	cd b7       	in	r28, 0x3d	; 61
- 84c:	de b7       	in	r29, 0x3e	; 62
- 84e:	6c 83       	std	Y+4, r22	; 0x04
- 850:	27 2f       	mov	r18, r23
- 852:	38 2f       	mov	r19, r24
- 854:	49 2f       	mov	r20, r25
- 856:	55 27       	eor	r21, r21
- 858:	2b 83       	std	Y+3, r18	; 0x03
- 85a:	9c 01       	movw	r18, r24
- 85c:	44 27       	eor	r20, r20
- 85e:	55 27       	eor	r21, r21
- 860:	2a 83       	std	Y+2, r18	; 0x02
- 862:	69 2f       	mov	r22, r25
- 864:	77 27       	eor	r23, r23
- 866:	88 27       	eor	r24, r24
- 868:	99 27       	eor	r25, r25
- 86a:	69 83       	std	Y+1, r22	; 0x01
- 86c:	86 e0       	ldi	r24, 0x06	; 6
- 86e:	be 01       	movw	r22, r28
- 870:	6f 5f       	subi	r22, 0xFF	; 255
- 872:	7f 4f       	sbci	r23, 0xFF	; 255
- 874:	0e 94 ed 03 	call	0x7da	; 0x7da <NFC_write_page>
- 878:	0f 90       	pop	r0
- 87a:	0f 90       	pop	r0
- 87c:	0f 90       	pop	r0
- 87e:	0f 90       	pop	r0
- 880:	cf 91       	pop	r28
- 882:	df 91       	pop	r29
- 884:	08 95       	ret
+000008d6 <LCD_VidInit>:
+     8d6:	0f 93       	push	r16
+     8d8:	1f 93       	push	r17
+     8da:	87 b3       	in	r24, 0x17	; 23
+     8dc:	80 6f       	ori	r24, 0xF0	; 240
+     8de:	87 bb       	out	0x17, r24	; 23
+     8e0:	84 b3       	in	r24, 0x14	; 20
+     8e2:	80 6c       	ori	r24, 0xC0	; 192
+     8e4:	84 bb       	out	0x14, r24	; 20
+     8e6:	88 b3       	in	r24, 0x18	; 24
+     8e8:	8f 70       	andi	r24, 0x0F	; 15
+     8ea:	88 bb       	out	0x18, r24	; 24
+     8ec:	85 b3       	in	r24, 0x15	; 21
+     8ee:	8f 73       	andi	r24, 0x3F	; 63
+     8f0:	85 bb       	out	0x15, r24	; 21
+     8f2:	00 e4       	ldi	r16, 0x40	; 64
+     8f4:	1f e1       	ldi	r17, 0x1F	; 31
+     8f6:	c8 01       	movw	r24, r16
+     8f8:	01 97       	sbiw	r24, 0x01	; 1
+     8fa:	f1 f7       	brne	.-4      	; 0x8f8 <LCD_VidInit+0x22>
+     8fc:	83 e3       	ldi	r24, 0x33	; 51
+     8fe:	0e 94 4b 04 	call	0x896	; 0x896 <LCD_vidSendCommand>
+     902:	82 e3       	ldi	r24, 0x32	; 50
+     904:	0e 94 4b 04 	call	0x896	; 0x896 <LCD_vidSendCommand>
+     908:	88 e2       	ldi	r24, 0x28	; 40
+     90a:	0e 94 4b 04 	call	0x896	; 0x896 <LCD_vidSendCommand>
+     90e:	8e e0       	ldi	r24, 0x0E	; 14
+     910:	0e 94 4b 04 	call	0x896	; 0x896 <LCD_vidSendCommand>
+     914:	81 e0       	ldi	r24, 0x01	; 1
+     916:	0e 94 4b 04 	call	0x896	; 0x896 <LCD_vidSendCommand>
+     91a:	c8 01       	movw	r24, r16
+     91c:	01 97       	sbiw	r24, 0x01	; 1
+     91e:	f1 f7       	brne	.-4      	; 0x91c <LCD_VidInit+0x46>
+     920:	86 e0       	ldi	r24, 0x06	; 6
+     922:	0e 94 4b 04 	call	0x896	; 0x896 <LCD_vidSendCommand>
+     926:	1f 91       	pop	r17
+     928:	0f 91       	pop	r16
+     92a:	08 95       	ret
 
-00000886 <NFC_write_tag_ID>:
- 886:	df 93       	push	r29
- 888:	cf 93       	push	r28
- 88a:	00 d0       	rcall	.+0      	; 0x88c <NFC_write_tag_ID+0x6>
- 88c:	00 d0       	rcall	.+0      	; 0x88e <NFC_write_tag_ID+0x8>
- 88e:	cd b7       	in	r28, 0x3d	; 61
- 890:	de b7       	in	r29, 0x3e	; 62
- 892:	6c 83       	std	Y+4, r22	; 0x04
- 894:	27 2f       	mov	r18, r23
- 896:	38 2f       	mov	r19, r24
- 898:	49 2f       	mov	r20, r25
- 89a:	55 27       	eor	r21, r21
- 89c:	2b 83       	std	Y+3, r18	; 0x03
- 89e:	9c 01       	movw	r18, r24
- 8a0:	44 27       	eor	r20, r20
- 8a2:	55 27       	eor	r21, r21
- 8a4:	2a 83       	std	Y+2, r18	; 0x02
- 8a6:	69 2f       	mov	r22, r25
- 8a8:	77 27       	eor	r23, r23
- 8aa:	88 27       	eor	r24, r24
- 8ac:	99 27       	eor	r25, r25
- 8ae:	69 83       	std	Y+1, r22	; 0x01
- 8b0:	85 e0       	ldi	r24, 0x05	; 5
- 8b2:	be 01       	movw	r22, r28
- 8b4:	6f 5f       	subi	r22, 0xFF	; 255
- 8b6:	7f 4f       	sbci	r23, 0xFF	; 255
- 8b8:	0e 94 ed 03 	call	0x7da	; 0x7da <NFC_write_page>
- 8bc:	0f 90       	pop	r0
- 8be:	0f 90       	pop	r0
- 8c0:	0f 90       	pop	r0
- 8c2:	0f 90       	pop	r0
- 8c4:	cf 91       	pop	r28
- 8c6:	df 91       	pop	r29
- 8c8:	08 95       	ret
+0000092c <LCD_vidsendData>:
+     92c:	ae 9a       	sbi	0x15, 6	; 21
+     92e:	98 b3       	in	r25, 0x18	; 24
+     930:	28 2f       	mov	r18, r24
+     932:	20 7f       	andi	r18, 0xF0	; 240
+     934:	9f 70       	andi	r25, 0x0F	; 15
+     936:	29 2b       	or	r18, r25
+     938:	28 bb       	out	0x18, r18	; 24
+     93a:	af 9a       	sbi	0x15, 7	; 21
+     93c:	20 e4       	ldi	r18, 0x40	; 64
+     93e:	3f e1       	ldi	r19, 0x1F	; 31
+     940:	f9 01       	movw	r30, r18
+     942:	31 97       	sbiw	r30, 0x01	; 1
+     944:	f1 f7       	brne	.-4      	; 0x942 <LCD_vidsendData+0x16>
+     946:	af 98       	cbi	0x15, 7	; 21
+     948:	95 e0       	ldi	r25, 0x05	; 5
+     94a:	9a 95       	dec	r25
+     94c:	f1 f7       	brne	.-4      	; 0x94a <LCD_vidsendData+0x1e>
+     94e:	98 b3       	in	r25, 0x18	; 24
+     950:	82 95       	swap	r24
+     952:	80 7f       	andi	r24, 0xF0	; 240
+     954:	9f 70       	andi	r25, 0x0F	; 15
+     956:	98 2b       	or	r25, r24
+     958:	98 bb       	out	0x18, r25	; 24
+     95a:	af 9a       	sbi	0x15, 7	; 21
+     95c:	c9 01       	movw	r24, r18
+     95e:	01 97       	sbiw	r24, 0x01	; 1
+     960:	f1 f7       	brne	.-4      	; 0x95e <LCD_vidsendData+0x32>
+     962:	af 98       	cbi	0x15, 7	; 21
+     964:	c9 01       	movw	r24, r18
+     966:	01 97       	sbiw	r24, 0x01	; 1
+     968:	f1 f7       	brne	.-4      	; 0x966 <LCD_vidsendData+0x3a>
+     96a:	08 95       	ret
 
-000008ca <NFC_write_company_id>:
- 8ca:	bc 01       	movw	r22, r24
- 8cc:	84 e0       	ldi	r24, 0x04	; 4
- 8ce:	0e 94 ed 03 	call	0x7da	; 0x7da <NFC_write_page>
- 8d2:	08 95       	ret
+0000096c <LCD_vidsendword>:
+     96c:	cf 93       	push	r28
+     96e:	df 93       	push	r29
+     970:	ec 01       	movw	r28, r24
+     972:	03 c0       	rjmp	.+6      	; 0x97a <LCD_vidsendword+0xe>
+     974:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     978:	21 96       	adiw	r28, 0x01	; 1
+     97a:	88 81       	ld	r24, Y
+     97c:	88 23       	and	r24, r24
+     97e:	d1 f7       	brne	.-12     	; 0x974 <LCD_vidsendword+0x8>
+     980:	df 91       	pop	r29
+     982:	cf 91       	pop	r28
+     984:	08 95       	ret
 
-000008d4 <NFC_read_tag>:
- 8d4:	0e 94 11 03 	call	0x622	; 0x622 <Clear_Rec_buffer>
- 8d8:	85 ef       	ldi	r24, 0xF5	; 245
- 8da:	90 e0       	ldi	r25, 0x00	; 0
- 8dc:	63 e0       	ldi	r22, 0x03	; 3
- 8de:	0e 94 d3 02 	call	0x5a6	; 0x5a6 <NFC_send_frame>
- 8e2:	88 ee       	ldi	r24, 0xE8	; 232
- 8e4:	93 e0       	ldi	r25, 0x03	; 3
- 8e6:	20 e9       	ldi	r18, 0x90	; 144
- 8e8:	31 e0       	ldi	r19, 0x01	; 1
- 8ea:	f9 01       	movw	r30, r18
- 8ec:	31 97       	sbiw	r30, 0x01	; 1
- 8ee:	f1 f7       	brne	.-4      	; 0x8ec <NFC_read_tag+0x18>
- 8f0:	01 97       	sbiw	r24, 0x01	; 1
- 8f2:	d9 f7       	brne	.-10     	; 0x8ea <NFC_read_tag+0x16>
- 8f4:	20 e0       	ldi	r18, 0x00	; 0
- 8f6:	30 e0       	ldi	r19, 0x00	; 0
- 8f8:	f9 01       	movw	r30, r18
- 8fa:	e0 5c       	subi	r30, 0xC0	; 192
- 8fc:	fe 4f       	sbci	r31, 0xFE	; 254
- 8fe:	d9 01       	movw	r26, r18
- 900:	a8 50       	subi	r26, 0x08	; 8
- 902:	bf 4f       	sbci	r27, 0xFF	; 255
- 904:	90 81       	ld	r25, Z
- 906:	8c 91       	ld	r24, X
- 908:	98 17       	cp	r25, r24
- 90a:	11 f0       	breq	.+4      	; 0x910 <NFC_read_tag+0x3c>
- 90c:	82 e0       	ldi	r24, 0x02	; 2
- 90e:	08 95       	ret
- 910:	2f 5f       	subi	r18, 0xFF	; 255
- 912:	3f 4f       	sbci	r19, 0xFF	; 255
- 914:	2e 30       	cpi	r18, 0x0E	; 14
- 916:	31 05       	cpc	r19, r1
- 918:	79 f7       	brne	.-34     	; 0x8f8 <NFC_read_tag+0x24>
- 91a:	83 e0       	ldi	r24, 0x03	; 3
- 91c:	08 95       	ret
+00000986 <LCD_vidClear>:
+     986:	81 e0       	ldi	r24, 0x01	; 1
+     988:	0e 94 4b 04 	call	0x896	; 0x896 <LCD_vidSendCommand>
+     98c:	08 95       	ret
 
-0000091e <NFC_init>:
- 91e:	0e 94 d3 05 	call	0xba6	; 0xba6 <uart_init>
- 922:	78 94       	sei
- 924:	0e 94 57 00 	call	0xae	; 0xae <init_UART_115200>
- 928:	84 e9       	ldi	r24, 0x94	; 148
- 92a:	92 e0       	ldi	r25, 0x02	; 2
- 92c:	0e 94 73 00 	call	0xe6	; 0xe6 <UART_set_call_back_function>
- 930:	0e 94 11 03 	call	0x622	; 0x622 <Clear_Rec_buffer>
- 934:	82 ee       	ldi	r24, 0xE2	; 226
- 936:	90 e0       	ldi	r25, 0x00	; 0
- 938:	64 e0       	ldi	r22, 0x04	; 4
- 93a:	0e 94 d3 02 	call	0x5a6	; 0x5a6 <NFC_send_frame>
- 93e:	88 ee       	ldi	r24, 0xE8	; 232
- 940:	93 e0       	ldi	r25, 0x03	; 3
- 942:	20 e9       	ldi	r18, 0x90	; 144
- 944:	31 e0       	ldi	r19, 0x01	; 1
- 946:	f9 01       	movw	r30, r18
- 948:	31 97       	sbiw	r30, 0x01	; 1
- 94a:	f1 f7       	brne	.-4      	; 0x948 <NFC_init+0x2a>
- 94c:	01 97       	sbiw	r24, 0x01	; 1
- 94e:	d9 f7       	brne	.-10     	; 0x946 <NFC_init+0x28>
- 950:	20 e0       	ldi	r18, 0x00	; 0
- 952:	30 e0       	ldi	r19, 0x00	; 0
- 954:	f9 01       	movw	r30, r18
- 956:	e0 5c       	subi	r30, 0xC0	; 192
- 958:	fe 4f       	sbci	r31, 0xFE	; 254
- 95a:	d9 01       	movw	r26, r18
- 95c:	aa 51       	subi	r26, 0x1A	; 26
- 95e:	bf 4f       	sbci	r27, 0xFF	; 255
- 960:	90 81       	ld	r25, Z
- 962:	8c 91       	ld	r24, X
- 964:	98 17       	cp	r25, r24
- 966:	11 f0       	breq	.+4      	; 0x96c <NFC_init+0x4e>
- 968:	80 e0       	ldi	r24, 0x00	; 0
- 96a:	08 95       	ret
- 96c:	2f 5f       	subi	r18, 0xFF	; 255
- 96e:	3f 4f       	sbci	r19, 0xFF	; 255
- 970:	2f 30       	cpi	r18, 0x0F	; 15
- 972:	31 05       	cpc	r19, r1
- 974:	79 f7       	brne	.-34     	; 0x954 <NFC_init+0x36>
- 976:	81 e0       	ldi	r24, 0x01	; 1
- 978:	08 95       	ret
+0000098e <LCD_vid_Save_in_CGRAM>:
+     98e:	80 e4       	ldi	r24, 0x40	; 64
+     990:	0e 94 4b 04 	call	0x896	; 0x896 <LCD_vidSendCommand>
+     994:	8e e0       	ldi	r24, 0x0E	; 14
+     996:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     99a:	8e e0       	ldi	r24, 0x0E	; 14
+     99c:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     9a0:	84 e0       	ldi	r24, 0x04	; 4
+     9a2:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     9a6:	8e e0       	ldi	r24, 0x0E	; 14
+     9a8:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     9ac:	85 e1       	ldi	r24, 0x15	; 21
+     9ae:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     9b2:	84 e0       	ldi	r24, 0x04	; 4
+     9b4:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     9b8:	8a e0       	ldi	r24, 0x0A	; 10
+     9ba:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     9be:	8a e0       	ldi	r24, 0x0A	; 10
+     9c0:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     9c4:	80 e0       	ldi	r24, 0x00	; 0
+     9c6:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     9ca:	80 e0       	ldi	r24, 0x00	; 0
+     9cc:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     9d0:	8a e0       	ldi	r24, 0x0A	; 10
+     9d2:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     9d6:	80 e0       	ldi	r24, 0x00	; 0
+     9d8:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     9dc:	80 e0       	ldi	r24, 0x00	; 0
+     9de:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     9e2:	81 e1       	ldi	r24, 0x11	; 17
+     9e4:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     9e8:	8e e0       	ldi	r24, 0x0E	; 14
+     9ea:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     9ee:	80 e0       	ldi	r24, 0x00	; 0
+     9f0:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     9f4:	8e e0       	ldi	r24, 0x0E	; 14
+     9f6:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     9fa:	81 e1       	ldi	r24, 0x11	; 17
+     9fc:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a00:	81 e1       	ldi	r24, 0x11	; 17
+     a02:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a06:	8f e1       	ldi	r24, 0x1F	; 31
+     a08:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a0c:	8b e1       	ldi	r24, 0x1B	; 27
+     a0e:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a12:	8b e1       	ldi	r24, 0x1B	; 27
+     a14:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a18:	8f e1       	ldi	r24, 0x1F	; 31
+     a1a:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a1e:	80 e0       	ldi	r24, 0x00	; 0
+     a20:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a24:	80 e0       	ldi	r24, 0x00	; 0
+     a26:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a2a:	80 e0       	ldi	r24, 0x00	; 0
+     a2c:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a30:	8a e0       	ldi	r24, 0x0A	; 10
+     a32:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a36:	85 e1       	ldi	r24, 0x15	; 21
+     a38:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a3c:	81 e1       	ldi	r24, 0x11	; 17
+     a3e:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a42:	8e e0       	ldi	r24, 0x0E	; 14
+     a44:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a48:	84 e0       	ldi	r24, 0x04	; 4
+     a4a:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a4e:	80 e0       	ldi	r24, 0x00	; 0
+     a50:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a54:	80 e0       	ldi	r24, 0x00	; 0
+     a56:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a5a:	80 e0       	ldi	r24, 0x00	; 0
+     a5c:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a60:	80 e0       	ldi	r24, 0x00	; 0
+     a62:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a66:	81 e0       	ldi	r24, 0x01	; 1
+     a68:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a6c:	81 e0       	ldi	r24, 0x01	; 1
+     a6e:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a72:	81 e0       	ldi	r24, 0x01	; 1
+     a74:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a78:	8f e1       	ldi	r24, 0x1F	; 31
+     a7a:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a7e:	80 e0       	ldi	r24, 0x00	; 0
+     a80:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a84:	80 e0       	ldi	r24, 0x00	; 0
+     a86:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a8a:	80 e0       	ldi	r24, 0x00	; 0
+     a8c:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a90:	80 e0       	ldi	r24, 0x00	; 0
+     a92:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a96:	80 e0       	ldi	r24, 0x00	; 0
+     a98:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     a9c:	80 e0       	ldi	r24, 0x00	; 0
+     a9e:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     aa2:	8e e0       	ldi	r24, 0x0E	; 14
+     aa4:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     aa8:	81 e1       	ldi	r24, 0x11	; 17
+     aaa:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     aae:	8e e0       	ldi	r24, 0x0E	; 14
+     ab0:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     ab4:	80 e0       	ldi	r24, 0x00	; 0
+     ab6:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     aba:	80 e0       	ldi	r24, 0x00	; 0
+     abc:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     ac0:	80 e0       	ldi	r24, 0x00	; 0
+     ac2:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     ac6:	80 e0       	ldi	r24, 0x00	; 0
+     ac8:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     acc:	8e e0       	ldi	r24, 0x0E	; 14
+     ace:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     ad2:	81 e0       	ldi	r24, 0x01	; 1
+     ad4:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     ad8:	8f e1       	ldi	r24, 0x1F	; 31
+     ada:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     ade:	80 e0       	ldi	r24, 0x00	; 0
+     ae0:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     ae4:	86 e0       	ldi	r24, 0x06	; 6
+     ae6:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     aea:	84 e0       	ldi	r24, 0x04	; 4
+     aec:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     af0:	8e e0       	ldi	r24, 0x0E	; 14
+     af2:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     af6:	80 e0       	ldi	r24, 0x00	; 0
+     af8:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     afc:	84 e0       	ldi	r24, 0x04	; 4
+     afe:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     b02:	84 e0       	ldi	r24, 0x04	; 4
+     b04:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     b08:	84 e0       	ldi	r24, 0x04	; 4
+     b0a:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     b0e:	84 e0       	ldi	r24, 0x04	; 4
+     b10:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     b14:	08 95       	ret
 
-0000097a <main>:
- 97a:	cf 92       	push	r12
- 97c:	df 92       	push	r13
- 97e:	ef 92       	push	r14
- 980:	ff 92       	push	r15
- 982:	1f 93       	push	r17
- 984:	df 93       	push	r29
- 986:	cf 93       	push	r28
- 988:	cd b7       	in	r28, 0x3d	; 61
- 98a:	de b7       	in	r29, 0x3e	; 62
- 98c:	68 97       	sbiw	r28, 0x18	; 24
- 98e:	0f b6       	in	r0, 0x3f	; 63
- 990:	f8 94       	cli
- 992:	de bf       	out	0x3e, r29	; 62
- 994:	0f be       	out	0x3f, r0	; 63
- 996:	cd bf       	out	0x3d, r28	; 61
- 998:	0e 94 e1 00 	call	0x1c2	; 0x1c2 <LCD_VidInit>
- 99c:	80 e6       	ldi	r24, 0x60	; 96
- 99e:	90 e0       	ldi	r25, 0x00	; 0
- 9a0:	0e 94 2c 01 	call	0x258	; 0x258 <LCD_vidsendword>
- 9a4:	0e 94 8f 04 	call	0x91e	; 0x91e <NFC_init>
- 9a8:	88 23       	and	r24, r24
- 9aa:	09 f4       	brne	.+2      	; 0x9ae <main+0x34>
- 9ac:	ec c0       	rjmp	.+472    	; 0xb86 <main+0x20c>
- 9ae:	81 30       	cpi	r24, 0x01	; 1
- 9b0:	09 f0       	breq	.+2      	; 0x9b4 <main+0x3a>
- 9b2:	e9 c0       	rjmp	.+466    	; 0xb86 <main+0x20c>
- 9b4:	80 e9       	ldi	r24, 0x90	; 144
- 9b6:	e8 2e       	mov	r14, r24
- 9b8:	81 e0       	ldi	r24, 0x01	; 1
- 9ba:	f8 2e       	mov	r15, r24
- 9bc:	6e 01       	movw	r12, r28
- 9be:	08 94       	sec
- 9c0:	c1 1c       	adc	r12, r1
- 9c2:	d1 1c       	adc	r13, r1
- 9c4:	0e 94 39 01 	call	0x272	; 0x272 <LCD_vidClear>
- 9c8:	88 e6       	ldi	r24, 0x68	; 104
- 9ca:	90 e0       	ldi	r25, 0x00	; 0
- 9cc:	0e 94 2c 01 	call	0x258	; 0x258 <LCD_vidsendword>
- 9d0:	0e 94 6a 04 	call	0x8d4	; 0x8d4 <NFC_read_tag>
- 9d4:	20 ea       	ldi	r18, 0xA0	; 160
- 9d6:	3f e0       	ldi	r19, 0x0F	; 15
- 9d8:	f7 01       	movw	r30, r14
- 9da:	31 97       	sbiw	r30, 0x01	; 1
- 9dc:	f1 f7       	brne	.-4      	; 0x9da <main+0x60>
- 9de:	21 50       	subi	r18, 0x01	; 1
- 9e0:	30 40       	sbci	r19, 0x00	; 0
- 9e2:	d1 f7       	brne	.-12     	; 0x9d8 <main+0x5e>
- 9e4:	83 30       	cpi	r24, 0x03	; 3
- 9e6:	a1 f7       	brne	.-24     	; 0x9d0 <main+0x56>
- 9e8:	c6 01       	movw	r24, r12
- 9ea:	0e 94 1b 03 	call	0x636	; 0x636 <NFC_read_tag_data>
- 9ee:	87 30       	cpi	r24, 0x07	; 7
- 9f0:	09 f0       	breq	.+2      	; 0x9f4 <main+0x7a>
- 9f2:	a0 c0       	rjmp	.+320    	; 0xb34 <main+0x1ba>
- 9f4:	8d 89       	ldd	r24, Y+21	; 0x15
- 9f6:	9e 89       	ldd	r25, Y+22	; 0x16
- 9f8:	af 89       	ldd	r26, Y+23	; 0x17
- 9fa:	b8 8d       	ldd	r27, Y+24	; 0x18
- 9fc:	44 97       	sbiw	r24, 0x14	; 20
- 9fe:	a1 05       	cpc	r26, r1
- a00:	b1 05       	cpc	r27, r1
- a02:	b8 f5       	brcc	.+110    	; 0xa72 <main+0xf8>
- a04:	0e 94 39 01 	call	0x272	; 0x272 <LCD_vidClear>
- a08:	80 e0       	ldi	r24, 0x00	; 0
- a0a:	60 e0       	ldi	r22, 0x00	; 0
- a0c:	0e 94 01 02 	call	0x402	; 0x402 <LCD_vidGoTo>
- a10:	88 e7       	ldi	r24, 0x78	; 120
- a12:	90 e0       	ldi	r25, 0x00	; 0
- a14:	0e 94 2c 01 	call	0x258	; 0x258 <LCD_vidsendword>
- a18:	89 89       	ldd	r24, Y+17	; 0x11
- a1a:	9a 89       	ldd	r25, Y+18	; 0x12
- a1c:	0e 94 2e 02 	call	0x45c	; 0x45c <LCD_SEND_number>
- a20:	80 e0       	ldi	r24, 0x00	; 0
- a22:	6e e0       	ldi	r22, 0x0E	; 14
- a24:	0e 94 01 02 	call	0x402	; 0x402 <LCD_vidGoTo>
- a28:	84 e1       	ldi	r24, 0x14	; 20
- a2a:	90 e0       	ldi	r25, 0x00	; 0
- a2c:	0e 94 2e 02 	call	0x45c	; 0x45c <LCD_SEND_number>
- a30:	81 e0       	ldi	r24, 0x01	; 1
- a32:	60 e0       	ldi	r22, 0x00	; 0
- a34:	0e 94 01 02 	call	0x402	; 0x402 <LCD_vidGoTo>
- a38:	82 e8       	ldi	r24, 0x82	; 130
- a3a:	90 e0       	ldi	r25, 0x00	; 0
- a3c:	0e 94 2c 01 	call	0x258	; 0x258 <LCD_vidsendword>
- a40:	8d 89       	ldd	r24, Y+21	; 0x15
- a42:	9e 89       	ldd	r25, Y+22	; 0x16
- a44:	0e 94 2e 02 	call	0x45c	; 0x45c <LCD_SEND_number>
- a48:	80 e1       	ldi	r24, 0x10	; 16
- a4a:	97 e2       	ldi	r25, 0x27	; 39
- a4c:	f7 01       	movw	r30, r14
- a4e:	31 97       	sbiw	r30, 0x01	; 1
- a50:	f1 f7       	brne	.-4      	; 0xa4e <main+0xd4>
- a52:	01 97       	sbiw	r24, 0x01	; 1
- a54:	d9 f7       	brne	.-10     	; 0xa4c <main+0xd2>
- a56:	0e 94 39 01 	call	0x272	; 0x272 <LCD_vidClear>
- a5a:	8c e8       	ldi	r24, 0x8C	; 140
- a5c:	90 e0       	ldi	r25, 0x00	; 0
- a5e:	0e 94 2c 01 	call	0x258	; 0x258 <LCD_vidsendword>
- a62:	80 e3       	ldi	r24, 0x30	; 48
- a64:	95 e7       	ldi	r25, 0x75	; 117
- a66:	f7 01       	movw	r30, r14
- a68:	31 97       	sbiw	r30, 0x01	; 1
- a6a:	f1 f7       	brne	.-4      	; 0xa68 <main+0xee>
- a6c:	01 97       	sbiw	r24, 0x01	; 1
- a6e:	d9 f7       	brne	.-10     	; 0xa66 <main+0xec>
- a70:	a9 cf       	rjmp	.-174    	; 0x9c4 <main+0x4a>
- a72:	0e 94 39 01 	call	0x272	; 0x272 <LCD_vidClear>
- a76:	80 e0       	ldi	r24, 0x00	; 0
- a78:	60 e0       	ldi	r22, 0x00	; 0
- a7a:	0e 94 01 02 	call	0x402	; 0x402 <LCD_vidGoTo>
- a7e:	88 e7       	ldi	r24, 0x78	; 120
- a80:	90 e0       	ldi	r25, 0x00	; 0
- a82:	0e 94 2c 01 	call	0x258	; 0x258 <LCD_vidsendword>
- a86:	89 89       	ldd	r24, Y+17	; 0x11
- a88:	9a 89       	ldd	r25, Y+18	; 0x12
- a8a:	0e 94 2e 02 	call	0x45c	; 0x45c <LCD_SEND_number>
- a8e:	80 e0       	ldi	r24, 0x00	; 0
- a90:	6e e0       	ldi	r22, 0x0E	; 14
- a92:	0e 94 01 02 	call	0x402	; 0x402 <LCD_vidGoTo>
- a96:	84 e1       	ldi	r24, 0x14	; 20
- a98:	90 e0       	ldi	r25, 0x00	; 0
- a9a:	0e 94 2e 02 	call	0x45c	; 0x45c <LCD_SEND_number>
- a9e:	81 e0       	ldi	r24, 0x01	; 1
- aa0:	60 e0       	ldi	r22, 0x00	; 0
- aa2:	0e 94 01 02 	call	0x402	; 0x402 <LCD_vidGoTo>
- aa6:	82 e8       	ldi	r24, 0x82	; 130
- aa8:	90 e0       	ldi	r25, 0x00	; 0
- aaa:	0e 94 2c 01 	call	0x258	; 0x258 <LCD_vidsendword>
- aae:	8d 89       	ldd	r24, Y+21	; 0x15
- ab0:	9e 89       	ldd	r25, Y+22	; 0x16
- ab2:	0e 94 2e 02 	call	0x45c	; 0x45c <LCD_SEND_number>
- ab6:	6d 89       	ldd	r22, Y+21	; 0x15
- ab8:	7e 89       	ldd	r23, Y+22	; 0x16
- aba:	8f 89       	ldd	r24, Y+23	; 0x17
- abc:	98 8d       	ldd	r25, Y+24	; 0x18
- abe:	64 51       	subi	r22, 0x14	; 20
- ac0:	70 40       	sbci	r23, 0x00	; 0
- ac2:	80 40       	sbci	r24, 0x00	; 0
- ac4:	90 40       	sbci	r25, 0x00	; 0
- ac6:	6d 8b       	std	Y+21, r22	; 0x15
- ac8:	7e 8b       	std	Y+22, r23	; 0x16
- aca:	8f 8b       	std	Y+23, r24	; 0x17
- acc:	98 8f       	std	Y+24, r25	; 0x18
- ace:	0e 94 21 04 	call	0x842	; 0x842 <NFC_write_Tag_Points>
- ad2:	87 30       	cpi	r24, 0x07	; 7
- ad4:	51 f5       	brne	.+84     	; 0xb2a <main+0x1b0>
- ad6:	80 e1       	ldi	r24, 0x10	; 16
- ad8:	97 e2       	ldi	r25, 0x27	; 39
- ada:	f7 01       	movw	r30, r14
- adc:	31 97       	sbiw	r30, 0x01	; 1
- ade:	f1 f7       	brne	.-4      	; 0xadc <main+0x162>
- ae0:	01 97       	sbiw	r24, 0x01	; 1
- ae2:	d9 f7       	brne	.-10     	; 0xada <main+0x160>
- ae4:	10 e0       	ldi	r17, 0x00	; 0
- ae6:	81 e0       	ldi	r24, 0x01	; 1
- ae8:	69 e0       	ldi	r22, 0x09	; 9
- aea:	0e 94 01 02 	call	0x402	; 0x402 <LCD_vidGoTo>
- aee:	8e e9       	ldi	r24, 0x9E	; 158
- af0:	90 e0       	ldi	r25, 0x00	; 0
- af2:	0e 94 2c 01 	call	0x258	; 0x258 <LCD_vidsendword>
- af6:	88 e8       	ldi	r24, 0x88	; 136
- af8:	93 e1       	ldi	r25, 0x13	; 19
- afa:	f7 01       	movw	r30, r14
- afc:	31 97       	sbiw	r30, 0x01	; 1
- afe:	f1 f7       	brne	.-4      	; 0xafc <main+0x182>
- b00:	01 97       	sbiw	r24, 0x01	; 1
- b02:	d9 f7       	brne	.-10     	; 0xafa <main+0x180>
- b04:	81 e0       	ldi	r24, 0x01	; 1
- b06:	69 e0       	ldi	r22, 0x09	; 9
- b08:	0e 94 01 02 	call	0x402	; 0x402 <LCD_vidGoTo>
- b0c:	8d 89       	ldd	r24, Y+21	; 0x15
- b0e:	9e 89       	ldd	r25, Y+22	; 0x16
- b10:	0e 94 2e 02 	call	0x45c	; 0x45c <LCD_SEND_number>
- b14:	88 e8       	ldi	r24, 0x88	; 136
- b16:	93 e1       	ldi	r25, 0x13	; 19
- b18:	f7 01       	movw	r30, r14
- b1a:	31 97       	sbiw	r30, 0x01	; 1
- b1c:	f1 f7       	brne	.-4      	; 0xb1a <main+0x1a0>
- b1e:	01 97       	sbiw	r24, 0x01	; 1
- b20:	d9 f7       	brne	.-10     	; 0xb18 <main+0x19e>
- b22:	1f 5f       	subi	r17, 0xFF	; 255
- b24:	15 30       	cpi	r17, 0x05	; 5
- b26:	f9 f6       	brne	.-66     	; 0xae6 <main+0x16c>
- b28:	4d cf       	rjmp	.-358    	; 0x9c4 <main+0x4a>
- b2a:	86 ea       	ldi	r24, 0xA6	; 166
- b2c:	90 e0       	ldi	r25, 0x00	; 0
- b2e:	0e 94 2c 01 	call	0x258	; 0x258 <LCD_vidsendword>
- b32:	48 cf       	rjmp	.-368    	; 0x9c4 <main+0x4a>
- b34:	86 30       	cpi	r24, 0x06	; 6
- b36:	71 f4       	brne	.+28     	; 0xb54 <main+0x1da>
- b38:	0e 94 39 01 	call	0x272	; 0x272 <LCD_vidClear>
- b3c:	8b eb       	ldi	r24, 0xBB	; 187
- b3e:	90 e0       	ldi	r25, 0x00	; 0
- b40:	0e 94 2c 01 	call	0x258	; 0x258 <LCD_vidsendword>
- b44:	80 e2       	ldi	r24, 0x20	; 32
- b46:	9e e4       	ldi	r25, 0x4E	; 78
- b48:	f7 01       	movw	r30, r14
- b4a:	31 97       	sbiw	r30, 0x01	; 1
- b4c:	f1 f7       	brne	.-4      	; 0xb4a <main+0x1d0>
- b4e:	01 97       	sbiw	r24, 0x01	; 1
- b50:	d9 f7       	brne	.-10     	; 0xb48 <main+0x1ce>
- b52:	38 cf       	rjmp	.-400    	; 0x9c4 <main+0x4a>
- b54:	84 30       	cpi	r24, 0x04	; 4
- b56:	09 f0       	breq	.+2      	; 0xb5a <main+0x1e0>
- b58:	35 cf       	rjmp	.-406    	; 0x9c4 <main+0x4a>
- b5a:	0e 94 39 01 	call	0x272	; 0x272 <LCD_vidClear>
- b5e:	8a ec       	ldi	r24, 0xCA	; 202
- b60:	90 e0       	ldi	r25, 0x00	; 0
- b62:	0e 94 2c 01 	call	0x258	; 0x258 <LCD_vidsendword>
- b66:	81 e0       	ldi	r24, 0x01	; 1
- b68:	60 e0       	ldi	r22, 0x00	; 0
- b6a:	0e 94 01 02 	call	0x402	; 0x402 <LCD_vidGoTo>
- b6e:	88 ed       	ldi	r24, 0xD8	; 216
- b70:	90 e0       	ldi	r25, 0x00	; 0
- b72:	0e 94 2c 01 	call	0x258	; 0x258 <LCD_vidsendword>
- b76:	80 e2       	ldi	r24, 0x20	; 32
- b78:	9e e4       	ldi	r25, 0x4E	; 78
- b7a:	f7 01       	movw	r30, r14
- b7c:	31 97       	sbiw	r30, 0x01	; 1
- b7e:	f1 f7       	brne	.-4      	; 0xb7c <main+0x202>
- b80:	01 97       	sbiw	r24, 0x01	; 1
- b82:	d9 f7       	brne	.-10     	; 0xb7a <main+0x200>
- b84:	1f cf       	rjmp	.-450    	; 0x9c4 <main+0x4a>
- b86:	80 e0       	ldi	r24, 0x00	; 0
- b88:	90 e0       	ldi	r25, 0x00	; 0
- b8a:	68 96       	adiw	r28, 0x18	; 24
- b8c:	0f b6       	in	r0, 0x3f	; 63
- b8e:	f8 94       	cli
- b90:	de bf       	out	0x3e, r29	; 62
- b92:	0f be       	out	0x3f, r0	; 63
- b94:	cd bf       	out	0x3d, r28	; 61
- b96:	cf 91       	pop	r28
- b98:	df 91       	pop	r29
- b9a:	1f 91       	pop	r17
- b9c:	ff 90       	pop	r15
- b9e:	ef 90       	pop	r14
- ba0:	df 90       	pop	r13
- ba2:	cf 90       	pop	r12
- ba4:	08 95       	ret
+00000b16 <LCD_vidGoTo>:
+     b16:	88 23       	and	r24, r24
+     b18:	29 f4       	brne	.+10     	; 0xb24 <LCD_vidGoTo+0xe>
+     b1a:	86 2f       	mov	r24, r22
+     b1c:	80 68       	ori	r24, 0x80	; 128
+     b1e:	0e 94 4b 04 	call	0x896	; 0x896 <LCD_vidSendCommand>
+     b22:	08 95       	ret
+     b24:	81 30       	cpi	r24, 0x01	; 1
+     b26:	21 f4       	brne	.+8      	; 0xb30 <LCD_vidGoTo+0x1a>
+     b28:	86 2f       	mov	r24, r22
+     b2a:	80 6c       	ori	r24, 0xC0	; 192
+     b2c:	0e 94 4b 04 	call	0x896	; 0x896 <LCD_vidSendCommand>
+     b30:	08 95       	ret
 
-00000ba6 <uart_init>:
- ba6:	d1 9a       	sbi	0x1a, 1	; 26
- ba8:	d9 9a       	sbi	0x1b, 1	; 27
- baa:	08 95       	ret
+00000b32 <LCD_vidsend_sentance>:
+     b32:	1f 93       	push	r17
+     b34:	cf 93       	push	r28
+     b36:	df 93       	push	r29
+     b38:	ec 01       	movw	r28, r24
+     b3a:	0e 94 c3 04 	call	0x986	; 0x986 <LCD_vidClear>
+     b3e:	10 e0       	ldi	r17, 0x00	; 0
+     b40:	0a c0       	rjmp	.+20     	; 0xb56 <LCD_vidsend_sentance+0x24>
+     b42:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     b46:	1f 5f       	subi	r17, 0xFF	; 255
+     b48:	10 31       	cpi	r17, 0x10	; 16
+     b4a:	21 f4       	brne	.+8      	; 0xb54 <LCD_vidsend_sentance+0x22>
+     b4c:	81 e0       	ldi	r24, 0x01	; 1
+     b4e:	60 e0       	ldi	r22, 0x00	; 0
+     b50:	0e 94 8b 05 	call	0xb16	; 0xb16 <LCD_vidGoTo>
+     b54:	21 96       	adiw	r28, 0x01	; 1
+     b56:	88 81       	ld	r24, Y
+     b58:	88 23       	and	r24, r24
+     b5a:	99 f7       	brne	.-26     	; 0xb42 <LCD_vidsend_sentance+0x10>
+     b5c:	df 91       	pop	r29
+     b5e:	cf 91       	pop	r28
+     b60:	1f 91       	pop	r17
+     b62:	08 95       	ret
 
-00000bac <uart_tx>:
- bac:	58 2f       	mov	r21, r24
- bae:	d9 98       	cbi	0x1b, 1	; 27
- bb0:	80 e4       	ldi	r24, 0x40	; 64
- bb2:	93 e0       	ldi	r25, 0x03	; 3
- bb4:	01 97       	sbiw	r24, 0x01	; 1
- bb6:	f1 f7       	brne	.-4      	; 0xbb4 <uart_tx+0x8>
- bb8:	41 e0       	ldi	r20, 0x01	; 1
- bba:	20 e0       	ldi	r18, 0x00	; 0
- bbc:	30 e0       	ldi	r19, 0x00	; 0
- bbe:	60 e4       	ldi	r22, 0x40	; 64
- bc0:	73 e0       	ldi	r23, 0x03	; 3
- bc2:	84 2f       	mov	r24, r20
- bc4:	85 23       	and	r24, r21
- bc6:	11 f0       	breq	.+4      	; 0xbcc <uart_tx+0x20>
- bc8:	d9 9a       	sbi	0x1b, 1	; 27
- bca:	01 c0       	rjmp	.+2      	; 0xbce <uart_tx+0x22>
- bcc:	d9 98       	cbi	0x1b, 1	; 27
- bce:	cb 01       	movw	r24, r22
- bd0:	01 97       	sbiw	r24, 0x01	; 1
- bd2:	f1 f7       	brne	.-4      	; 0xbd0 <uart_tx+0x24>
- bd4:	44 0f       	add	r20, r20
- bd6:	2f 5f       	subi	r18, 0xFF	; 255
- bd8:	3f 4f       	sbci	r19, 0xFF	; 255
- bda:	28 30       	cpi	r18, 0x08	; 8
- bdc:	31 05       	cpc	r19, r1
- bde:	89 f7       	brne	.-30     	; 0xbc2 <uart_tx+0x16>
- be0:	d9 9a       	sbi	0x1b, 1	; 27
- be2:	80 e4       	ldi	r24, 0x40	; 64
- be4:	93 e0       	ldi	r25, 0x03	; 3
- be6:	01 97       	sbiw	r24, 0x01	; 1
- be8:	f1 f7       	brne	.-4      	; 0xbe6 <uart_tx+0x3a>
- bea:	08 95       	ret
+00000b64 <LCD_SEND_number_binary>:
+     b64:	0f 93       	push	r16
+     b66:	1f 93       	push	r17
+     b68:	cf 93       	push	r28
+     b6a:	df 93       	push	r29
+     b6c:	8c 01       	movw	r16, r24
+     b6e:	c7 e0       	ldi	r28, 0x07	; 7
+     b70:	d0 e0       	ldi	r29, 0x00	; 0
+     b72:	c8 01       	movw	r24, r16
+     b74:	0c 2e       	mov	r0, r28
+     b76:	02 c0       	rjmp	.+4      	; 0xb7c <LCD_SEND_number_binary+0x18>
+     b78:	95 95       	asr	r25
+     b7a:	87 95       	ror	r24
+     b7c:	0a 94       	dec	r0
+     b7e:	e2 f7       	brpl	.-8      	; 0xb78 <LCD_SEND_number_binary+0x14>
+     b80:	80 ff       	sbrs	r24, 0
+     b82:	02 c0       	rjmp	.+4      	; 0xb88 <LCD_SEND_number_binary+0x24>
+     b84:	81 e3       	ldi	r24, 0x31	; 49
+     b86:	01 c0       	rjmp	.+2      	; 0xb8a <LCD_SEND_number_binary+0x26>
+     b88:	80 e3       	ldi	r24, 0x30	; 48
+     b8a:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     b8e:	21 97       	sbiw	r28, 0x01	; 1
+     b90:	8f ef       	ldi	r24, 0xFF	; 255
+     b92:	cf 3f       	cpi	r28, 0xFF	; 255
+     b94:	d8 07       	cpc	r29, r24
+     b96:	69 f7       	brne	.-38     	; 0xb72 <LCD_SEND_number_binary+0xe>
+     b98:	df 91       	pop	r29
+     b9a:	cf 91       	pop	r28
+     b9c:	1f 91       	pop	r17
+     b9e:	0f 91       	pop	r16
+     ba0:	08 95       	ret
 
-00000bec <uart_TX_string>:
- bec:	1f 93       	push	r17
- bee:	cf 93       	push	r28
- bf0:	df 93       	push	r29
- bf2:	ec 01       	movw	r28, r24
- bf4:	10 e0       	ldi	r17, 0x00	; 0
- bf6:	03 c0       	rjmp	.+6      	; 0xbfe <uart_TX_string+0x12>
- bf8:	0e 94 d6 05 	call	0xbac	; 0xbac <uart_tx>
- bfc:	1f 5f       	subi	r17, 0xFF	; 255
- bfe:	fe 01       	movw	r30, r28
- c00:	e1 0f       	add	r30, r17
- c02:	f1 1d       	adc	r31, r1
- c04:	80 81       	ld	r24, Z
- c06:	88 23       	and	r24, r24
- c08:	b9 f7       	brne	.-18     	; 0xbf8 <uart_TX_string+0xc>
- c0a:	df 91       	pop	r29
- c0c:	cf 91       	pop	r28
- c0e:	1f 91       	pop	r17
- c10:	08 95       	ret
+00000ba2 <LCD_SEND_long_number>:
+     ba2:	0f 93       	push	r16
+     ba4:	1f 93       	push	r17
+     ba6:	df 93       	push	r29
+     ba8:	cf 93       	push	r28
+     baa:	cd b7       	in	r28, 0x3d	; 61
+     bac:	de b7       	in	r29, 0x3e	; 62
+     bae:	64 97       	sbiw	r28, 0x14	; 20
+     bb0:	0f b6       	in	r0, 0x3f	; 63
+     bb2:	f8 94       	cli
+     bb4:	de bf       	out	0x3e, r29	; 62
+     bb6:	0f be       	out	0x3f, r0	; 63
+     bb8:	cd bf       	out	0x3d, r28	; 61
+     bba:	8e 01       	movw	r16, r28
+     bbc:	0f 5f       	subi	r16, 0xFF	; 255
+     bbe:	1f 4f       	sbci	r17, 0xFF	; 255
+     bc0:	a8 01       	movw	r20, r16
+     bc2:	2a e0       	ldi	r18, 0x0A	; 10
+     bc4:	30 e0       	ldi	r19, 0x00	; 0
+     bc6:	0e 94 bf 08 	call	0x117e	; 0x117e <ultoa>
+     bca:	c8 01       	movw	r24, r16
+     bcc:	0e 94 b6 04 	call	0x96c	; 0x96c <LCD_vidsendword>
+     bd0:	64 96       	adiw	r28, 0x14	; 20
+     bd2:	0f b6       	in	r0, 0x3f	; 63
+     bd4:	f8 94       	cli
+     bd6:	de bf       	out	0x3e, r29	; 62
+     bd8:	0f be       	out	0x3f, r0	; 63
+     bda:	cd bf       	out	0x3d, r28	; 61
+     bdc:	cf 91       	pop	r28
+     bde:	df 91       	pop	r29
+     be0:	1f 91       	pop	r17
+     be2:	0f 91       	pop	r16
+     be4:	08 95       	ret
 
-00000c12 <uart_tx_str>:
- c12:	cf 93       	push	r28
- c14:	df 93       	push	r29
- c16:	ec 01       	movw	r28, r24
- c18:	fc 01       	movw	r30, r24
- c1a:	84 91       	lpm	r24, Z+
- c1c:	05 c0       	rjmp	.+10     	; 0xc28 <uart_tx_str+0x16>
- c1e:	21 96       	adiw	r28, 0x01	; 1
- c20:	0e 94 d6 05 	call	0xbac	; 0xbac <uart_tx>
- c24:	fe 01       	movw	r30, r28
- c26:	84 91       	lpm	r24, Z+
- c28:	88 23       	and	r24, r24
- c2a:	c9 f7       	brne	.-14     	; 0xc1e <uart_tx_str+0xc>
- c2c:	df 91       	pop	r29
- c2e:	cf 91       	pop	r28
- c30:	08 95       	ret
+00000be6 <LCD_SEND_number>:
+     be6:	0f 93       	push	r16
+     be8:	1f 93       	push	r17
+     bea:	df 93       	push	r29
+     bec:	cf 93       	push	r28
+     bee:	cd b7       	in	r28, 0x3d	; 61
+     bf0:	de b7       	in	r29, 0x3e	; 62
+     bf2:	64 97       	sbiw	r28, 0x14	; 20
+     bf4:	0f b6       	in	r0, 0x3f	; 63
+     bf6:	f8 94       	cli
+     bf8:	de bf       	out	0x3e, r29	; 62
+     bfa:	0f be       	out	0x3f, r0	; 63
+     bfc:	cd bf       	out	0x3d, r28	; 61
+     bfe:	8e 01       	movw	r16, r28
+     c00:	0f 5f       	subi	r16, 0xFF	; 255
+     c02:	1f 4f       	sbci	r17, 0xFF	; 255
+     c04:	b8 01       	movw	r22, r16
+     c06:	4a e0       	ldi	r20, 0x0A	; 10
+     c08:	50 e0       	ldi	r21, 0x00	; 0
+     c0a:	0e 94 9e 08 	call	0x113c	; 0x113c <itoa>
+     c0e:	c8 01       	movw	r24, r16
+     c10:	0e 94 b6 04 	call	0x96c	; 0x96c <LCD_vidsendword>
+     c14:	64 96       	adiw	r28, 0x14	; 20
+     c16:	0f b6       	in	r0, 0x3f	; 63
+     c18:	f8 94       	cli
+     c1a:	de bf       	out	0x3e, r29	; 62
+     c1c:	0f be       	out	0x3f, r0	; 63
+     c1e:	cd bf       	out	0x3d, r28	; 61
+     c20:	cf 91       	pop	r28
+     c22:	df 91       	pop	r29
+     c24:	1f 91       	pop	r17
+     c26:	0f 91       	pop	r16
+     c28:	08 95       	ret
 
-00000c32 <uart_tx_hex>:
- c32:	8a 30       	cpi	r24, 0x0A	; 10
- c34:	10 f0       	brcs	.+4      	; 0xc3a <uart_tx_hex+0x8>
- c36:	89 5a       	subi	r24, 0xA9	; 169
- c38:	01 c0       	rjmp	.+2      	; 0xc3c <uart_tx_hex+0xa>
- c3a:	80 5d       	subi	r24, 0xD0	; 208
- c3c:	0e 94 d6 05 	call	0xbac	; 0xbac <uart_tx>
- c40:	08 95       	ret
+00000c2a <LCD_SEND_number_hex>:
+     c2a:	1f 93       	push	r17
+     c2c:	98 2f       	mov	r25, r24
+     c2e:	92 95       	swap	r25
+     c30:	9f 70       	andi	r25, 0x0F	; 15
+     c32:	18 2f       	mov	r17, r24
+     c34:	1f 70       	andi	r17, 0x0F	; 15
+     c36:	9a 30       	cpi	r25, 0x0A	; 10
+     c38:	28 f4       	brcc	.+10     	; 0xc44 <LCD_SEND_number_hex+0x1a>
+     c3a:	89 2f       	mov	r24, r25
+     c3c:	90 e0       	ldi	r25, 0x00	; 0
+     c3e:	0e 94 f3 05 	call	0xbe6	; 0xbe6 <LCD_SEND_number>
+     c42:	17 c0       	rjmp	.+46     	; 0xc72 <LCD_SEND_number_hex+0x48>
+     c44:	9a 30       	cpi	r25, 0x0A	; 10
+     c46:	11 f4       	brne	.+4      	; 0xc4c <LCD_SEND_number_hex+0x22>
+     c48:	81 e4       	ldi	r24, 0x41	; 65
+     c4a:	11 c0       	rjmp	.+34     	; 0xc6e <LCD_SEND_number_hex+0x44>
+     c4c:	9b 30       	cpi	r25, 0x0B	; 11
+     c4e:	11 f4       	brne	.+4      	; 0xc54 <LCD_SEND_number_hex+0x2a>
+     c50:	82 e4       	ldi	r24, 0x42	; 66
+     c52:	0d c0       	rjmp	.+26     	; 0xc6e <LCD_SEND_number_hex+0x44>
+     c54:	9c 30       	cpi	r25, 0x0C	; 12
+     c56:	11 f4       	brne	.+4      	; 0xc5c <LCD_SEND_number_hex+0x32>
+     c58:	83 e4       	ldi	r24, 0x43	; 67
+     c5a:	09 c0       	rjmp	.+18     	; 0xc6e <LCD_SEND_number_hex+0x44>
+     c5c:	9d 30       	cpi	r25, 0x0D	; 13
+     c5e:	11 f4       	brne	.+4      	; 0xc64 <LCD_SEND_number_hex+0x3a>
+     c60:	84 e4       	ldi	r24, 0x44	; 68
+     c62:	05 c0       	rjmp	.+10     	; 0xc6e <LCD_SEND_number_hex+0x44>
+     c64:	9e 30       	cpi	r25, 0x0E	; 14
+     c66:	11 f4       	brne	.+4      	; 0xc6c <LCD_SEND_number_hex+0x42>
+     c68:	85 e4       	ldi	r24, 0x45	; 69
+     c6a:	01 c0       	rjmp	.+2      	; 0xc6e <LCD_SEND_number_hex+0x44>
+     c6c:	86 e4       	ldi	r24, 0x46	; 70
+     c6e:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     c72:	1a 30       	cpi	r17, 0x0A	; 10
+     c74:	28 f4       	brcc	.+10     	; 0xc80 <LCD_SEND_number_hex+0x56>
+     c76:	81 2f       	mov	r24, r17
+     c78:	90 e0       	ldi	r25, 0x00	; 0
+     c7a:	0e 94 f3 05 	call	0xbe6	; 0xbe6 <LCD_SEND_number>
+     c7e:	17 c0       	rjmp	.+46     	; 0xcae <LCD_SEND_number_hex+0x84>
+     c80:	1a 30       	cpi	r17, 0x0A	; 10
+     c82:	11 f4       	brne	.+4      	; 0xc88 <LCD_SEND_number_hex+0x5e>
+     c84:	81 e4       	ldi	r24, 0x41	; 65
+     c86:	11 c0       	rjmp	.+34     	; 0xcaa <LCD_SEND_number_hex+0x80>
+     c88:	1b 30       	cpi	r17, 0x0B	; 11
+     c8a:	11 f4       	brne	.+4      	; 0xc90 <LCD_SEND_number_hex+0x66>
+     c8c:	82 e4       	ldi	r24, 0x42	; 66
+     c8e:	0d c0       	rjmp	.+26     	; 0xcaa <LCD_SEND_number_hex+0x80>
+     c90:	1c 30       	cpi	r17, 0x0C	; 12
+     c92:	11 f4       	brne	.+4      	; 0xc98 <LCD_SEND_number_hex+0x6e>
+     c94:	83 e4       	ldi	r24, 0x43	; 67
+     c96:	09 c0       	rjmp	.+18     	; 0xcaa <LCD_SEND_number_hex+0x80>
+     c98:	1d 30       	cpi	r17, 0x0D	; 13
+     c9a:	11 f4       	brne	.+4      	; 0xca0 <LCD_SEND_number_hex+0x76>
+     c9c:	84 e4       	ldi	r24, 0x44	; 68
+     c9e:	05 c0       	rjmp	.+10     	; 0xcaa <LCD_SEND_number_hex+0x80>
+     ca0:	1e 30       	cpi	r17, 0x0E	; 14
+     ca2:	11 f4       	brne	.+4      	; 0xca8 <LCD_SEND_number_hex+0x7e>
+     ca4:	85 e4       	ldi	r24, 0x45	; 69
+     ca6:	01 c0       	rjmp	.+2      	; 0xcaa <LCD_SEND_number_hex+0x80>
+     ca8:	86 e4       	ldi	r24, 0x46	; 70
+     caa:	0e 94 96 04 	call	0x92c	; 0x92c <LCD_vidsendData>
+     cae:	1f 91       	pop	r17
+     cb0:	08 95       	ret
 
-00000c42 <uart_tx_hex_byte>:
- c42:	1f 93       	push	r17
- c44:	18 2f       	mov	r17, r24
- c46:	82 95       	swap	r24
- c48:	8f 70       	andi	r24, 0x0F	; 15
- c4a:	0e 94 19 06 	call	0xc32	; 0xc32 <uart_tx_hex>
- c4e:	81 2f       	mov	r24, r17
- c50:	8f 70       	andi	r24, 0x0F	; 15
- c52:	0e 94 19 06 	call	0xc32	; 0xc32 <uart_tx_hex>
- c56:	1f 91       	pop	r17
- c58:	08 95       	ret
+00000cb2 <NFC_Recieving_interrupt>:
+     cb2:	2f b7       	in	r18, 0x3f	; 63
+     cb4:	f8 94       	cli
+     cb6:	80 91 30 03 	lds	r24, 0x0330
+     cba:	9c b1       	in	r25, 0x0c	; 12
+     cbc:	e8 2f       	mov	r30, r24
+     cbe:	f0 e0       	ldi	r31, 0x00	; 0
+     cc0:	e8 5a       	subi	r30, 0xA8	; 168
+     cc2:	fc 4f       	sbci	r31, 0xFC	; 252
+     cc4:	90 83       	st	Z, r25
+     cc6:	8f 5f       	subi	r24, 0xFF	; 255
+     cc8:	80 93 30 03 	sts	0x0330, r24
+     ccc:	84 36       	cpi	r24, 0x64	; 100
+     cce:	11 f4       	brne	.+4      	; 0xcd4 <NFC_Recieving_interrupt+0x22>
+     cd0:	10 92 30 03 	sts	0x0330, r1
+     cd4:	2f bf       	out	0x3f, r18	; 63
+     cd6:	08 95       	ret
 
-00000c5a <uart_tx_hex_word>:
- c5a:	1f 93       	push	r17
- c5c:	18 2f       	mov	r17, r24
- c5e:	89 2f       	mov	r24, r25
- c60:	0e 94 21 06 	call	0xc42	; 0xc42 <uart_tx_hex_byte>
- c64:	81 2f       	mov	r24, r17
- c66:	0e 94 21 06 	call	0xc42	; 0xc42 <uart_tx_hex_byte>
- c6a:	1f 91       	pop	r17
- c6c:	08 95       	ret
+00000cd8 <Check_Respond>:
+     cd8:	58 2f       	mov	r21, r24
+     cda:	a8 e5       	ldi	r26, 0x58	; 88
+     cdc:	b3 e0       	ldi	r27, 0x03	; 3
+     cde:	28 2f       	mov	r18, r24
+     ce0:	39 2f       	mov	r19, r25
+     ce2:	f9 01       	movw	r30, r18
+     ce4:	06 c0       	rjmp	.+12     	; 0xcf2 <Check_Respond+0x1a>
+     ce6:	9d 91       	ld	r25, X+
+     ce8:	81 91       	ld	r24, Z+
+     cea:	98 17       	cp	r25, r24
+     cec:	11 f0       	breq	.+4      	; 0xcf2 <Check_Respond+0x1a>
+     cee:	80 e0       	ldi	r24, 0x00	; 0
+     cf0:	08 95       	ret
+     cf2:	8e 2f       	mov	r24, r30
+     cf4:	85 1b       	sub	r24, r21
+     cf6:	86 17       	cp	r24, r22
+     cf8:	b0 f3       	brcs	.-20     	; 0xce6 <Check_Respond+0xe>
+     cfa:	81 e0       	ldi	r24, 0x01	; 1
+     cfc:	08 95       	ret
 
-00000c6e <uart_tx_hex_lword>:
- c6e:	ef 92       	push	r14
- c70:	ff 92       	push	r15
- c72:	0f 93       	push	r16
- c74:	1f 93       	push	r17
- c76:	7b 01       	movw	r14, r22
- c78:	8c 01       	movw	r16, r24
- c7a:	c8 01       	movw	r24, r16
- c7c:	aa 27       	eor	r26, r26
- c7e:	bb 27       	eor	r27, r27
- c80:	0e 94 2d 06 	call	0xc5a	; 0xc5a <uart_tx_hex_word>
- c84:	c7 01       	movw	r24, r14
- c86:	0e 94 2d 06 	call	0xc5a	; 0xc5a <uart_tx_hex_word>
- c8a:	1f 91       	pop	r17
- c8c:	0f 91       	pop	r16
- c8e:	ff 90       	pop	r15
- c90:	ef 90       	pop	r14
- c92:	08 95       	ret
+00000cfe <NFC_fixed_data>:
+     cfe:	85 e5       	ldi	r24, 0x55	; 85
+     d00:	0e 94 eb 03 	call	0x7d6	; 0x7d6 <UART_SendChar>
+     d04:	85 e5       	ldi	r24, 0x55	; 85
+     d06:	0e 94 eb 03 	call	0x7d6	; 0x7d6 <UART_SendChar>
+     d0a:	80 e0       	ldi	r24, 0x00	; 0
+     d0c:	0e 94 eb 03 	call	0x7d6	; 0x7d6 <UART_SendChar>
+     d10:	80 e0       	ldi	r24, 0x00	; 0
+     d12:	0e 94 eb 03 	call	0x7d6	; 0x7d6 <UART_SendChar>
+     d16:	80 e0       	ldi	r24, 0x00	; 0
+     d18:	0e 94 eb 03 	call	0x7d6	; 0x7d6 <UART_SendChar>
+     d1c:	80 e0       	ldi	r24, 0x00	; 0
+     d1e:	0e 94 eb 03 	call	0x7d6	; 0x7d6 <UART_SendChar>
+     d22:	80 e0       	ldi	r24, 0x00	; 0
+     d24:	0e 94 eb 03 	call	0x7d6	; 0x7d6 <UART_SendChar>
+     d28:	8f ef       	ldi	r24, 0xFF	; 255
+     d2a:	0e 94 eb 03 	call	0x7d6	; 0x7d6 <UART_SendChar>
+     d2e:	08 95       	ret
 
-00000c94 <uart_TX_long_number>:
- c94:	0f 93       	push	r16
- c96:	1f 93       	push	r17
- c98:	df 93       	push	r29
- c9a:	cf 93       	push	r28
- c9c:	cd b7       	in	r28, 0x3d	; 61
- c9e:	de b7       	in	r29, 0x3e	; 62
- ca0:	64 97       	sbiw	r28, 0x14	; 20
- ca2:	0f b6       	in	r0, 0x3f	; 63
- ca4:	f8 94       	cli
- ca6:	de bf       	out	0x3e, r29	; 62
- ca8:	0f be       	out	0x3f, r0	; 63
- caa:	cd bf       	out	0x3d, r28	; 61
- cac:	8e 01       	movw	r16, r28
- cae:	0f 5f       	subi	r16, 0xFF	; 255
- cb0:	1f 4f       	sbci	r17, 0xFF	; 255
- cb2:	a8 01       	movw	r20, r16
- cb4:	2a e0       	ldi	r18, 0x0A	; 10
- cb6:	30 e0       	ldi	r19, 0x00	; 0
- cb8:	0e 94 c9 06 	call	0xd92	; 0xd92 <ultoa>
- cbc:	c8 01       	movw	r24, r16
- cbe:	0e 94 f6 05 	call	0xbec	; 0xbec <uart_TX_string>
- cc2:	64 96       	adiw	r28, 0x14	; 20
- cc4:	0f b6       	in	r0, 0x3f	; 63
- cc6:	f8 94       	cli
- cc8:	de bf       	out	0x3e, r29	; 62
- cca:	0f be       	out	0x3f, r0	; 63
- ccc:	cd bf       	out	0x3d, r28	; 61
- cce:	cf 91       	pop	r28
- cd0:	df 91       	pop	r29
- cd2:	1f 91       	pop	r17
- cd4:	0f 91       	pop	r16
- cd6:	08 95       	ret
+00000d30 <NFC_send_frame>:
+     d30:	cf 92       	push	r12
+     d32:	df 92       	push	r13
+     d34:	ef 92       	push	r14
+     d36:	ff 92       	push	r15
+     d38:	0f 93       	push	r16
+     d3a:	1f 93       	push	r17
+     d3c:	cf 93       	push	r28
+     d3e:	df 93       	push	r29
+     d40:	6c 01       	movw	r12, r24
+     d42:	16 2f       	mov	r17, r22
+     d44:	1f 5f       	subi	r17, 0xFF	; 255
+     d46:	0e 94 7f 06 	call	0xcfe	; 0xcfe <NFC_fixed_data>
+     d4a:	81 2f       	mov	r24, r17
+     d4c:	0e 94 eb 03 	call	0x7d6	; 0x7d6 <UART_SendChar>
+     d50:	81 2f       	mov	r24, r17
+     d52:	81 95       	neg	r24
+     d54:	0e 94 eb 03 	call	0x7d6	; 0x7d6 <UART_SendChar>
+     d58:	84 ed       	ldi	r24, 0xD4	; 212
+     d5a:	0e 94 eb 03 	call	0x7d6	; 0x7d6 <UART_SendChar>
+     d5e:	84 ed       	ldi	r24, 0xD4	; 212
+     d60:	e8 2e       	mov	r14, r24
+     d62:	ff 24       	eor	r15, r15
+     d64:	c1 2f       	mov	r28, r17
+     d66:	d0 e0       	ldi	r29, 0x00	; 0
+     d68:	21 97       	sbiw	r28, 0x01	; 1
+     d6a:	0b c0       	rjmp	.+22     	; 0xd82 <NFC_send_frame+0x52>
+     d6c:	86 01       	movw	r16, r12
+     d6e:	08 0f       	add	r16, r24
+     d70:	19 1f       	adc	r17, r25
+     d72:	f8 01       	movw	r30, r16
+     d74:	80 81       	ld	r24, Z
+     d76:	0e 94 eb 03 	call	0x7d6	; 0x7d6 <UART_SendChar>
+     d7a:	f8 01       	movw	r30, r16
+     d7c:	80 81       	ld	r24, Z
+     d7e:	e8 0e       	add	r14, r24
+     d80:	f3 94       	inc	r15
+     d82:	8f 2d       	mov	r24, r15
+     d84:	90 e0       	ldi	r25, 0x00	; 0
+     d86:	8c 17       	cp	r24, r28
+     d88:	9d 07       	cpc	r25, r29
+     d8a:	84 f3       	brlt	.-32     	; 0xd6c <NFC_send_frame+0x3c>
+     d8c:	8e 2d       	mov	r24, r14
+     d8e:	81 95       	neg	r24
+     d90:	0e 94 eb 03 	call	0x7d6	; 0x7d6 <UART_SendChar>
+     d94:	80 e0       	ldi	r24, 0x00	; 0
+     d96:	0e 94 eb 03 	call	0x7d6	; 0x7d6 <UART_SendChar>
+     d9a:	df 91       	pop	r29
+     d9c:	cf 91       	pop	r28
+     d9e:	1f 91       	pop	r17
+     da0:	0f 91       	pop	r16
+     da2:	ff 90       	pop	r15
+     da4:	ef 90       	pop	r14
+     da6:	df 90       	pop	r13
+     da8:	cf 90       	pop	r12
+     daa:	08 95       	ret
 
-00000cd8 <uart_TX_number>:
- cd8:	0f 93       	push	r16
- cda:	1f 93       	push	r17
- cdc:	df 93       	push	r29
- cde:	cf 93       	push	r28
- ce0:	cd b7       	in	r28, 0x3d	; 61
- ce2:	de b7       	in	r29, 0x3e	; 62
- ce4:	64 97       	sbiw	r28, 0x14	; 20
- ce6:	0f b6       	in	r0, 0x3f	; 63
- ce8:	f8 94       	cli
- cea:	de bf       	out	0x3e, r29	; 62
- cec:	0f be       	out	0x3f, r0	; 63
- cee:	cd bf       	out	0x3d, r28	; 61
- cf0:	8e 01       	movw	r16, r28
- cf2:	0f 5f       	subi	r16, 0xFF	; 255
- cf4:	1f 4f       	sbci	r17, 0xFF	; 255
- cf6:	b8 01       	movw	r22, r16
- cf8:	4a e0       	ldi	r20, 0x0A	; 10
- cfa:	50 e0       	ldi	r21, 0x00	; 0
- cfc:	0e 94 a8 06 	call	0xd50	; 0xd50 <itoa>
- d00:	c8 01       	movw	r24, r16
- d02:	0e 94 f6 05 	call	0xbec	; 0xbec <uart_TX_string>
- d06:	64 96       	adiw	r28, 0x14	; 20
- d08:	0f b6       	in	r0, 0x3f	; 63
- d0a:	f8 94       	cli
- d0c:	de bf       	out	0x3e, r29	; 62
- d0e:	0f be       	out	0x3f, r0	; 63
- d10:	cd bf       	out	0x3d, r28	; 61
- d12:	cf 91       	pop	r28
- d14:	df 91       	pop	r29
- d16:	1f 91       	pop	r17
- d18:	0f 91       	pop	r16
- d1a:	08 95       	ret
+00000dac <Clear_Rec_buffer>:
+     dac:	84 e6       	ldi	r24, 0x64	; 100
+     dae:	e8 e5       	ldi	r30, 0x58	; 88
+     db0:	f3 e0       	ldi	r31, 0x03	; 3
+     db2:	df 01       	movw	r26, r30
+     db4:	1d 92       	st	X+, r1
+     db6:	8a 95       	dec	r24
+     db8:	e9 f7       	brne	.-6      	; 0xdb4 <Clear_Rec_buffer+0x8>
+     dba:	10 92 30 03 	sts	0x0330, r1
+     dbe:	08 95       	ret
 
-00000d1c <uart_TX_hex_number>:
- d1c:	1f 93       	push	r17
- d1e:	18 2f       	mov	r17, r24
- d20:	82 95       	swap	r24
- d22:	8f 70       	andi	r24, 0x0F	; 15
- d24:	8a 30       	cpi	r24, 0x0A	; 10
- d26:	20 f4       	brcc	.+8      	; 0xd30 <uart_TX_hex_number+0x14>
- d28:	90 e0       	ldi	r25, 0x00	; 0
- d2a:	0e 94 6c 06 	call	0xcd8	; 0xcd8 <uart_TX_number>
- d2e:	03 c0       	rjmp	.+6      	; 0xd36 <uart_TX_hex_number+0x1a>
- d30:	89 5c       	subi	r24, 0xC9	; 201
- d32:	0e 94 d6 05 	call	0xbac	; 0xbac <uart_tx>
- d36:	81 2f       	mov	r24, r17
- d38:	8f 70       	andi	r24, 0x0F	; 15
- d3a:	8a 30       	cpi	r24, 0x0A	; 10
- d3c:	20 f4       	brcc	.+8      	; 0xd46 <uart_TX_hex_number+0x2a>
- d3e:	90 e0       	ldi	r25, 0x00	; 0
- d40:	0e 94 6c 06 	call	0xcd8	; 0xcd8 <uart_TX_number>
- d44:	03 c0       	rjmp	.+6      	; 0xd4c <uart_TX_hex_number+0x30>
- d46:	89 5c       	subi	r24, 0xC9	; 201
- d48:	0e 94 d6 05 	call	0xbac	; 0xbac <uart_tx>
- d4c:	1f 91       	pop	r17
- d4e:	08 95       	ret
+00000dc0 <NFC_read_tag_data>:
+     dc0:	1f 93       	push	r17
+     dc2:	cf 93       	push	r28
+     dc4:	df 93       	push	r29
+     dc6:	ec 01       	movw	r28, r24
+     dc8:	0e 94 d6 06 	call	0xdac	; 0xdac <Clear_Rec_buffer>
+     dcc:	86 e0       	ldi	r24, 0x06	; 6
+     dce:	93 e0       	ldi	r25, 0x03	; 3
+     dd0:	64 e0       	ldi	r22, 0x04	; 4
+     dd2:	0e 94 98 06 	call	0xd30	; 0xd30 <NFC_send_frame>
+     dd6:	88 ee       	ldi	r24, 0xE8	; 232
+     dd8:	93 e0       	ldi	r25, 0x03	; 3
+     dda:	20 e9       	ldi	r18, 0x90	; 144
+     ddc:	31 e0       	ldi	r19, 0x01	; 1
+     dde:	f9 01       	movw	r30, r18
+     de0:	31 97       	sbiw	r30, 0x01	; 1
+     de2:	f1 f7       	brne	.-4      	; 0xde0 <NFC_read_tag_data+0x20>
+     de4:	01 97       	sbiw	r24, 0x01	; 1
+     de6:	d9 f7       	brne	.-10     	; 0xdde <NFC_read_tag_data+0x1e>
+     de8:	20 e0       	ldi	r18, 0x00	; 0
+     dea:	30 e0       	ldi	r19, 0x00	; 0
+     dec:	f9 01       	movw	r30, r18
+     dee:	e8 5a       	subi	r30, 0xA8	; 168
+     df0:	fc 4f       	sbci	r31, 0xFC	; 252
+     df2:	d9 01       	movw	r26, r18
+     df4:	a6 5f       	subi	r26, 0xF6	; 246
+     df6:	bc 4f       	sbci	r27, 0xFC	; 252
+     df8:	90 81       	ld	r25, Z
+     dfa:	8c 91       	ld	r24, X
+     dfc:	98 17       	cp	r25, r24
+     dfe:	11 f0       	breq	.+4      	; 0xe04 <NFC_read_tag_data+0x44>
+     e00:	10 e0       	ldi	r17, 0x00	; 0
+     e02:	06 c0       	rjmp	.+12     	; 0xe10 <NFC_read_tag_data+0x50>
+     e04:	2f 5f       	subi	r18, 0xFF	; 255
+     e06:	3f 4f       	sbci	r19, 0xFF	; 255
+     e08:	2e 30       	cpi	r18, 0x0E	; 14
+     e0a:	31 05       	cpc	r19, r1
+     e0c:	79 f7       	brne	.-34     	; 0xdec <NFC_read_tag_data+0x2c>
+     e0e:	11 e0       	ldi	r17, 0x01	; 1
+     e10:	e6 e6       	ldi	r30, 0x66	; 102
+     e12:	f3 e0       	ldi	r31, 0x03	; 3
+     e14:	a1 e3       	ldi	r26, 0x31	; 49
+     e16:	b3 e0       	ldi	r27, 0x03	; 3
+     e18:	81 91       	ld	r24, Z+
+     e1a:	8d 93       	st	X+, r24
+     e1c:	83 e0       	ldi	r24, 0x03	; 3
+     e1e:	e2 37       	cpi	r30, 0x72	; 114
+     e20:	f8 07       	cpc	r31, r24
+     e22:	d1 f7       	brne	.-12     	; 0xe18 <NFC_read_tag_data+0x58>
+     e24:	18 82       	st	Y, r1
+     e26:	19 82       	std	Y+1, r1	; 0x01
+     e28:	1a 82       	std	Y+2, r1	; 0x02
+     e2a:	1b 82       	std	Y+3, r1	; 0x03
+     e2c:	e4 e3       	ldi	r30, 0x34	; 52
+     e2e:	f3 e0       	ldi	r31, 0x03	; 3
+     e30:	60 e0       	ldi	r22, 0x00	; 0
+     e32:	70 e0       	ldi	r23, 0x00	; 0
+     e34:	20 81       	ld	r18, Z
+     e36:	30 e0       	ldi	r19, 0x00	; 0
+     e38:	40 e0       	ldi	r20, 0x00	; 0
+     e3a:	50 e0       	ldi	r21, 0x00	; 0
+     e3c:	06 2e       	mov	r0, r22
+     e3e:	04 c0       	rjmp	.+8      	; 0xe48 <NFC_read_tag_data+0x88>
+     e40:	22 0f       	add	r18, r18
+     e42:	33 1f       	adc	r19, r19
+     e44:	44 1f       	adc	r20, r20
+     e46:	55 1f       	adc	r21, r21
+     e48:	0a 94       	dec	r0
+     e4a:	d2 f7       	brpl	.-12     	; 0xe40 <NFC_read_tag_data+0x80>
+     e4c:	88 81       	ld	r24, Y
+     e4e:	99 81       	ldd	r25, Y+1	; 0x01
+     e50:	aa 81       	ldd	r26, Y+2	; 0x02
+     e52:	bb 81       	ldd	r27, Y+3	; 0x03
+     e54:	82 2b       	or	r24, r18
+     e56:	93 2b       	or	r25, r19
+     e58:	a4 2b       	or	r26, r20
+     e5a:	b5 2b       	or	r27, r21
+     e5c:	88 83       	st	Y, r24
+     e5e:	99 83       	std	Y+1, r25	; 0x01
+     e60:	aa 83       	std	Y+2, r26	; 0x02
+     e62:	bb 83       	std	Y+3, r27	; 0x03
+     e64:	31 97       	sbiw	r30, 0x01	; 1
+     e66:	68 5f       	subi	r22, 0xF8	; 248
+     e68:	7f 4f       	sbci	r23, 0xFF	; 255
+     e6a:	83 e0       	ldi	r24, 0x03	; 3
+     e6c:	e0 33       	cpi	r30, 0x30	; 48
+     e6e:	f8 07       	cpc	r31, r24
+     e70:	09 f7       	brne	.-62     	; 0xe34 <NFC_read_tag_data+0x74>
+     e72:	1c 82       	std	Y+4, r1	; 0x04
+     e74:	1d 82       	std	Y+5, r1	; 0x05
+     e76:	1e 82       	std	Y+6, r1	; 0x06
+     e78:	1f 82       	std	Y+7, r1	; 0x07
+     e7a:	38 96       	adiw	r30, 0x08	; 8
+     e7c:	60 e0       	ldi	r22, 0x00	; 0
+     e7e:	70 e0       	ldi	r23, 0x00	; 0
+     e80:	20 81       	ld	r18, Z
+     e82:	30 e0       	ldi	r19, 0x00	; 0
+     e84:	40 e0       	ldi	r20, 0x00	; 0
+     e86:	50 e0       	ldi	r21, 0x00	; 0
+     e88:	06 2e       	mov	r0, r22
+     e8a:	04 c0       	rjmp	.+8      	; 0xe94 <NFC_read_tag_data+0xd4>
+     e8c:	22 0f       	add	r18, r18
+     e8e:	33 1f       	adc	r19, r19
+     e90:	44 1f       	adc	r20, r20
+     e92:	55 1f       	adc	r21, r21
+     e94:	0a 94       	dec	r0
+     e96:	d2 f7       	brpl	.-12     	; 0xe8c <NFC_read_tag_data+0xcc>
+     e98:	8c 81       	ldd	r24, Y+4	; 0x04
+     e9a:	9d 81       	ldd	r25, Y+5	; 0x05
+     e9c:	ae 81       	ldd	r26, Y+6	; 0x06
+     e9e:	bf 81       	ldd	r27, Y+7	; 0x07
+     ea0:	82 2b       	or	r24, r18
+     ea2:	93 2b       	or	r25, r19
+     ea4:	a4 2b       	or	r26, r20
+     ea6:	b5 2b       	or	r27, r21
+     ea8:	8c 83       	std	Y+4, r24	; 0x04
+     eaa:	9d 83       	std	Y+5, r25	; 0x05
+     eac:	ae 83       	std	Y+6, r26	; 0x06
+     eae:	bf 83       	std	Y+7, r27	; 0x07
+     eb0:	31 97       	sbiw	r30, 0x01	; 1
+     eb2:	68 5f       	subi	r22, 0xF8	; 248
+     eb4:	7f 4f       	sbci	r23, 0xFF	; 255
+     eb6:	83 e0       	ldi	r24, 0x03	; 3
+     eb8:	e4 33       	cpi	r30, 0x34	; 52
+     eba:	f8 07       	cpc	r31, r24
+     ebc:	09 f7       	brne	.-62     	; 0xe80 <NFC_read_tag_data+0xc0>
+     ebe:	18 86       	std	Y+8, r1	; 0x08
+     ec0:	19 86       	std	Y+9, r1	; 0x09
+     ec2:	1a 86       	std	Y+10, r1	; 0x0a
+     ec4:	1b 86       	std	Y+11, r1	; 0x0b
+     ec6:	38 96       	adiw	r30, 0x08	; 8
+     ec8:	60 e0       	ldi	r22, 0x00	; 0
+     eca:	70 e0       	ldi	r23, 0x00	; 0
+     ecc:	20 81       	ld	r18, Z
+     ece:	30 e0       	ldi	r19, 0x00	; 0
+     ed0:	40 e0       	ldi	r20, 0x00	; 0
+     ed2:	50 e0       	ldi	r21, 0x00	; 0
+     ed4:	06 2e       	mov	r0, r22
+     ed6:	04 c0       	rjmp	.+8      	; 0xee0 <NFC_read_tag_data+0x120>
+     ed8:	22 0f       	add	r18, r18
+     eda:	33 1f       	adc	r19, r19
+     edc:	44 1f       	adc	r20, r20
+     ede:	55 1f       	adc	r21, r21
+     ee0:	0a 94       	dec	r0
+     ee2:	d2 f7       	brpl	.-12     	; 0xed8 <NFC_read_tag_data+0x118>
+     ee4:	88 85       	ldd	r24, Y+8	; 0x08
+     ee6:	99 85       	ldd	r25, Y+9	; 0x09
+     ee8:	aa 85       	ldd	r26, Y+10	; 0x0a
+     eea:	bb 85       	ldd	r27, Y+11	; 0x0b
+     eec:	82 2b       	or	r24, r18
+     eee:	93 2b       	or	r25, r19
+     ef0:	a4 2b       	or	r26, r20
+     ef2:	b5 2b       	or	r27, r21
+     ef4:	88 87       	std	Y+8, r24	; 0x08
+     ef6:	99 87       	std	Y+9, r25	; 0x09
+     ef8:	aa 87       	std	Y+10, r26	; 0x0a
+     efa:	bb 87       	std	Y+11, r27	; 0x0b
+     efc:	31 97       	sbiw	r30, 0x01	; 1
+     efe:	68 5f       	subi	r22, 0xF8	; 248
+     f00:	7f 4f       	sbci	r23, 0xFF	; 255
+     f02:	83 e0       	ldi	r24, 0x03	; 3
+     f04:	e8 33       	cpi	r30, 0x38	; 56
+     f06:	f8 07       	cpc	r31, r24
+     f08:	09 f7       	brne	.-62     	; 0xecc <NFC_read_tag_data+0x10c>
+     f0a:	11 30       	cpi	r17, 0x01	; 1
+     f0c:	11 f0       	breq	.+4      	; 0xf12 <NFC_read_tag_data+0x152>
+     f0e:	86 e0       	ldi	r24, 0x06	; 6
+     f10:	01 c0       	rjmp	.+2      	; 0xf14 <NFC_read_tag_data+0x154>
+     f12:	87 e0       	ldi	r24, 0x07	; 7
+     f14:	df 91       	pop	r29
+     f16:	cf 91       	pop	r28
+     f18:	1f 91       	pop	r17
+     f1a:	08 95       	ret
 
-00000d50 <itoa>:
- d50:	fb 01       	movw	r30, r22
- d52:	9f 01       	movw	r18, r30
- d54:	e8 94       	clt
- d56:	42 30       	cpi	r20, 0x02	; 2
- d58:	c4 f0       	brlt	.+48     	; 0xd8a <itoa+0x3a>
- d5a:	45 32       	cpi	r20, 0x25	; 37
- d5c:	b4 f4       	brge	.+44     	; 0xd8a <itoa+0x3a>
- d5e:	4a 30       	cpi	r20, 0x0A	; 10
- d60:	29 f4       	brne	.+10     	; 0xd6c <itoa+0x1c>
- d62:	97 fb       	bst	r25, 7
- d64:	1e f4       	brtc	.+6      	; 0xd6c <itoa+0x1c>
- d66:	90 95       	com	r25
- d68:	81 95       	neg	r24
- d6a:	9f 4f       	sbci	r25, 0xFF	; 255
- d6c:	64 2f       	mov	r22, r20
- d6e:	77 27       	eor	r23, r23
- d70:	0e 94 fe 06 	call	0xdfc	; 0xdfc <__udivmodhi4>
- d74:	80 5d       	subi	r24, 0xD0	; 208
- d76:	8a 33       	cpi	r24, 0x3A	; 58
- d78:	0c f0       	brlt	.+2      	; 0xd7c <itoa+0x2c>
- d7a:	89 5d       	subi	r24, 0xD9	; 217
- d7c:	81 93       	st	Z+, r24
- d7e:	cb 01       	movw	r24, r22
- d80:	00 97       	sbiw	r24, 0x00	; 0
- d82:	a1 f7       	brne	.-24     	; 0xd6c <itoa+0x1c>
- d84:	16 f4       	brtc	.+4      	; 0xd8a <itoa+0x3a>
- d86:	5d e2       	ldi	r21, 0x2D	; 45
- d88:	51 93       	st	Z+, r21
- d8a:	10 82       	st	Z, r1
- d8c:	c9 01       	movw	r24, r18
- d8e:	0c 94 ee 06 	jmp	0xddc	; 0xddc <strrev>
+00000f1c <NFC_write_page>:
+     f1c:	fb 01       	movw	r30, r22
+     f1e:	80 93 1b 03 	sts	0x031B, r24
+     f22:	80 81       	ld	r24, Z
+     f24:	80 93 1c 03 	sts	0x031C, r24
+     f28:	81 81       	ldd	r24, Z+1	; 0x01
+     f2a:	80 93 1d 03 	sts	0x031D, r24
+     f2e:	82 81       	ldd	r24, Z+2	; 0x02
+     f30:	80 93 1e 03 	sts	0x031E, r24
+     f34:	83 81       	ldd	r24, Z+3	; 0x03
+     f36:	80 93 1f 03 	sts	0x031F, r24
+     f3a:	0e 94 d6 06 	call	0xdac	; 0xdac <Clear_Rec_buffer>
+     f3e:	88 e1       	ldi	r24, 0x18	; 24
+     f40:	93 e0       	ldi	r25, 0x03	; 3
+     f42:	68 e0       	ldi	r22, 0x08	; 8
+     f44:	0e 94 98 06 	call	0xd30	; 0xd30 <NFC_send_frame>
+     f48:	88 ee       	ldi	r24, 0xE8	; 232
+     f4a:	93 e0       	ldi	r25, 0x03	; 3
+     f4c:	20 e9       	ldi	r18, 0x90	; 144
+     f4e:	31 e0       	ldi	r19, 0x01	; 1
+     f50:	f9 01       	movw	r30, r18
+     f52:	31 97       	sbiw	r30, 0x01	; 1
+     f54:	f1 f7       	brne	.-4      	; 0xf52 <NFC_write_page+0x36>
+     f56:	01 97       	sbiw	r24, 0x01	; 1
+     f58:	d9 f7       	brne	.-10     	; 0xf50 <NFC_write_page+0x34>
+     f5a:	20 e0       	ldi	r18, 0x00	; 0
+     f5c:	30 e0       	ldi	r19, 0x00	; 0
+     f5e:	f9 01       	movw	r30, r18
+     f60:	e8 5a       	subi	r30, 0xA8	; 168
+     f62:	fc 4f       	sbci	r31, 0xFC	; 252
+     f64:	d9 01       	movw	r26, r18
+     f66:	a0 5e       	subi	r26, 0xE0	; 224
+     f68:	bc 4f       	sbci	r27, 0xFC	; 252
+     f6a:	90 81       	ld	r25, Z
+     f6c:	8c 91       	ld	r24, X
+     f6e:	98 17       	cp	r25, r24
+     f70:	11 f0       	breq	.+4      	; 0xf76 <NFC_write_page+0x5a>
+     f72:	86 e0       	ldi	r24, 0x06	; 6
+     f74:	08 95       	ret
+     f76:	2f 5f       	subi	r18, 0xFF	; 255
+     f78:	3f 4f       	sbci	r19, 0xFF	; 255
+     f7a:	20 31       	cpi	r18, 0x10	; 16
+     f7c:	31 05       	cpc	r19, r1
+     f7e:	79 f7       	brne	.-34     	; 0xf5e <NFC_write_page+0x42>
+     f80:	87 e0       	ldi	r24, 0x07	; 7
+     f82:	08 95       	ret
 
-00000d92 <ultoa>:
- d92:	fa 01       	movw	r30, r20
- d94:	cf 93       	push	r28
- d96:	ff 93       	push	r31
- d98:	ef 93       	push	r30
- d9a:	22 30       	cpi	r18, 0x02	; 2
- d9c:	cc f0       	brlt	.+50     	; 0xdd0 <ultoa+0x3e>
- d9e:	25 32       	cpi	r18, 0x25	; 37
- da0:	bc f4       	brge	.+46     	; 0xdd0 <ultoa+0x3e>
- da2:	c2 2f       	mov	r28, r18
- da4:	2c 2f       	mov	r18, r28
- da6:	33 27       	eor	r19, r19
- da8:	44 27       	eor	r20, r20
- daa:	55 27       	eor	r21, r21
- dac:	ff 93       	push	r31
- dae:	ef 93       	push	r30
- db0:	0e 94 12 07 	call	0xe24	; 0xe24 <__udivmodsi4>
- db4:	ef 91       	pop	r30
- db6:	ff 91       	pop	r31
- db8:	60 5d       	subi	r22, 0xD0	; 208
- dba:	6a 33       	cpi	r22, 0x3A	; 58
- dbc:	0c f0       	brlt	.+2      	; 0xdc0 <ultoa+0x2e>
- dbe:	69 5d       	subi	r22, 0xD9	; 217
- dc0:	61 93       	st	Z+, r22
- dc2:	b9 01       	movw	r22, r18
- dc4:	ca 01       	movw	r24, r20
- dc6:	60 50       	subi	r22, 0x00	; 0
- dc8:	70 40       	sbci	r23, 0x00	; 0
- dca:	80 40       	sbci	r24, 0x00	; 0
- dcc:	90 40       	sbci	r25, 0x00	; 0
- dce:	51 f7       	brne	.-44     	; 0xda4 <ultoa+0x12>
- dd0:	10 82       	st	Z, r1
- dd2:	8f 91       	pop	r24
- dd4:	9f 91       	pop	r25
- dd6:	cf 91       	pop	r28
- dd8:	0c 94 ee 06 	jmp	0xddc	; 0xddc <strrev>
+00000f84 <NFC_write_Tag_Points>:
+     f84:	df 93       	push	r29
+     f86:	cf 93       	push	r28
+     f88:	00 d0       	rcall	.+0      	; 0xf8a <NFC_write_Tag_Points+0x6>
+     f8a:	00 d0       	rcall	.+0      	; 0xf8c <NFC_write_Tag_Points+0x8>
+     f8c:	cd b7       	in	r28, 0x3d	; 61
+     f8e:	de b7       	in	r29, 0x3e	; 62
+     f90:	6c 83       	std	Y+4, r22	; 0x04
+     f92:	27 2f       	mov	r18, r23
+     f94:	38 2f       	mov	r19, r24
+     f96:	49 2f       	mov	r20, r25
+     f98:	55 27       	eor	r21, r21
+     f9a:	2b 83       	std	Y+3, r18	; 0x03
+     f9c:	9c 01       	movw	r18, r24
+     f9e:	44 27       	eor	r20, r20
+     fa0:	55 27       	eor	r21, r21
+     fa2:	2a 83       	std	Y+2, r18	; 0x02
+     fa4:	69 2f       	mov	r22, r25
+     fa6:	77 27       	eor	r23, r23
+     fa8:	88 27       	eor	r24, r24
+     faa:	99 27       	eor	r25, r25
+     fac:	69 83       	std	Y+1, r22	; 0x01
+     fae:	86 e0       	ldi	r24, 0x06	; 6
+     fb0:	be 01       	movw	r22, r28
+     fb2:	6f 5f       	subi	r22, 0xFF	; 255
+     fb4:	7f 4f       	sbci	r23, 0xFF	; 255
+     fb6:	0e 94 8e 07 	call	0xf1c	; 0xf1c <NFC_write_page>
+     fba:	0f 90       	pop	r0
+     fbc:	0f 90       	pop	r0
+     fbe:	0f 90       	pop	r0
+     fc0:	0f 90       	pop	r0
+     fc2:	cf 91       	pop	r28
+     fc4:	df 91       	pop	r29
+     fc6:	08 95       	ret
 
-00000ddc <strrev>:
- ddc:	dc 01       	movw	r26, r24
- dde:	fc 01       	movw	r30, r24
- de0:	67 2f       	mov	r22, r23
- de2:	71 91       	ld	r23, Z+
- de4:	77 23       	and	r23, r23
- de6:	e1 f7       	brne	.-8      	; 0xde0 <strrev+0x4>
- de8:	32 97       	sbiw	r30, 0x02	; 2
- dea:	04 c0       	rjmp	.+8      	; 0xdf4 <strrev+0x18>
- dec:	7c 91       	ld	r23, X
- dee:	6d 93       	st	X+, r22
- df0:	70 83       	st	Z, r23
- df2:	62 91       	ld	r22, -Z
- df4:	ae 17       	cp	r26, r30
- df6:	bf 07       	cpc	r27, r31
- df8:	c8 f3       	brcs	.-14     	; 0xdec <strrev+0x10>
- dfa:	08 95       	ret
+00000fc8 <NFC_write_tag_ID>:
+     fc8:	df 93       	push	r29
+     fca:	cf 93       	push	r28
+     fcc:	00 d0       	rcall	.+0      	; 0xfce <NFC_write_tag_ID+0x6>
+     fce:	00 d0       	rcall	.+0      	; 0xfd0 <NFC_write_tag_ID+0x8>
+     fd0:	cd b7       	in	r28, 0x3d	; 61
+     fd2:	de b7       	in	r29, 0x3e	; 62
+     fd4:	6c 83       	std	Y+4, r22	; 0x04
+     fd6:	27 2f       	mov	r18, r23
+     fd8:	38 2f       	mov	r19, r24
+     fda:	49 2f       	mov	r20, r25
+     fdc:	55 27       	eor	r21, r21
+     fde:	2b 83       	std	Y+3, r18	; 0x03
+     fe0:	9c 01       	movw	r18, r24
+     fe2:	44 27       	eor	r20, r20
+     fe4:	55 27       	eor	r21, r21
+     fe6:	2a 83       	std	Y+2, r18	; 0x02
+     fe8:	69 2f       	mov	r22, r25
+     fea:	77 27       	eor	r23, r23
+     fec:	88 27       	eor	r24, r24
+     fee:	99 27       	eor	r25, r25
+     ff0:	69 83       	std	Y+1, r22	; 0x01
+     ff2:	85 e0       	ldi	r24, 0x05	; 5
+     ff4:	be 01       	movw	r22, r28
+     ff6:	6f 5f       	subi	r22, 0xFF	; 255
+     ff8:	7f 4f       	sbci	r23, 0xFF	; 255
+     ffa:	0e 94 8e 07 	call	0xf1c	; 0xf1c <NFC_write_page>
+     ffe:	0f 90       	pop	r0
+    1000:	0f 90       	pop	r0
+    1002:	0f 90       	pop	r0
+    1004:	0f 90       	pop	r0
+    1006:	cf 91       	pop	r28
+    1008:	df 91       	pop	r29
+    100a:	08 95       	ret
 
-00000dfc <__udivmodhi4>:
- dfc:	aa 1b       	sub	r26, r26
- dfe:	bb 1b       	sub	r27, r27
- e00:	51 e1       	ldi	r21, 0x11	; 17
- e02:	07 c0       	rjmp	.+14     	; 0xe12 <__udivmodhi4_ep>
+0000100c <NFC_write_company_id_number>:
+    100c:	df 93       	push	r29
+    100e:	cf 93       	push	r28
+    1010:	00 d0       	rcall	.+0      	; 0x1012 <NFC_write_company_id_number+0x6>
+    1012:	00 d0       	rcall	.+0      	; 0x1014 <NFC_write_company_id_number+0x8>
+    1014:	cd b7       	in	r28, 0x3d	; 61
+    1016:	de b7       	in	r29, 0x3e	; 62
+    1018:	6c 83       	std	Y+4, r22	; 0x04
+    101a:	27 2f       	mov	r18, r23
+    101c:	38 2f       	mov	r19, r24
+    101e:	49 2f       	mov	r20, r25
+    1020:	55 27       	eor	r21, r21
+    1022:	2b 83       	std	Y+3, r18	; 0x03
+    1024:	9c 01       	movw	r18, r24
+    1026:	44 27       	eor	r20, r20
+    1028:	55 27       	eor	r21, r21
+    102a:	2a 83       	std	Y+2, r18	; 0x02
+    102c:	69 2f       	mov	r22, r25
+    102e:	77 27       	eor	r23, r23
+    1030:	88 27       	eor	r24, r24
+    1032:	99 27       	eor	r25, r25
+    1034:	69 83       	std	Y+1, r22	; 0x01
+    1036:	84 e0       	ldi	r24, 0x04	; 4
+    1038:	be 01       	movw	r22, r28
+    103a:	6f 5f       	subi	r22, 0xFF	; 255
+    103c:	7f 4f       	sbci	r23, 0xFF	; 255
+    103e:	0e 94 8e 07 	call	0xf1c	; 0xf1c <NFC_write_page>
+    1042:	0f 90       	pop	r0
+    1044:	0f 90       	pop	r0
+    1046:	0f 90       	pop	r0
+    1048:	0f 90       	pop	r0
+    104a:	cf 91       	pop	r28
+    104c:	df 91       	pop	r29
+    104e:	08 95       	ret
 
-00000e04 <__udivmodhi4_loop>:
- e04:	aa 1f       	adc	r26, r26
- e06:	bb 1f       	adc	r27, r27
- e08:	a6 17       	cp	r26, r22
- e0a:	b7 07       	cpc	r27, r23
- e0c:	10 f0       	brcs	.+4      	; 0xe12 <__udivmodhi4_ep>
- e0e:	a6 1b       	sub	r26, r22
- e10:	b7 0b       	sbc	r27, r23
+00001050 <NFC_write_company_id>:
+    1050:	bc 01       	movw	r22, r24
+    1052:	84 e0       	ldi	r24, 0x04	; 4
+    1054:	0e 94 8e 07 	call	0xf1c	; 0xf1c <NFC_write_page>
+    1058:	08 95       	ret
 
-00000e12 <__udivmodhi4_ep>:
- e12:	88 1f       	adc	r24, r24
- e14:	99 1f       	adc	r25, r25
- e16:	5a 95       	dec	r21
- e18:	a9 f7       	brne	.-22     	; 0xe04 <__udivmodhi4_loop>
- e1a:	80 95       	com	r24
- e1c:	90 95       	com	r25
- e1e:	bc 01       	movw	r22, r24
- e20:	cd 01       	movw	r24, r26
- e22:	08 95       	ret
+0000105a <NFC_read_tag>:
+    105a:	0e 94 d6 06 	call	0xdac	; 0xdac <Clear_Rec_buffer>
+    105e:	85 ef       	ldi	r24, 0xF5	; 245
+    1060:	92 e0       	ldi	r25, 0x02	; 2
+    1062:	63 e0       	ldi	r22, 0x03	; 3
+    1064:	0e 94 98 06 	call	0xd30	; 0xd30 <NFC_send_frame>
+    1068:	88 ee       	ldi	r24, 0xE8	; 232
+    106a:	93 e0       	ldi	r25, 0x03	; 3
+    106c:	20 e9       	ldi	r18, 0x90	; 144
+    106e:	31 e0       	ldi	r19, 0x01	; 1
+    1070:	f9 01       	movw	r30, r18
+    1072:	31 97       	sbiw	r30, 0x01	; 1
+    1074:	f1 f7       	brne	.-4      	; 0x1072 <NFC_read_tag+0x18>
+    1076:	01 97       	sbiw	r24, 0x01	; 1
+    1078:	d9 f7       	brne	.-10     	; 0x1070 <NFC_read_tag+0x16>
+    107a:	20 e0       	ldi	r18, 0x00	; 0
+    107c:	30 e0       	ldi	r19, 0x00	; 0
+    107e:	f9 01       	movw	r30, r18
+    1080:	e8 5a       	subi	r30, 0xA8	; 168
+    1082:	fc 4f       	sbci	r31, 0xFC	; 252
+    1084:	d9 01       	movw	r26, r18
+    1086:	a8 50       	subi	r26, 0x08	; 8
+    1088:	bd 4f       	sbci	r27, 0xFD	; 253
+    108a:	90 81       	ld	r25, Z
+    108c:	8c 91       	ld	r24, X
+    108e:	98 17       	cp	r25, r24
+    1090:	11 f0       	breq	.+4      	; 0x1096 <NFC_read_tag+0x3c>
+    1092:	82 e0       	ldi	r24, 0x02	; 2
+    1094:	08 95       	ret
+    1096:	2f 5f       	subi	r18, 0xFF	; 255
+    1098:	3f 4f       	sbci	r19, 0xFF	; 255
+    109a:	2e 30       	cpi	r18, 0x0E	; 14
+    109c:	31 05       	cpc	r19, r1
+    109e:	79 f7       	brne	.-34     	; 0x107e <NFC_read_tag+0x24>
+    10a0:	83 e0       	ldi	r24, 0x03	; 3
+    10a2:	08 95       	ret
 
-00000e24 <__udivmodsi4>:
- e24:	a1 e2       	ldi	r26, 0x21	; 33
- e26:	1a 2e       	mov	r1, r26
- e28:	aa 1b       	sub	r26, r26
- e2a:	bb 1b       	sub	r27, r27
- e2c:	fd 01       	movw	r30, r26
- e2e:	0d c0       	rjmp	.+26     	; 0xe4a <__udivmodsi4_ep>
+000010a4 <NFC_init>:
+    10a4:	0e 94 fe 02 	call	0x5fc	; 0x5fc <uart_init>
+    10a8:	78 94       	sei
+    10aa:	0e 94 e1 03 	call	0x7c2	; 0x7c2 <init_UART_115200>
+    10ae:	89 e5       	ldi	r24, 0x59	; 89
+    10b0:	96 e0       	ldi	r25, 0x06	; 6
+    10b2:	0e 94 fd 03 	call	0x7fa	; 0x7fa <UART_set_call_back_function>
+    10b6:	0e 94 d6 06 	call	0xdac	; 0xdac <Clear_Rec_buffer>
+    10ba:	82 ee       	ldi	r24, 0xE2	; 226
+    10bc:	92 e0       	ldi	r25, 0x02	; 2
+    10be:	64 e0       	ldi	r22, 0x04	; 4
+    10c0:	0e 94 98 06 	call	0xd30	; 0xd30 <NFC_send_frame>
+    10c4:	88 ee       	ldi	r24, 0xE8	; 232
+    10c6:	93 e0       	ldi	r25, 0x03	; 3
+    10c8:	20 e9       	ldi	r18, 0x90	; 144
+    10ca:	31 e0       	ldi	r19, 0x01	; 1
+    10cc:	f9 01       	movw	r30, r18
+    10ce:	31 97       	sbiw	r30, 0x01	; 1
+    10d0:	f1 f7       	brne	.-4      	; 0x10ce <NFC_init+0x2a>
+    10d2:	01 97       	sbiw	r24, 0x01	; 1
+    10d4:	d9 f7       	brne	.-10     	; 0x10cc <NFC_init+0x28>
+    10d6:	20 e0       	ldi	r18, 0x00	; 0
+    10d8:	30 e0       	ldi	r19, 0x00	; 0
+    10da:	f9 01       	movw	r30, r18
+    10dc:	e8 5a       	subi	r30, 0xA8	; 168
+    10de:	fc 4f       	sbci	r31, 0xFC	; 252
+    10e0:	d9 01       	movw	r26, r18
+    10e2:	aa 51       	subi	r26, 0x1A	; 26
+    10e4:	bd 4f       	sbci	r27, 0xFD	; 253
+    10e6:	90 81       	ld	r25, Z
+    10e8:	8c 91       	ld	r24, X
+    10ea:	98 17       	cp	r25, r24
+    10ec:	11 f0       	breq	.+4      	; 0x10f2 <NFC_init+0x4e>
+    10ee:	80 e0       	ldi	r24, 0x00	; 0
+    10f0:	08 95       	ret
+    10f2:	2f 5f       	subi	r18, 0xFF	; 255
+    10f4:	3f 4f       	sbci	r19, 0xFF	; 255
+    10f6:	2f 30       	cpi	r18, 0x0F	; 15
+    10f8:	31 05       	cpc	r19, r1
+    10fa:	79 f7       	brne	.-34     	; 0x10da <NFC_init+0x36>
+    10fc:	81 e0       	ldi	r24, 0x01	; 1
+    10fe:	08 95       	ret
 
-00000e30 <__udivmodsi4_loop>:
- e30:	aa 1f       	adc	r26, r26
- e32:	bb 1f       	adc	r27, r27
- e34:	ee 1f       	adc	r30, r30
- e36:	ff 1f       	adc	r31, r31
- e38:	a2 17       	cp	r26, r18
- e3a:	b3 07       	cpc	r27, r19
- e3c:	e4 07       	cpc	r30, r20
- e3e:	f5 07       	cpc	r31, r21
- e40:	20 f0       	brcs	.+8      	; 0xe4a <__udivmodsi4_ep>
- e42:	a2 1b       	sub	r26, r18
- e44:	b3 0b       	sbc	r27, r19
- e46:	e4 0b       	sbc	r30, r20
- e48:	f5 0b       	sbc	r31, r21
+00001100 <main>:
+    1100:	80 e0       	ldi	r24, 0x00	; 0
+    1102:	82 30       	cpi	r24, 0x02	; 2
+    1104:	91 f0       	breq	.+36     	; 0x112a <main+0x2a>
+    1106:	83 30       	cpi	r24, 0x03	; 3
+    1108:	28 f4       	brcc	.+10     	; 0x1114 <main+0x14>
+    110a:	88 23       	and	r24, r24
+    110c:	41 f0       	breq	.+16     	; 0x111e <main+0x1e>
+    110e:	81 30       	cpi	r24, 0x01	; 1
+    1110:	c1 f7       	brne	.-16     	; 0x1102 <main+0x2>
+    1112:	08 c0       	rjmp	.+16     	; 0x1124 <main+0x24>
+    1114:	83 30       	cpi	r24, 0x03	; 3
+    1116:	61 f0       	breq	.+24     	; 0x1130 <main+0x30>
+    1118:	84 30       	cpi	r24, 0x04	; 4
+    111a:	99 f7       	brne	.-26     	; 0x1102 <main+0x2>
+    111c:	0c c0       	rjmp	.+24     	; 0x1136 <main+0x36>
+    111e:	0e 94 db 00 	call	0x1b6	; 0x1b6 <init_state>
+    1122:	ef cf       	rjmp	.-34     	; 0x1102 <main+0x2>
+    1124:	0e 94 49 00 	call	0x92	; 0x92 <idle_state>
+    1128:	ec cf       	rjmp	.-40     	; 0x1102 <main+0x2>
+    112a:	0e 94 f1 01 	call	0x3e2	; 0x3e2 <user_card_state>
+    112e:	e9 cf       	rjmp	.-46     	; 0x1102 <main+0x2>
+    1130:	0e 94 e8 01 	call	0x3d0	; 0x3d0 <master_card_state>
+    1134:	e6 cf       	rjmp	.-52     	; 0x1102 <main+0x2>
+    1136:	0e 94 69 01 	call	0x2d2	; 0x2d2 <load_card_state>
+    113a:	e3 cf       	rjmp	.-58     	; 0x1102 <main+0x2>
 
-00000e4a <__udivmodsi4_ep>:
- e4a:	66 1f       	adc	r22, r22
- e4c:	77 1f       	adc	r23, r23
- e4e:	88 1f       	adc	r24, r24
- e50:	99 1f       	adc	r25, r25
- e52:	1a 94       	dec	r1
- e54:	69 f7       	brne	.-38     	; 0xe30 <__udivmodsi4_loop>
- e56:	60 95       	com	r22
- e58:	70 95       	com	r23
- e5a:	80 95       	com	r24
- e5c:	90 95       	com	r25
- e5e:	9b 01       	movw	r18, r22
- e60:	ac 01       	movw	r20, r24
- e62:	bd 01       	movw	r22, r26
- e64:	cf 01       	movw	r24, r30
- e66:	08 95       	ret
+0000113c <itoa>:
+    113c:	fb 01       	movw	r30, r22
+    113e:	9f 01       	movw	r18, r30
+    1140:	e8 94       	clt
+    1142:	42 30       	cpi	r20, 0x02	; 2
+    1144:	c4 f0       	brlt	.+48     	; 0x1176 <itoa+0x3a>
+    1146:	45 32       	cpi	r20, 0x25	; 37
+    1148:	b4 f4       	brge	.+44     	; 0x1176 <itoa+0x3a>
+    114a:	4a 30       	cpi	r20, 0x0A	; 10
+    114c:	29 f4       	brne	.+10     	; 0x1158 <itoa+0x1c>
+    114e:	97 fb       	bst	r25, 7
+    1150:	1e f4       	brtc	.+6      	; 0x1158 <itoa+0x1c>
+    1152:	90 95       	com	r25
+    1154:	81 95       	neg	r24
+    1156:	9f 4f       	sbci	r25, 0xFF	; 255
+    1158:	64 2f       	mov	r22, r20
+    115a:	77 27       	eor	r23, r23
+    115c:	0e 94 0a 09 	call	0x1214	; 0x1214 <__udivmodhi4>
+    1160:	80 5d       	subi	r24, 0xD0	; 208
+    1162:	8a 33       	cpi	r24, 0x3A	; 58
+    1164:	0c f0       	brlt	.+2      	; 0x1168 <itoa+0x2c>
+    1166:	89 5d       	subi	r24, 0xD9	; 217
+    1168:	81 93       	st	Z+, r24
+    116a:	cb 01       	movw	r24, r22
+    116c:	00 97       	sbiw	r24, 0x00	; 0
+    116e:	a1 f7       	brne	.-24     	; 0x1158 <itoa+0x1c>
+    1170:	16 f4       	brtc	.+4      	; 0x1176 <itoa+0x3a>
+    1172:	5d e2       	ldi	r21, 0x2D	; 45
+    1174:	51 93       	st	Z+, r21
+    1176:	10 82       	st	Z, r1
+    1178:	c9 01       	movw	r24, r18
+    117a:	0c 94 ea 08 	jmp	0x11d4	; 0x11d4 <strrev>
 
-00000e68 <_exit>:
- e68:	f8 94       	cli
+0000117e <ultoa>:
+    117e:	fa 01       	movw	r30, r20
+    1180:	cf 93       	push	r28
+    1182:	ff 93       	push	r31
+    1184:	ef 93       	push	r30
+    1186:	22 30       	cpi	r18, 0x02	; 2
+    1188:	cc f0       	brlt	.+50     	; 0x11bc <ultoa+0x3e>
+    118a:	25 32       	cpi	r18, 0x25	; 37
+    118c:	bc f4       	brge	.+46     	; 0x11bc <ultoa+0x3e>
+    118e:	c2 2f       	mov	r28, r18
+    1190:	2c 2f       	mov	r18, r28
+    1192:	33 27       	eor	r19, r19
+    1194:	44 27       	eor	r20, r20
+    1196:	55 27       	eor	r21, r21
+    1198:	ff 93       	push	r31
+    119a:	ef 93       	push	r30
+    119c:	0e 94 1e 09 	call	0x123c	; 0x123c <__udivmodsi4>
+    11a0:	ef 91       	pop	r30
+    11a2:	ff 91       	pop	r31
+    11a4:	60 5d       	subi	r22, 0xD0	; 208
+    11a6:	6a 33       	cpi	r22, 0x3A	; 58
+    11a8:	0c f0       	brlt	.+2      	; 0x11ac <ultoa+0x2e>
+    11aa:	69 5d       	subi	r22, 0xD9	; 217
+    11ac:	61 93       	st	Z+, r22
+    11ae:	b9 01       	movw	r22, r18
+    11b0:	ca 01       	movw	r24, r20
+    11b2:	60 50       	subi	r22, 0x00	; 0
+    11b4:	70 40       	sbci	r23, 0x00	; 0
+    11b6:	80 40       	sbci	r24, 0x00	; 0
+    11b8:	90 40       	sbci	r25, 0x00	; 0
+    11ba:	51 f7       	brne	.-44     	; 0x1190 <ultoa+0x12>
+    11bc:	10 82       	st	Z, r1
+    11be:	8f 91       	pop	r24
+    11c0:	9f 91       	pop	r25
+    11c2:	cf 91       	pop	r28
+    11c4:	0c 94 ea 08 	jmp	0x11d4	; 0x11d4 <strrev>
 
-00000e6a <__stop_program>:
- e6a:	ff cf       	rjmp	.-2      	; 0xe6a <__stop_program>
+000011c8 <__eerd_dword_m32>:
+    11c8:	a6 e1       	ldi	r26, 0x16	; 22
+    11ca:	b0 e0       	ldi	r27, 0x00	; 0
+    11cc:	44 e0       	ldi	r20, 0x04	; 4
+    11ce:	50 e0       	ldi	r21, 0x00	; 0
+    11d0:	0c 94 fc 08 	jmp	0x11f8	; 0x11f8 <__eerd_blraw_m32>
+
+000011d4 <strrev>:
+    11d4:	dc 01       	movw	r26, r24
+    11d6:	fc 01       	movw	r30, r24
+    11d8:	67 2f       	mov	r22, r23
+    11da:	71 91       	ld	r23, Z+
+    11dc:	77 23       	and	r23, r23
+    11de:	e1 f7       	brne	.-8      	; 0x11d8 <strrev+0x4>
+    11e0:	32 97       	sbiw	r30, 0x02	; 2
+    11e2:	04 c0       	rjmp	.+8      	; 0x11ec <strrev+0x18>
+    11e4:	7c 91       	ld	r23, X
+    11e6:	6d 93       	st	X+, r22
+    11e8:	70 83       	st	Z, r23
+    11ea:	62 91       	ld	r22, -Z
+    11ec:	ae 17       	cp	r26, r30
+    11ee:	bf 07       	cpc	r27, r31
+    11f0:	c8 f3       	brcs	.-14     	; 0x11e4 <strrev+0x10>
+    11f2:	08 95       	ret
+
+000011f4 <__eerd_block_m32>:
+    11f4:	dc 01       	movw	r26, r24
+    11f6:	cb 01       	movw	r24, r22
+
+000011f8 <__eerd_blraw_m32>:
+    11f8:	fc 01       	movw	r30, r24
+    11fa:	e1 99       	sbic	0x1c, 1	; 28
+    11fc:	fe cf       	rjmp	.-4      	; 0x11fa <__eerd_blraw_m32+0x2>
+    11fe:	06 c0       	rjmp	.+12     	; 0x120c <__eerd_blraw_m32+0x14>
+    1200:	ff bb       	out	0x1f, r31	; 31
+    1202:	ee bb       	out	0x1e, r30	; 30
+    1204:	e0 9a       	sbi	0x1c, 0	; 28
+    1206:	31 96       	adiw	r30, 0x01	; 1
+    1208:	0d b2       	in	r0, 0x1d	; 29
+    120a:	0d 92       	st	X+, r0
+    120c:	41 50       	subi	r20, 0x01	; 1
+    120e:	50 40       	sbci	r21, 0x00	; 0
+    1210:	b8 f7       	brcc	.-18     	; 0x1200 <__eerd_blraw_m32+0x8>
+    1212:	08 95       	ret
+
+00001214 <__udivmodhi4>:
+    1214:	aa 1b       	sub	r26, r26
+    1216:	bb 1b       	sub	r27, r27
+    1218:	51 e1       	ldi	r21, 0x11	; 17
+    121a:	07 c0       	rjmp	.+14     	; 0x122a <__udivmodhi4_ep>
+
+0000121c <__udivmodhi4_loop>:
+    121c:	aa 1f       	adc	r26, r26
+    121e:	bb 1f       	adc	r27, r27
+    1220:	a6 17       	cp	r26, r22
+    1222:	b7 07       	cpc	r27, r23
+    1224:	10 f0       	brcs	.+4      	; 0x122a <__udivmodhi4_ep>
+    1226:	a6 1b       	sub	r26, r22
+    1228:	b7 0b       	sbc	r27, r23
+
+0000122a <__udivmodhi4_ep>:
+    122a:	88 1f       	adc	r24, r24
+    122c:	99 1f       	adc	r25, r25
+    122e:	5a 95       	dec	r21
+    1230:	a9 f7       	brne	.-22     	; 0x121c <__udivmodhi4_loop>
+    1232:	80 95       	com	r24
+    1234:	90 95       	com	r25
+    1236:	bc 01       	movw	r22, r24
+    1238:	cd 01       	movw	r24, r26
+    123a:	08 95       	ret
+
+0000123c <__udivmodsi4>:
+    123c:	a1 e2       	ldi	r26, 0x21	; 33
+    123e:	1a 2e       	mov	r1, r26
+    1240:	aa 1b       	sub	r26, r26
+    1242:	bb 1b       	sub	r27, r27
+    1244:	fd 01       	movw	r30, r26
+    1246:	0d c0       	rjmp	.+26     	; 0x1262 <__udivmodsi4_ep>
+
+00001248 <__udivmodsi4_loop>:
+    1248:	aa 1f       	adc	r26, r26
+    124a:	bb 1f       	adc	r27, r27
+    124c:	ee 1f       	adc	r30, r30
+    124e:	ff 1f       	adc	r31, r31
+    1250:	a2 17       	cp	r26, r18
+    1252:	b3 07       	cpc	r27, r19
+    1254:	e4 07       	cpc	r30, r20
+    1256:	f5 07       	cpc	r31, r21
+    1258:	20 f0       	brcs	.+8      	; 0x1262 <__udivmodsi4_ep>
+    125a:	a2 1b       	sub	r26, r18
+    125c:	b3 0b       	sbc	r27, r19
+    125e:	e4 0b       	sbc	r30, r20
+    1260:	f5 0b       	sbc	r31, r21
+
+00001262 <__udivmodsi4_ep>:
+    1262:	66 1f       	adc	r22, r22
+    1264:	77 1f       	adc	r23, r23
+    1266:	88 1f       	adc	r24, r24
+    1268:	99 1f       	adc	r25, r25
+    126a:	1a 94       	dec	r1
+    126c:	69 f7       	brne	.-38     	; 0x1248 <__udivmodsi4_loop>
+    126e:	60 95       	com	r22
+    1270:	70 95       	com	r23
+    1272:	80 95       	com	r24
+    1274:	90 95       	com	r25
+    1276:	9b 01       	movw	r18, r22
+    1278:	ac 01       	movw	r20, r24
+    127a:	bd 01       	movw	r22, r26
+    127c:	cf 01       	movw	r24, r30
+    127e:	08 95       	ret
+
+00001280 <_exit>:
+    1280:	f8 94       	cli
+
+00001282 <__stop_program>:
+    1282:	ff cf       	rjmp	.-2      	; 0x1282 <__stop_program>

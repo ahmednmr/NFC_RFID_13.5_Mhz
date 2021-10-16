@@ -15,9 +15,9 @@
 #include<stdlib.h>
 #include "../MCAL/UART.h"
 #include <avr/interrupt.h>
-#include "../uart.h"
-#include "../Utils.h"
-#include "../STD_TYPES.h"
+#include "../MCAL/UART_Debug/uart.h"
+#include "../helpers/Utils.h"
+#include "../helpers/STD_TYPES.h"
 
 
 
@@ -40,11 +40,13 @@
 #define TAG_ID_PAGE_NUMBER                5
 #define TAG_POINTS_PAGE_NUMBER            6
 
+#define NFC_Company_ID_reference 0xE9E8E7E6
+
 typedef struct
 {
-	unsigned long tag_company_id[4];
-	unsigned long tag_id;
-	unsigned long tag_points_number;
+	U32 tag_company_id;
+	U32 tag_id;
+	U32 tag_points_number;
 
 }st_recieved_tag_data;
 
@@ -71,8 +73,10 @@ void NFC_Recieving_interrupt(void);
 en_tag_status NFC_read_tag(void);
 en_tag_status NFC_write_page(U8 page_number,U8* Data);
 en_tag_status NFC_write_company_id(U8* Company_id);
+en_tag_status NFC_write_company_id_number(U32 Company_id_number);
 en_tag_status NFC_write_tag_ID(U32 tag_number);
 en_tag_status NFC_write_Tag_Points(U32 points);
+//en_tag_status NFC_write_load_Points(U32 points);
 U8 NFC_read_tag_data(st_recieved_tag_data* recieved_struct);
 
 

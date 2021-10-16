@@ -5,15 +5,21 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../HAL/LCD.c \
-../HAL/NFC_13_56MHZ.c 
+../HAL/NFC_13_56MHZ.c \
+../HAL/buzzer.c \
+../HAL/keypad.c 
 
 OBJS += \
 ./HAL/LCD.o \
-./HAL/NFC_13_56MHZ.o 
+./HAL/NFC_13_56MHZ.o \
+./HAL/buzzer.o \
+./HAL/keypad.o 
 
 C_DEPS += \
 ./HAL/LCD.d \
-./HAL/NFC_13_56MHZ.d 
+./HAL/NFC_13_56MHZ.d \
+./HAL/buzzer.d \
+./HAL/keypad.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

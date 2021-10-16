@@ -23,5 +23,7 @@ C_DEPS :=
 SUBDIRS := \
 HAL \
 MCAL \
+MCAL/UART_Debug \
+app \
 . \
 
